@@ -1,0 +1,41 @@
+﻿# ===========================
+# Large dataset files
+# ===========================
+
+# Raw sales CSVs
+dataset/raw/sales/*.csv
+
+# Combined sales file
+dataset/combined/fact_sales_combined.csv
+
+# Cleaned / processed datasets
+dataset/cleaned/*.csv
+
+
+# ===========================
+# Python
+# ===========================
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+
+# ===========================
+# IDE / Editor
+# ===========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
