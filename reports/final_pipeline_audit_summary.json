@@ -1,0 +1,125 @@
+{
+  "audit_timestamp": "2026-09-12T19:30:00Z",
+  "project_name": "Demand-Decision-Intelligence",
+  "data_integrity": {
+    "original_sales_rows": 46706387,
+    "final_sales_rows": 46706387,
+    "rows_deleted": 0,
+    "rows_fabricated": 0,
+    "unwarranted_modifications": 0,
+    "external_data_used": false
+  },
+  "product_master": {
+    "total_products_raw": 32226,
+    "total_products_cleaned": 32226,
+    "duplicate_product_ids": 0,
+    "fill_source_distribution": {
+      "original": 29030,
+      "mapped_from_brand": 875,
+      "mapped_from_manufacturer": 753,
+      "extracted_then_mapped": 460,
+      "extracted_from_product_name": 3,
+      "not_available_no_data": 1105
+    },
+    "unmatched_sales_skus": 1496,
+    "unmatched_sales_rows": 532122,
+    "unmatched_match_rate_pct": 98.86,
+    "unmatched_attributes_policy": "KEEP_AS_NOT_AVAILABLE"
+  },
+  "landing_price": {
+    "original_missing_rows": 79355,
+    "total_affected_products": 757,
+    "recovered_rows": 37484,
+    "recovered_breakdown": {
+      "tier_1_product_city_median": 28171,
+      "tier_2_product_median": 9313
+    },
+    "remaining_missing_rows": 41871,
+    "unresolved_products_count": 14,
+    "unresolved_policy": "KEEP_AS_NOT_AVAILABLE"
+  },
+  "daily_demand": {
+    "rows": 1764981,
+    "quantity_total": 60176096,
+    "revenue_total": 4725948522.0,
+    "date_range": "2022-04-01 to 2022-07-10",
+    "unique_dates": 81,
+    "unique_products": 17304,
+    "unique_cities": 4,
+    "order_count_status": "CONFIRMED_EXACT_MATCH (line-item transaction count)",
+    "aggregation_match_status": "EXACT_100_PCT_MATCH"
+  },
+  "forecasting_features": {
+    "total_calendar_series": 46305,
+    "calendar_days": 101,
+    "complete_calendar_rows": 4676805,
+    "model_feature_rows": 3380265,
+    "train_rows": 2917215,
+    "train_period": "2022-04-29 to 2022-06-30",
+    "validation_rows": 463050,
+    "validation_period": "2022-07-01 to 2022-07-10",
+    "features_generated": [
+      "lag_1", "lag_7", "lag_14", "lag_28",
+      "rolling_mean_7", "rolling_mean_14", "rolling_mean_28", "rolling_std_7",
+      "day_of_week", "is_weekend"
+    ],
+    "leakage_status": "ZERO_LEAKAGE_CONFIRMED"
+  },
+  "models": {
+    "evaluated": [
+      {
+        "model": "Naive (Lag-1)",
+        "MAE": 5.948,
+        "RMSE": 45.6442,
+        "WAPE_pct": 32.43
+      },
+      {
+        "model": "Seasonal Naive (Lag-7)",
+        "MAE": 14.5525,
+        "RMSE": 105.8495,
+        "WAPE_pct": 79.35
+      },
+      {
+        "model": "Rolling Mean 7",
+        "MAE": 9.1043,
+        "RMSE": 70.4306,
+        "WAPE_pct": 49.64
+      },
+      {
+        "model": "Ridge Regression",
+        "MAE": 5.8639,
+        "RMSE": 41.0083,
+        "WAPE_pct": 31.97
+      },
+      {
+        "model": "HistGradientBoosting (GBT)",
+        "MAE": 7.4838,
+        "RMSE": 73.966,
+        "WAPE_pct": 40.81
+      }
+    ],
+    "best_model": "Ridge Regression",
+    "best_model_wape_pct": 31.97
+  },
+  "inventory": {
+    "total_series_calculated": 38936,
+    "decision_outputs": [
+      "lead_time_demand",
+      "safety_stock",
+      "reorder_point",
+      "target_stock_level"
+    ],
+    "calculated_from_data": [
+      "mean_daily_demand",
+      "std_daily_demand",
+      "recovered_landing_cost"
+    ],
+    "unavailable_inputs_marked_configurable": [
+      "supplier_lead_time_days",
+      "target_service_level",
+      "holding_cost_rate",
+      "stockout_cost",
+      "current_on_hand_inventory"
+    ]
+  }
+}

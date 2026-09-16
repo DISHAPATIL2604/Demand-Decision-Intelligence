@@ -1,0 +1,55 @@
+{
+  "audit_timestamp": "2026-09-12T20:00:00Z",
+  "project_name": "Demand-Decision-Intelligence",
+  "final_dataset_path": "C:\\Users\\qaziu\\Downloads\\Demand-Decision-Intelligence-main\\dataset\\cleaned\\sales_product_master.csv",
+  "data_integrity": {
+    "raw_data_untouched": true,
+    "total_raw_sales_rows": 46706387,
+    "total_final_sales_rows": 46706387,
+    "rows_deleted": 0,
+    "rows_fabricated": 0,
+    "rows_added": 0
+  },
+  "product_master": {
+    "raw_master_rows": 32226,
+    "raw_master_unique_skus": 32226,
+    "duplicate_skus": 0,
+    "matched_sales_skus": 15808,
+    "unmatched_sales_skus": 1496,
+    "unmatched_sales_rows": 532122,
+    "unmatched_policy": "KEEP_AS_NOT_AVAILABLE (No Attribute Fabrication)"
+  },
+  "landing_price": {
+    "original_missing_rows": 79355,
+    "recovered_rows": 37484,
+    "recovered_breakdown": {
+      "tier_1_product_city_median": 28171,
+      "tier_2_product_median": 9313
+    },
+    "remaining_unresolved_rows": 41871,
+    "unresolved_products_count": 14,
+    "unresolved_policy": "KEEP_AS_NOT_AVAILABLE (No Artificial Imputation)"
+  },
+  "dates": {
+    "min_date": "2022-04-01 00:00:00",
+    "max_date": "2022-07-10 00:00:00",
+    "unique_dates": 81,
+    "null_dates": 0,
+    "status": "CONFIRMED"
+  },
+  "numerical_quality": {
+    "negative_quantities": 0,
+    "negative_selling_prices": 0,
+    "negative_discounts": 0,
+    "zero_quantity_rows": 184411,
+    "zero_selling_price_rows": 125349,
+    "selling_price_gt_10k": 18,
+    "discount_gt_revenue_rows": 231,
+    "status": "CONFIRMED_AUDITED_NOT_DELETED"
+  },
+  "duplicates": {
+    "exact_duplicate_sales_rows": 0,
+    "duplicate_product_master_ids": 0,
+    "status": "CONFIRMED"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "metadata_version": "1.0.0",
+  "project": "Demand-Decision-Intelligence",
+  "generation_timestamp": "2026-09-12T21:40:00+05:30",
+  "sales_period_start": "2022-04-01",
+  "sales_period_end": "2022-07-10",
+  "datasets": {
+    "calendar": {
+      "name": "India National and State Calendar Holidays Dataset",
+      "source": "Government of India Department of Personnel and Training (DOPT) Gazetted Holiday Schedule 2022 & python-holidays official India rule engine",
+      "source_url": "https://dopt.gov.in/sites/default/files/Holidays_2022.pdf",
+      "documentation_url": "https://github.com/vacanza/python-holidays",
+      "frequency": "Daily",
+      "coverage_start": "2022-04-01",
+      "coverage_end": "2022-07-10",
+      "total_rows": 101,
+      "columns": [
+        "date_",
+        "day_of_week",
+        "day_name",
+        "month",
+        "quarter",
+        "year",
+        "is_weekend",
+        "is_holiday_national",
+        "holiday_name_national",
+        "holiday_type",
+        "holiday_delhi",
+        "holiday_bengaluru",
+        "holiday_mumbai",
+        "holiday_hr_ncr",
+        "holiday_restricted",
+        "is_holiday_any",
+        "primary_holiday_name",
+        "season"
+      ],
+      "license": "Public Domain / MIT",
+      "files": [
+        "dataset/external/calendar/india_holidays_calendar_2022.csv",
+        "dataset/external/calendar/calendar_features.csv"
+      ],
+      "features_provided": [
+        "date_",
+        "day_of_week",
+        "day_name",
+        "month",
+        "quarter",
+        "year",
+        "is_weekend",
+        "is_holiday_national",
+        "holiday_name_national",
+        "holiday_type",
+        "holiday_delhi",
+        "holiday_bengaluru",
+        "holiday_mumbai",
+        "holiday_hr_ncr",
+        "is_holiday_any",
+        "primary_holiday_name",
+        "season"
+      ],
+      "relevance": "Holiday and festival spikes significantly drive grocery purchase surges (e.g., Ugadi, Eid-ul-Fitr, Ambedkar Jayanti, Good Friday), while weekend patterns dictate intra-week fulfillment surges."
+    },
+    "weather": {
+      "name": "Historical City Daily Weather Dataset (ERA5 Reanalysis)",
+      "source": "Open-Meteo Historical Weather API / European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5 reanalysis & India Meteorological Department (IMD) observational blend",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive",
+      "documentation_url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "frequency": "Daily",
+      "coverage_start": "2022-04-01",
+      "coverage_end": "2022-07-10",
+      "total_rows": 404,
+      "columns": [
+        "date_",
+        "city_name",
+        "latitude",
+        "longitude",
+        "temperature_mean_c",
+        "temperature_max_c",
+        "temperature_min_c",
+        "relative_humidity_pct",
+        "precipitation_mm",
+        "wind_speed_max_kmh",
+        "weather_condition"
+      ],
+      "cities": [
+        "Bengaluru",
+        "Delhi",
+        "HR-NCR",
+        "Mumbai"
+      ],
+      "license": "Open Database License (ODbL) / Copernicus Climate Change Service",
+      "files": [
+        "dataset/external/weather/city_daily_weather_historical_2022.csv",
+        "dataset/external/weather/weather_data.csv"
+      ],
+      "variables": [
+        "temperature_mean_c",
+        "temperature_max_c",
+        "temperature_min_c",
+        "relative_humidity_pct",
+        "precipitation_mm",
+        "wind_speed_max_kmh",
+        "weather_condition"
+      ],
+      "relevance": "Extreme heat (Delhi/HR-NCR 40\u00b0C+ heatwaves in April-May) increases demand for cold beverages, dairy, and ice creams, while onset of heavy monsoon in Mumbai (798mm) and Bengaluru (426mm) impacts delivery SLAs, fresh produce spoilage, and panic-buying of shelf-stable essentials."
+    },
+    "commodity": {
+      "name": "India City Retail Grocery Commodity Prices & World Bank Global Benchmarks",
+      "source": "United Nations World Food Programme (WFP) & Ministry of Consumer Affairs, Government of India (Price Monitoring Division); World Bank Commodity Pink Sheet",
+      "source_url": "https://data.humdata.org/dataset/wfp-food-prices-for-india",
+      "secondary_source_url": "https://www.worldbank.org/en/research/commodity-markets",
+      "frequency": "Monthly (mid-month retail observation & monthly international benchmark)",
+      "coverage_start": "2022-04-15",
+      "coverage_end": "2022-07-15",
+      "total_city_rows": 333,
+      "total_wb_rows": 36,
+      "cities": [
+        "Bengaluru",
+        "Delhi",
+        "HR-NCR",
+        "Mumbai"
+      ],
+      "commodities_count": 21,
+      "commodities": [
+        "Ghee (vanaspati)",
+        "Lentils",
+        "Lentils (masur)",
+        "Lentils (moong)",
+        "Lentils (urad)",
+        "Milk (pasteurized)",
+        "Oil (groundnut)",
+        "Oil (mustard)",
+        "Oil (palm)",
+        "Oil (soybean)",
+        "Oil (sunflower)",
+        "Onions",
+        "Potatoes",
+        "Rice",
+        "Salt (iodised)",
+        "Sugar",
+        "Sugar (jaggery/gur)",
+        "Tea (black)",
+        "Tomatoes",
+        "Wheat",
+        "Wheat flour"
+      ],
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "files": [
+        "dataset/external/commodity/india_city_commodity_prices_2022.csv",
+        "dataset/external/commodity/commodity_prices.csv",
+        "dataset/external/commodity/world_bank_global_commodity_benchmarks_2022.csv"
+      ],
+      "units": "INR per KG (Retail Price) & USD per metric ton / KG (World Bank Benchmarks)",
+      "relevance": "Essential staples (Atta/Wheat, Rice, Edible Oils, Sugar, Pulses/Lentils) make up a core share of grocery basket volume. Wholesale and retail price fluctuations directly modulate consumer demand elasticity, basket sizing, and promotional margins."
+    }
+  },
+  "sales_data_integrity_check": {
+    "canonical_file": "dataset/cleaned/sales_product_master.csv",
+    "status": "UNTOUCHED",
+    "rows": 46706387,
+    "modified": false
+  }
+}

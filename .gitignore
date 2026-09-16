@@ -1,15 +1,21 @@
 # ===========================
 # Large dataset files (>100MB)
 # ===========================
-# Raw sales CSVs (~500-655 MB each)
+
+# Raw sales CSVs
 dataset/raw/sales/*.csv
 
-# Combined sales file (~2.3 GB)
+# Combined sales file
 dataset/combined/fact_sales_combined.csv
+
+# Cleaned / processed datasets
+dataset/cleaned/*.csv
+dataset/processed/
 
 # ===========================
 # Python
 # ===========================
+
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -24,8 +30,10 @@ env/
 # ===========================
 # Frontend & Node
 # ===========================
+
 node_modules/
 frontend/dist/
+frontend/.env
 frontend/.env.local
 frontend/.env.*.local
 .env
