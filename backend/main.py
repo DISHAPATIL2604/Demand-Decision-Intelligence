@@ -20,9 +20,24 @@ app.add_middleware(
 )
 
 # Register API Routers
-app.include_router(health.router, prefix=settings.API_V1_STR, tags=["Health"])
-app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["Auth"])
-app.include_router(demand.router, prefix=f"{settings.API_V1_STR}/demand", tags=["Demand Intelligence"])
+app.include_router(
+    health.router,
+    prefix=settings.API_V1_STR,
+    tags=["Health"]
+)
+
+app.include_router(
+    auth.router,
+    prefix=f"{settings.API_V1_STR}/auth",
+    tags=["Auth"]
+)
+
+app.include_router(
+    demand.router,
+    prefix=f"{settings.API_V1_STR}/demand",
+    tags=["Demand Intelligence"]
+)
+
 
 @app.get("/")
 def root():

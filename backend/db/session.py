@@ -9,11 +9,19 @@ try:
         echo=False
     )
 except Exception:
-    engine = create_engine("sqlite:///./demand_decision.db", echo=False)
+    engine = create_engine(
+        "sqlite:///./demand_decision.db",
+        echo=False
+    )
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine
+)
 
 Base = declarative_base()
+
 
 def get_db():
     db = SessionLocal()

@@ -1,5 +1,5 @@
-﻿# ===========================
-# Large dataset files
+# ===========================
+# Large dataset files (>100MB)
 # ===========================
 
 # Raw sales CSVs
@@ -10,7 +10,7 @@ dataset/combined/fact_sales_combined.csv
 
 # Cleaned / processed datasets
 dataset/cleaned/*.csv
-
+dataset/processed/
 
 # ===========================
 # Python
@@ -27,6 +27,17 @@ build/
 venv/
 env/
 
+# ===========================
+# Frontend & Node
+# ===========================
+
+node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+.env
+.env*.local
 
 # ===========================
 # IDE / Editor
@@ -39,7 +50,3 @@ env/
 *~
 .DS_Store
 Thumbs.db
-dataset/processed/sales_product_master_imputed.csv
-frontend/.env
-
-dataset/processed/
