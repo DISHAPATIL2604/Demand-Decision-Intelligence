@@ -1,0 +1,665 @@
+{
+  "overview": {
+    "total_rows": 46706387,
+    "total_products": 17304,
+    "total_cities": 4,
+    "unique_dates": 81,
+    "min_date": "2022-04-01 00:00:00",
+    "max_date": "2022-07-10 00:00:00",
+    "unique_l0": 21,
+    "unique_l1": 199,
+    "unique_l2": 393,
+    "total_quantity": 60176096.0,
+    "total_revenue": 4725948522.0
+  },
+  "cities": [
+    {
+      "city_name": "Delhi",
+      "transaction_rows": 21449858,
+      "total_quantity": 28075593.0,
+      "total_revenue": 2288798124.0,
+      "unique_products": 11990,
+      "avg_daily_quantity": 346612.3,
+      "avg_daily_revenue": 28256766.96,
+      "revenue_share_pct": 48.43,
+      "quantity_share_pct": 46.66
+    },
+    {
+      "city_name": "HR-NCR",
+      "transaction_rows": 11866528,
+      "total_quantity": 15339245.0,
+      "total_revenue": 1139562783.0,
+      "unique_products": 12787,
+      "avg_daily_quantity": 189373.4,
+      "avg_daily_revenue": 14068676.33,
+      "revenue_share_pct": 24.11,
+      "quantity_share_pct": 25.49
+    },
+    {
+      "city_name": "Bengaluru",
+      "transaction_rows": 9511508,
+      "total_quantity": 11747370.0,
+      "total_revenue": 865422917.0,
+      "unique_products": 10491,
+      "avg_daily_quantity": 145029.3,
+      "avg_daily_revenue": 10684233.54,
+      "revenue_share_pct": 18.31,
+      "quantity_share_pct": 19.52
+    },
+    {
+      "city_name": "Mumbai",
+      "transaction_rows": 3878493,
+      "total_quantity": 5013888.0,
+      "total_revenue": 432164698.0,
+      "unique_products": 11037,
+      "avg_daily_quantity": 61899.9,
+      "avg_daily_revenue": 5335366.64,
+      "revenue_share_pct": 9.14,
+      "quantity_share_pct": 8.33
+    }
+  ],
+  "categories_l0": [
+    {
+      "l0_category": "Dry Fruits, Masala & Oil",
+      "transaction_rows": 4536625,
+      "total_quantity": 5572465.0,
+      "total_revenue": 815641197.0,
+      "unique_products": 1030,
+      "revenue_share_pct": 17.26,
+      "quantity_share_pct": 9.26
+    },
+    {
+      "l0_category": "Dairy & Breakfast",
+      "transaction_rows": 6833739,
+      "total_quantity": 10397163.0,
+      "total_revenue": 547623366.0,
+      "unique_products": 650,
+      "revenue_share_pct": 11.59,
+      "quantity_share_pct": 17.28
+    },
+    {
+      "l0_category": "Atta, Rice & Dal",
+      "transaction_rows": 3519998,
+      "total_quantity": 4148284.0,
+      "total_revenue": 540824597.0,
+      "unique_products": 621,
+      "revenue_share_pct": 11.44,
+      "quantity_share_pct": 6.89
+    },
+    {
+      "l0_category": "Vegetables & Fruits",
+      "transaction_rows": 11709843,
+      "total_quantity": 14758468.0,
+      "total_revenue": 491973610.0,
+      "unique_products": 422,
+      "revenue_share_pct": 10.41,
+      "quantity_share_pct": 24.53
+    },
+    {
+      "l0_category": "Personal Care",
+      "transaction_rows": 1768090,
+      "total_quantity": 1890595.0,
+      "total_revenue": 320269061.0,
+      "unique_products": 1761,
+      "revenue_share_pct": 6.78,
+      "quantity_share_pct": 3.14
+    },
+    {
+      "l0_category": "Cleaning Essentials",
+      "transaction_rows": 1686148,
+      "total_quantity": 1980811.0,
+      "total_revenue": 308661433.0,
+      "unique_products": 753,
+      "revenue_share_pct": 6.53,
+      "quantity_share_pct": 3.29
+    },
+    {
+      "l0_category": "Cold Drinks & Juices",
+      "transaction_rows": 2704187,
+      "total_quantity": 3999072.0,
+      "total_revenue": 255625764.0,
+      "unique_products": 766,
+      "revenue_share_pct": 5.41,
+      "quantity_share_pct": 6.65
+    },
+    {
+      "l0_category": "Tea, Coffee & Health Drinks",
+      "transaction_rows": 1453200,
+      "total_quantity": 2351221.0,
+      "total_revenue": 205651092.0,
+      "unique_products": 975,
+      "revenue_share_pct": 4.35,
+      "quantity_share_pct": 3.91
+    },
+    {
+      "l0_category": "Munchies",
+      "transaction_rows": 3566531,
+      "total_quantity": 4364858.0,
+      "total_revenue": 195479259.0,
+      "unique_products": 1180,
+      "revenue_share_pct": 4.14,
+      "quantity_share_pct": 7.25
+    },
+    {
+      "l0_category": "Instant & Frozen Food",
+      "transaction_rows": 1700065,
+      "total_quantity": 2092250.0,
+      "total_revenue": 194664391.0,
+      "unique_products": 880,
+      "revenue_share_pct": 4.12,
+      "quantity_share_pct": 3.48
+    }
+  ],
+  "categories_l1": [
+    {
+      "l0_category": "Dry Fruits, Masala & Oil",
+      "l1_category": "Oil",
+      "transaction_rows": 975476,
+      "total_quantity": 1402688.0,
+      "total_revenue": 354025764.0,
+      "unique_products": 234,
+      "revenue_share_pct": 7.49
+    },
+    {
+      "l0_category": "Vegetables & Fruits",
+      "l1_category": "Fresh Vegetables",
+      "transaction_rows": 7421309,
+      "total_quantity": 9634355.0,
+      "total_revenue": 232669326.0,
+      "unique_products": 108,
+      "revenue_share_pct": 4.92
+    },
+    {
+      "l0_category": "Atta, Rice & Dal",
+      "l1_category": "Atta",
+      "transaction_rows": 591186,
+      "total_quantity": 672394.0,
+      "total_revenue": 177509782.0,
+      "unique_products": 43,
+      "revenue_share_pct": 3.76
+    },
+    {
+      "l0_category": "Vegetables & Fruits",
+      "l1_category": "Fresh Fruits",
+      "transaction_rows": 1946564,
+      "total_quantity": 2404248.0,
+      "total_revenue": 143038263.0,
+      "unique_products": 69,
+      "revenue_share_pct": 3.03
+    },
+    {
+      "l0_category": "Dairy & Breakfast",
+      "l1_category": "Milk",
+      "transaction_rows": 1989075,
+      "total_quantity": 4663730.0,
+      "total_revenue": 141289219.0,
+      "unique_products": 38,
+      "revenue_share_pct": 2.99
+    },
+    {
+      "l0_category": "Atta, Rice & Dal",
+      "l1_category": "Rice",
+      "transaction_rows": 435530,
+      "total_quantity": 504077.0,
+      "total_revenue": 133878379.0,
+      "unique_products": 208,
+      "revenue_share_pct": 2.83
+    },
+    {
+      "l0_category": "Dry Fruits, Masala & Oil",
+      "l1_category": "Ghee & Vanaspati",
+      "transaction_rows": 271683,
+      "total_quantity": 302378.0,
+      "total_revenue": 133246395.0,
+      "unique_products": 79,
+      "revenue_share_pct": 2.82
+    },
+    {
+      "l0_category": "Cleaning Essentials",
+      "l1_category": "Detergent Powder & Bars",
+      "transaction_rows": 453073,
+      "total_quantity": 575965.0,
+      "total_revenue": 115166423.0,
+      "unique_products": 100,
+      "revenue_share_pct": 2.44
+    },
+    {
+      "l0_category": "Dry Fruits, Masala & Oil",
+      "l1_category": "Dry Fruits",
+      "transaction_rows": 515503,
+      "total_quantity": 577473.0,
+      "total_revenue": 108528638.0,
+      "unique_products": 124,
+      "revenue_share_pct": 2.3
+    },
+    {
+      "l0_category": "Tea, Coffee & Health Drinks",
+      "l1_category": "Tea",
+      "transaction_rows": 454040,
+      "total_quantity": 560066.0,
+      "total_revenue": 102289402.0,
+      "unique_products": 312,
+      "revenue_share_pct": 2.16
+    }
+  ],
+  "top20_quantity_products": [
+    {
+      "product_id": 19512,
+      "product_name": "Amul Taaza Toned Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_quantity": 1261153.0,
+      "total_revenue": 31410529.0
+    },
+    {
+      "product_id": 391306,
+      "product_name": "Onion",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 1171389.0,
+      "total_revenue": 27511576.0
+    },
+    {
+      "product_id": 12872,
+      "product_name": "Amul Gold Full Cream Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_quantity": 897112.0,
+      "total_revenue": 26829751.0
+    },
+    {
+      "product_id": 3881,
+      "product_name": "Hybrid Tomato",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 766785.0,
+      "total_revenue": 19120688.0
+    },
+    {
+      "product_id": 445675,
+      "product_name": "Desi Tomato",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 719921.0,
+      "total_revenue": 18401403.0
+    },
+    {
+      "product_id": 423735,
+      "product_name": "Green Chilli",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 521772.0,
+      "total_revenue": 5821489.0
+    },
+    {
+      "product_id": 3889,
+      "product_name": "Coriander Bunch",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 509505.0,
+      "total_revenue": 4579904.0
+    },
+    {
+      "product_id": 333785,
+      "product_name": "Potato (Chipsona)",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 483844.0,
+      "total_revenue": 12728900.0
+    },
+    {
+      "product_id": 10088,
+      "product_name": "Cucumber",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 461428.0,
+      "total_revenue": 8149279.0
+    },
+    {
+      "product_id": 3898,
+      "product_name": "Lady Finger",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 441270.0,
+      "total_revenue": 5981211.0
+    },
+    {
+      "product_id": 352443,
+      "product_name": "Tender Coconut",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 396320.0,
+      "total_revenue": 22922428.0
+    },
+    {
+      "product_id": 470636,
+      "product_name": "Banana",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 375526.0,
+      "total_revenue": 9687205.0
+    },
+    {
+      "product_id": 17748,
+      "product_name": "Lemon",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 342704.0,
+      "total_revenue": 14036498.0
+    },
+    {
+      "product_id": 160704,
+      "product_name": "Amul Cow Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_quantity": 325668.0,
+      "total_revenue": 8400686.0
+    },
+    {
+      "product_id": 369752,
+      "product_name": "Kiran Watermelon",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 297974.0,
+      "total_revenue": 14036753.0
+    },
+    {
+      "product_id": 37083,
+      "product_name": "Nandini Toned Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_quantity": 286646.0,
+      "total_revenue": 5428851.0
+    },
+    {
+      "product_id": 19925,
+      "product_name": "Mother Dairy Toned Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_quantity": 285829.0,
+      "total_revenue": 7138317.0
+    },
+    {
+      "product_id": 217614,
+      "product_name": "Bottle Gourd",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 283033.0,
+      "total_revenue": 7149890.0
+    },
+    {
+      "product_id": 391305,
+      "product_name": "Potato",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 282233.0,
+      "total_revenue": 9034075.0
+    },
+    {
+      "product_id": 3888,
+      "product_name": "Green Capsicum",
+      "category": "Vegetables & Fruits",
+      "total_quantity": 281917.0,
+      "total_revenue": 5511151.0
+    }
+  ],
+  "top20_revenue_products": [
+    {
+      "product_id": 52,
+      "product_name": "Fortune Soya Health Refined Soyabean Oil",
+      "category": "Dry Fruits, Masala & Oil",
+      "total_revenue": 44814504.0,
+      "total_quantity": 250055.0
+    },
+    {
+      "product_id": 333324,
+      "product_name": "Aashirvaad Shudh Chakki Whole Wheat Atta (10 kg)",
+      "category": "Atta, Rice & Dal",
+      "total_revenue": 40646976.0,
+      "total_quantity": 110221.0
+    },
+    {
+      "product_id": 15907,
+      "product_name": "Fortune Premium Kachi Ghani Pure Mustard Oil",
+      "category": "Dry Fruits, Masala & Oil",
+      "total_revenue": 36007725.0,
+      "total_quantity": 194562.0
+    },
+    {
+      "product_id": 19512,
+      "product_name": "Amul Taaza Toned Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_revenue": 31410529.0,
+      "total_quantity": 1261153.0
+    },
+    {
+      "product_id": 388639,
+      "product_name": "Chakki Atta (10 kg)",
+      "category": "Atta, Rice & Dal",
+      "total_revenue": 30364023.0,
+      "total_quantity": 97533.0
+    },
+    {
+      "product_id": 391306,
+      "product_name": "Onion",
+      "category": "Vegetables & Fruits",
+      "total_revenue": 27511576.0,
+      "total_quantity": 1171389.0
+    },
+    {
+      "product_id": 12872,
+      "product_name": "Amul Gold Full Cream Fresh Milk",
+      "category": "Dairy & Breakfast",
+      "total_revenue": 26829751.0,
+      "total_quantity": 897112.0
+    },
+    {
+      "product_id": 383480,
+      "product_name": "Maggi Masala Noodles - Pack of 12",
+      "category": "Instant & Frozen Food",
+      "total_revenue": 26704570.0,
+      "total_quantity": 175127.0
+    },
+    {
+      "product_id": 160,
+      "product_name": "Amul Salted Butter",
+      "category": "Dairy & Breakfast",
+      "total_revenue": 24163756.0,
+      "total_quantity": 97703.0
+    },
+    {
+      "product_id": 352443,
+      "product_name": "Tender Coconut",
+      "category": "Vegetables & Fruits",
+      "total_revenue": 22922428.0,
+      "total_quantity": 396320.0
+    },
+    {
+      "product_id": 82898,
+      "product_name": "Milkfood Rich Desi Danedar Ghee",
+      "category": "Dry Fruits, Masala & Oil",
+      "total_revenue": 22122914.0,
+      "total_quantity": 46396.0
+    },
+    {
+      "product_id": 3881,
+      "product_name": "Hybrid Tomato",
+      "category": "Vegetables & Fruits",
+      "total_revenue": 19120688.0,
+      "total_quantity": 766785.0
+    },
+    {
+      "product_id": 15902,
+      "product_name": "Fortune Premium Kachi Ghani Pure Mustard Oil",
+      "category": "Dry Fruits, Masala & Oil",
+      "total_revenue": 18767908.0,
+      "total_quantity": 20461.0
+    },
+    {
+      "product_id": 445675,
+      "product_name": "Desi Tomato",
+      "category": "Vegetables & Fruits",
+      "total_revenue": 18401403.0,
+      "total_quantity": 719921.0
+    },
+    {
+      "product_id": 329500,
+      "product_name": "Amul Fresh Malai Paneer",
+      "category": "Dairy & Breakfast",
+      "total_revenue": 16772945.0,
+      "total_quantity": 217914.0
+    },
+    {
+      "product_id": 333764,
+      "product_name": "Aashirvaad Shudh Chakki Whole Wheat Atta (5 kg)",
+      "category": "Atta, Rice & Dal",
+      "total_revenue": 16485359.0,
+      "total_quantity": 85840.0
+    },
+    {
+      "product_id": 408764,
+      "product_name": "Tide Extra Power (Jasmine & Rose) - 7 kg Detergent Powder - with Free Detergent Powder - 3 kg",
+      "category": "Cleaning Essentials",
+      "total_revenue": 16332242.0,
+      "total_quantity": 18511.0
+    },
+    {
+      "product_id": 114918,
+      "product_name": "Saffola Gold Refined Blended Cooking Oil (Rice Bran + Sunflower) - Free 1 l Pouch",
+      "category": "Dry Fruits, Masala & Oil",
+      "total_revenue": 15097654.0,
+      "total_quantity": 11956.0
+    },
+    {
+      "product_id": 192,
+      "product_name": "Mother Dairy Paneer",
+      "category": "Dairy & Breakfast",
+      "total_revenue": 14521842.0,
+      "total_quantity": 174458.0
+    },
+    {
+      "product_id": 380157,
+      "product_name": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta",
+      "category": "Atta, Rice & Dal",
+      "total_revenue": 14501568.0,
+      "total_quantity": 42180.0
+    }
+  ],
+  "pareto": {
+    "total_skus": 17304,
+    "top_10pct_rev_share": 73.57,
+    "top_20pct_rev_share": 82.93,
+    "skus_for_80pct_revenue": 231,
+    "pct_skus_for_80pct_revenue": 1.33
+  },
+  "monthly": [
+    {
+      "month_str": "2022-04",
+      "active_days": 30,
+      "total_quantity": 20286103.0,
+      "total_revenue": 1542732389.0,
+      "avg_daily_quantity": 676203.4,
+      "avg_daily_revenue": 51424412.97
+    },
+    {
+      "month_str": "2022-05",
+      "active_days": 21,
+      "total_quantity": 16024552.0,
+      "total_revenue": 1216468062.0,
+      "avg_daily_quantity": 763073.9,
+      "avg_daily_revenue": 57927050.57
+    },
+    {
+      "month_str": "2022-06",
+      "active_days": 20,
+      "total_quantity": 15373127.0,
+      "total_revenue": 1241662776.0,
+      "avg_daily_quantity": 768656.4,
+      "avg_daily_revenue": 62083138.8
+    },
+    {
+      "month_str": "2022-07",
+      "active_days": 10,
+      "total_quantity": 8492314.0,
+      "total_revenue": 725085295.0,
+      "avg_daily_quantity": 849231.4,
+      "avg_daily_revenue": 72508529.5
+    }
+  ],
+  "day_of_week": [
+    {
+      "day_name": "Monday",
+      "total_days": 11,
+      "avg_daily_quantity": 691575.7272727273,
+      "avg_daily_revenue": 53658015.63636363,
+      "total_quantity": 7607333.0,
+      "total_revenue": 590238172.0
+    },
+    {
+      "day_name": "Tuesday",
+      "total_days": 10,
+      "avg_daily_quantity": 704400.8,
+      "avg_daily_revenue": 54935155.5,
+      "total_quantity": 7044008.0,
+      "total_revenue": 549351555.0
+    },
+    {
+      "day_name": "Wednesday",
+      "total_days": 11,
+      "avg_daily_quantity": 707937.6363636364,
+      "avg_daily_revenue": 55462944.27272727,
+      "total_quantity": 7787314.0,
+      "total_revenue": 610092387.0
+    },
+    {
+      "day_name": "Thursday",
+      "total_days": 11,
+      "avg_daily_quantity": 717263.3636363636,
+      "avg_daily_revenue": 55639262.0,
+      "total_quantity": 7889897.0,
+      "total_revenue": 612031882.0
+    },
+    {
+      "day_name": "Friday",
+      "total_days": 13,
+      "avg_daily_quantity": 722764.5384615385,
+      "avg_daily_revenue": 56350967.307692304,
+      "total_quantity": 9395939.0,
+      "total_revenue": 732562575.0
+    },
+    {
+      "day_name": "Saturday",
+      "total_days": 13,
+      "avg_daily_quantity": 788757.0,
+      "avg_daily_revenue": 62157689.615384616,
+      "total_quantity": 10253841.0,
+      "total_revenue": 808049965.0
+    },
+    {
+      "day_name": "Sunday",
+      "total_days": 12,
+      "avg_daily_quantity": 849813.6666666666,
+      "avg_daily_revenue": 68635165.5,
+      "total_quantity": 10197764.0,
+      "total_revenue": 823621986.0
+    }
+  ],
+  "weekend_vs_weekday": [
+    {
+      "day_type": "Weekday",
+      "total_days": 70,
+      "avg_daily_quantity": 750982.3285714285,
+      "avg_daily_revenue": 59081576.428571425,
+      "total_quantity": 52568763.0,
+      "total_revenue": 4135710350.0,
+      "quantity_per_day": 750982.3,
+      "revenue_per_day": 59081576.43
+    },
+    {
+      "day_type": "Weekend",
+      "total_days": 11,
+      "avg_daily_quantity": 691575.7272727273,
+      "avg_daily_revenue": 53658015.63636363,
+      "total_quantity": 7607333.0,
+      "total_revenue": 590238172.0,
+      "quantity_per_day": 691575.7,
+      "revenue_per_day": 53658015.64
+    }
+  ],
+  "price_and_discount": {
+    "mean_price": 87.17,
+    "median_price": 50.0,
+    "p25_price": 27.0,
+    "p75_price": 102.0,
+    "p90_price": 195.0,
+    "p99_price": 514.0,
+    "max_price": 10999.0,
+    "total_discount_given": 29431020.34,
+    "discounted_rows": 1077330,
+    "zero_discount_rows": 45629057,
+    "mean_discount_when_present": 27.32,
+    "median_discount_when_present": 12.0,
+    "max_discount": 1500.0
+  }
+}

@@ -1,5 +1,11 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from typing import Optional
+
+try:
+    import email_validator
+    from pydantic import EmailStr
+except ImportError:
+    EmailStr = str
 
 class Token(BaseModel):
     access_token: str

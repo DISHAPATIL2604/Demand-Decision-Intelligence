@@ -1,0 +1,22 @@
+{
+  "engine": "Dynamic Lead-Time Demand + Variance Safety Stock",
+  "formulas": {
+    "safety_stock": "ceil(Z * std_daily_demand * sqrt(lead_time_days))",
+    "reorder_point": "ceil(mean_daily_demand * lead_time_days + safety_stock)",
+    "target_stock_level": "ceil(mean_daily_demand * (lead_time_days + review_period) + safety_stock)"
+  },
+  "configured_parameters": {
+    "default_lead_time_days": 3,
+    "default_service_level": 0.95,
+    "default_z_score": 1.645,
+    "default_review_period_days": 7
+  },
+  "data_availability_audit": {
+    "lead_time": "NOT_AVAILABLE in raw data (Must be user-configured or ERP supplied)",
+    "holding_cost": "NOT_AVAILABLE in raw data",
+    "stockout_cost": "NOT_AVAILABLE in raw data",
+    "current_stock_on_hand": "NOT_AVAILABLE in sales transactions (Derived/Simulation)",
+    "demand_actuals": "CONFIRMED (derived strictly from daily_product_demand.csv)"
+  },
+  "total_active_series_calculated": 38936
+}

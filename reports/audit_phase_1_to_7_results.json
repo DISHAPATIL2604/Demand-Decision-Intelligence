@@ -1,0 +1,225 @@
+{
+  "phase1_inventory": {
+    "raw_product_master": {
+      "exists": true,
+      "size_mb": 5.13
+    },
+    "cleaned_product_master": {
+      "exists": true,
+      "size_mb": 5.5
+    },
+    "cleaned_product_no_audit": {
+      "exists": true,
+      "size_mb": 5.18
+    },
+    "sales_product_master": {
+      "exists": true,
+      "size_mb": 9357.22
+    },
+    "daily_product_demand": {
+      "exists": true,
+      "size_mb": 207.17
+    },
+    "raw_sales/fact_sales_apr1.csv": {
+      "exists": true,
+      "size_mb": 634.15
+    },
+    "raw_sales/fact_sales_apr2.csv": {
+      "exists": true,
+      "size_mb": 655.64
+    },
+    "raw_sales/fact_sales_jul1.csv": {
+      "exists": true,
+      "size_mb": 573.39
+    },
+    "raw_sales/fact_sales_jun1.csv": {
+      "exists": true,
+      "size_mb": 520.93
+    },
+    "raw_sales/fact_sales_jun2.csv": {
+      "exists": true,
+      "size_mb": 499.78
+    },
+    "raw_sales/fact_sales_may1.csv": {
+      "exists": true,
+      "size_mb": 501.69
+    },
+    "raw_sales/fact_sales_may2.csv": {
+      "exists": true,
+      "size_mb": 534.65
+    }
+  },
+  "phase2_raw_product": {
+    "total_rows": 32226,
+    "columns": [
+      "Unnamed: 0",
+      "product_id",
+      "product_name",
+      "unit",
+      "product_type",
+      "brand_name",
+      "manufacturer_name",
+      "l0_category",
+      "l1_category",
+      "l2_category",
+      "l0_category_id",
+      "l1_category_id",
+      "l2_category_id"
+    ],
+    "unique_product_ids": 32226,
+    "duplicate_product_ids": 0,
+    "missing_values": {
+      "brand_name": 1438,
+      "manufacturer_name": 2416
+    },
+    "min_product_id": 1,
+    "max_product_id": 498814,
+    "has_unnamed_index_col": true
+  },
+  "phase3_clean_product": {
+    "total_rows": 32226,
+    "columns": [
+      "Unnamed: 0",
+      "product_id",
+      "product_name",
+      "unit",
+      "product_type",
+      "brand_name",
+      "manufacturer_name",
+      "l0_category",
+      "l1_category",
+      "l2_category",
+      "l0_category_id",
+      "l1_category_id",
+      "l2_category_id",
+      "fill_source"
+    ],
+    "unique_product_ids": 32226,
+    "duplicate_product_ids": 0,
+    "has_fill_source": true,
+    "missing_values": {},
+    "fill_source_distribution": {
+      "original": 29030,
+      "not_available_no_data": 1105,
+      "mapped_from_brand": 875,
+      "mapped_from_manufacturer": 753,
+      "extracted_then_mapped": 460,
+      "extracted_from_product_name": 3
+    },
+    "min_product_id": 1,
+    "max_product_id": 498814,
+    "raw_ids_missing_from_clean": 0,
+    "clean_ids_not_in_raw": 0,
+    "ids_in_both": 32226,
+    "raw_vs_clean_consistency": {
+      "product_name": {
+        "compared": 500,
+        "mismatches": 0
+      },
+      "l0_category": {
+        "compared": 500,
+        "mismatches": 0
+      },
+      "l1_category": {
+        "compared": 500,
+        "mismatches": 0
+      },
+      "l2_category": {
+        "compared": 500,
+        "mismatches": 0
+      }
+    }
+  },
+  "phase4_sales": {
+    "total_rows": 46706387,
+    "columns": [
+      "date_",
+      "city_name",
+      "order_id",
+      "cart_id",
+      "dim_customer_key",
+      "procured_quantity",
+      "unit_selling_price",
+      "total_discount_amount",
+      "product_id",
+      "total_weighted_landing_price",
+      "product_name",
+      "unit",
+      "product_type",
+      "brand_name",
+      "manufacturer_name",
+      "l0_category",
+      "l1_category",
+      "l2_category",
+      "l0_category_id",
+      "l1_category_id",
+      "l2_category_id"
+    ],
+    "unique_product_ids": 17304,
+    "missing_values": {
+      "total_weighted_landing_price": 79355,
+      "product_name": 532122,
+      "brand_name": 532122,
+      "manufacturer_name": 532122,
+      "l0_category": 532122,
+      "l1_category": 532122,
+      "l2_category": 532122
+    },
+    "date_min": "2022-04-01",
+    "date_max": "2022-07-10",
+    "unique_dates": 81,
+    "cities": [
+      "Bengaluru",
+      "Delhi",
+      "HR-NCR",
+      "Mumbai"
+    ]
+  },
+  "phase5_unmatched": {
+    "unmatched_rows": 532122,
+    "unmatched_unique_ids": 1496,
+    "detail_shape": "(1496, 19)",
+    "classification_summary": {
+      "B_low_frequency": 507,
+      "A_recurring_moderate_evidence": 433,
+      "A_recurring_strong_evidence": 272,
+      "D_unresolved_single_occurrence": 269,
+      "C_suspicious_anomalous": 15
+    },
+    "total_unmatched_qty": 629141.0,
+    "total_unmatched_revenue": 57839340.0,
+    "multi_city_ids": 773,
+    "multi_month_ids": 636
+  },
+  "phase6_crosscheck": {
+    "unmatched_ids_checked": 1496,
+    "found_in_raw_master": 0,
+    "found_in_clean_master": 0,
+    "not_found_anywhere": 1496,
+    "unmatched_min_id": 57,
+    "unmatched_max_id": 488730,
+    "above_raw_max": 0
+  },
+  "phase7_recoverability": {
+    "unmatched_direct_recovery": "NOT_POSSIBLE - IDs absent from all product masters",
+    "clean_master_brand_missing": 0,
+    "clean_master_mfg_missing": 0,
+    "known_unique_brands": 2193,
+    "fill_source_distribution": {
+      "original": 29030,
+      "not_available_no_data": 1105,
+      "mapped_from_brand": 875,
+      "mapped_from_manufacturer": 753,
+      "extracted_then_mapped": 460,
+      "extracted_from_product_name": 3
+    },
+    "category_consistency": {
+      "l0_to_l1_total_l0": 21,
+      "l0_to_l1_non_deterministic": 21,
+      "l1_to_l2_total_l1": 205,
+      "l1_to_l2_non_deterministic": 75,
+      "brand_to_mfg_total_brands": 2193,
+      "brand_to_mfg_non_deterministic": 262
+    }
+  }
+}

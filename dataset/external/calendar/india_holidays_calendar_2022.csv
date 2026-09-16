@@ -1,0 +1,102 @@
+date_,day_of_week,day_name,month,quarter,year,is_weekend,is_holiday_national,holiday_name_national,holiday_type,holiday_delhi,holiday_bengaluru,holiday_mumbai,holiday_hr_ncr,holiday_restricted,is_holiday_any,primary_holiday_name,season
+2022-04-01,4,Friday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-02,5,Saturday,4,2,2022,1,0,None,State,None,Ugadi,Gudi Padwa,None,None,1,Ugadi,Summer
+2022-04-03,6,Sunday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-04,0,Monday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-05,1,Tuesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-06,2,Wednesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-07,3,Thursday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-08,4,Friday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-09,5,Saturday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-10,6,Sunday,4,2,2022,1,0,None,Restricted,None,None,None,None,Rama Navami,1,Rama Navami,Summer
+2022-04-11,0,Monday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-12,1,Tuesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-13,2,Wednesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-14,3,Thursday,4,2,2022,0,1,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti,Gazetted,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti; Vaisakhi,None,1,Dr. B. R. Ambedkar's Jayanti; Mahavir Jayanti,Summer
+2022-04-15,4,Friday,4,2,2022,0,1,Good Friday,Gazetted,Good Friday,Good Friday,Good Friday,Good Friday,None,1,Good Friday,Summer
+2022-04-16,5,Saturday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-17,6,Sunday,4,2,2022,1,0,None,Restricted,None,None,None,None,Easter Sunday,1,Easter Sunday,Summer
+2022-04-18,0,Monday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-19,1,Tuesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-20,2,Wednesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-21,3,Thursday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-22,4,Friday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-23,5,Saturday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-24,6,Sunday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-25,0,Monday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-26,1,Tuesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-27,2,Wednesday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-28,3,Thursday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-29,4,Friday,4,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-04-30,5,Saturday,4,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-01,6,Sunday,5,2,2022,1,0,None,State,None,None,Maharashtra Day,None,None,1,Maharashtra Day,Summer
+2022-05-02,0,Monday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-03,1,Tuesday,5,2,2022,0,1,Id-ul-Fitr,Gazetted,Id-ul-Fitr,Id-ul-Fitr,Id-ul-Fitr,Akshay Tritiya; Bhagvan Shri Parshuram's Jayanti; Id-ul-Fitr,None,1,Id-ul-Fitr,Summer
+2022-05-04,2,Wednesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-05,3,Thursday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-06,4,Friday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-07,5,Saturday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-08,6,Sunday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-09,0,Monday,5,2,2022,0,0,None,Restricted,None,None,None,None,Guru Rabindranath's Birthday,1,Guru Rabindranath's Birthday,Summer
+2022-05-10,1,Tuesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-11,2,Wednesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-12,3,Thursday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-13,4,Friday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-14,5,Saturday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-15,6,Sunday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-16,0,Monday,5,2,2022,0,1,Buddha Purnima,Gazetted,Buddha Purnima,Buddha Purnima,Buddha Purnima,Buddha Purnima,None,1,Buddha Purnima,Summer
+2022-05-17,1,Tuesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-18,2,Wednesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-19,3,Thursday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-20,4,Friday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-21,5,Saturday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-22,6,Sunday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-23,0,Monday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-24,1,Tuesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-25,2,Wednesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-26,3,Thursday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-27,4,Friday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-28,5,Saturday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-29,6,Sunday,5,2,2022,1,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-30,0,Monday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-05-31,1,Tuesday,5,2,2022,0,0,None,None,None,None,None,None,None,0,None,Summer
+2022-06-01,2,Wednesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-02,3,Thursday,6,2,2022,0,0,None,State,None,None,None,Maharana Pratap's Jayanti,None,1,Maharana Pratap's Jayanti,Monsoon
+2022-06-03,4,Friday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-04,5,Saturday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-05,6,Sunday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-06,0,Monday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-07,1,Tuesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-08,2,Wednesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-09,3,Thursday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-10,4,Friday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-11,5,Saturday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-12,6,Sunday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-13,0,Monday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-14,1,Tuesday,6,2,2022,0,0,None,State,None,None,None,Sant Kabir's Jayanti,None,1,Sant Kabir's Jayanti,Monsoon
+2022-06-15,2,Wednesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-16,3,Thursday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-17,4,Friday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-18,5,Saturday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-19,6,Sunday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-20,0,Monday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-21,1,Tuesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-22,2,Wednesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-23,3,Thursday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-24,4,Friday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-25,5,Saturday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-26,6,Sunday,6,2,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-27,0,Monday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-28,1,Tuesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-29,2,Wednesday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-06-30,3,Thursday,6,2,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-01,4,Friday,7,3,2022,0,0,None,Restricted,None,None,None,None,Rath Yatra,1,Rath Yatra,Monsoon
+2022-07-02,5,Saturday,7,3,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-03,6,Sunday,7,3,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-04,0,Monday,7,3,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-05,1,Tuesday,7,3,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-06,2,Wednesday,7,3,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-07,3,Thursday,7,3,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-08,4,Friday,7,3,2022,0,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-09,5,Saturday,7,3,2022,1,0,None,None,None,None,None,None,None,0,None,Monsoon
+2022-07-10,6,Sunday,7,3,2022,1,1,Id-ul-Zuha (Bakrid),Gazetted,Id-ul-Zuha (Bakrid),Id-ul-Zuha (Bakrid),Id-ul-Zuha (Bakrid),Id-ul-Zuha (Bakrid),None,1,Id-ul-Zuha (Bakrid),Monsoon
