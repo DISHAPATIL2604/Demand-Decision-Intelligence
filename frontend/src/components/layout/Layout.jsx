@@ -12,6 +12,7 @@ const titleMap = {
   '/price-insights': 'Price Insights & Elasticity',
   '/evaluation': 'Model Performance Evaluation',
   '/assistant': 'AI Decision Assistant',
+  '/auth-test': 'Auth & User Management — Phase 2 Tester',
 };
 
 export default function Layout() {
