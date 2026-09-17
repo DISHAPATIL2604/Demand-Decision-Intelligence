@@ -1,0 +1,178 @@
+{
+  "feature_rows": 3380265,
+  "train_rows": 2917215,
+  "validation_rows": 463050,
+  "train_period": [
+    "2022-04-29 00:00:00",
+    "2022-06-30 00:00:00"
+  ],
+  "val_period": [
+    "2022-07-01 00:00:00",
+    "2022-07-10 00:00:00"
+  ],
+  "models_evaluated": [
+    {
+      "model": "Naive (Lag-1)",
+      "MAE": 5.948,
+      "RMSE": 45.6442,
+      "WAPE_pct": 32.43
+    },
+    {
+      "model": "Seasonal Naive (Lag-7)",
+      "MAE": 14.5525,
+      "RMSE": 105.8495,
+      "WAPE_pct": 79.35
+    },
+    {
+      "model": "Rolling Mean 7",
+      "MAE": 9.1043,
+      "RMSE": 70.4306,
+      "WAPE_pct": 49.64
+    },
+    {
+      "model": "Ridge Regression",
+      "MAE": 5.8639,
+      "RMSE": 41.0083,
+      "WAPE_pct": 31.97
+    },
+    {
+      "model": "HistGradientBoosting (GBT)",
+      "MAE": 7.4838,
+      "RMSE": 73.966,
+      "WAPE_pct": 40.81
+    }
+  ],
+  "best_model": "Ridge Regression",
+  "city_breakdown": [
+    {
+      "city_name": "Bengaluru",
+      "total_actual": 1768605.0,
+      "total_pred": 1461318.7982332783,
+      "mae": 6.521,
+      "total_abs_error": 684120.6579411576,
+      "wape_pct": 38.68
+    },
+    {
+      "city_name": "Delhi",
+      "total_actual": 3860573.0,
+      "total_pred": 3098038.5899253422,
+      "mae": 12.8049,
+      "total_abs_error": 1535303.304765418,
+      "wape_pct": 39.77
+    },
+    {
+      "city_name": "HR-NCR",
+      "total_actual": 2106691.0,
+      "total_pred": 1734093.5876505247,
+      "mae": 7.0235,
+      "total_abs_error": 898092.0723519654,
+      "wape_pct": 42.63
+    },
+    {
+      "city_name": "Mumbai",
+      "total_actual": 756445.0,
+      "total_pred": 683487.1376008164,
+      "mae": 3.1517,
+      "total_abs_error": 347849.4202347314,
+      "wape_pct": 45.98
+    }
+  ],
+  "sparsity_breakdown": [
+    {
+      "demand_type": "Regular / Frequent",
+      "series_count": 26015,
+      "total_actual": 8437729.0,
+      "total_abs_error": 3221728.1546687074,
+      "wape_pct": 38.18
+    },
+    {
+      "demand_type": "Sparse / Intermittent",
+      "series_count": 20290,
+      "total_actual": 54585.0,
+      "total_abs_error": 243637.30062456487,
+      "wape_pct": 446.34
+    }
+  ],
+  "top_error_series": [
+    {
+      "product_id": 19512,
+      "city_name": "Delhi",
+      "total_actual": 82158.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 66203.7997925268,
+      "mae": 6620.37997925268
+    },
+    {
+      "product_id": 19512,
+      "city_name": "HR-NCR",
+      "total_actual": 70765.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 54810.7997925268,
+      "mae": 5481.07997925268
+    },
+    {
+      "product_id": 12872,
+      "city_name": "Delhi",
+      "total_actual": 64005.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 48050.7997925268,
+      "mae": 4805.07997925268
+    },
+    {
+      "product_id": 391306,
+      "city_name": "Delhi",
+      "total_actual": 55890.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 39935.7997925268,
+      "mae": 3993.57997925268
+    },
+    {
+      "product_id": 12872,
+      "city_name": "HR-NCR",
+      "total_actual": 45410.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 29455.7997925268,
+      "mae": 2945.57997925268
+    },
+    {
+      "product_id": 391306,
+      "city_name": "HR-NCR",
+      "total_actual": 41539.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 25584.7997925268,
+      "mae": 2558.47997925268
+    },
+    {
+      "product_id": 3881,
+      "city_name": "Delhi",
+      "total_actual": 41372.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 25417.7997925268,
+      "mae": 2541.77997925268
+    },
+    {
+      "product_id": 333785,
+      "city_name": "Delhi",
+      "total_actual": 40958.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 25003.7997925268,
+      "mae": 2500.3799792526797
+    },
+    {
+      "product_id": 37083,
+      "city_name": "Bengaluru",
+      "total_actual": 39463.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 23508.7997925268,
+      "mae": 2350.8799792526797
+    },
+    {
+      "product_id": 3898,
+      "city_name": "Delhi",
+      "total_actual": 39057.0,
+      "total_pred": 15954.2002074732,
+      "total_abs_error": 23102.7997925268,
+      "mae": 2310.27997925268
+    }
+  ]
+}

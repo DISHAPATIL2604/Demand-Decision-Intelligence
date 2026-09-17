@@ -1,0 +1,37 @@
+date_,month_code,commodity_name,category,benchmark_price_usd,unit,source,source_url
+2022-04-01,2022M04,"Wheat, US HRW",Grains,495.28,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,"Wheat, US SRW",Grains,427.3068,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,"Rice, Thai 5%",Grains,431.0,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,Palm oil,Edible Oils,1682.74,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,Soybean oil,Edible Oils,1947.51,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,Sunflower oil,Edible Oils,2275.76,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,"Sugar, world",Sugar,0.4334,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,"Tea, Kolkata",Beverages,3.107,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-04-01,2022M04,Groundnuts,Oilseeds/Nuts,1443.75,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,"Wheat, US HRW",Grains,522.29,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,"Wheat, US SRW",Grains,438.3814,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,"Rice, Thai 5%",Grains,464.0,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,Palm oil,Edible Oils,1716.92,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,Soybean oil,Edible Oils,1962.88,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,Sunflower oil,Edible Oils,2079.3,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,"Sugar, world",Sugar,0.4288,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,"Tea, Kolkata",Beverages,2.8691,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-05-01,2022M05,Groundnuts,Oilseeds/Nuts,1482.95,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,"Wheat, US HRW",Grains,459.59,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,"Wheat, US SRW",Grains,379.8928,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,"Rice, Thai 5%",Grains,444.0,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,Palm oil,Edible Oils,1501.1,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,Soybean oil,Edible Oils,1751.76,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,Sunflower oil,Edible Oils,1884.59,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,"Sugar, world",Sugar,0.4178,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,"Tea, Kolkata",Beverages,3.2728,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-06-01,2022M06,Groundnuts,Oilseeds/Nuts,1607.14,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,"Wheat, US HRW",Grains,382.5,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,"Wheat, US SRW",Grains,316.6863,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,"Rice, Thai 5%",Grains,418.0,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,Palm oil,Edible Oils,1056.64,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,Soybean oil,Edible Oils,1533.4,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,Sunflower oil,Edible Oils,1556.87,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,"Sugar, world",Sugar,0.4028,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,"Tea, Kolkata",Beverages,3.5507,$/kg,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets
+2022-07-01,2022M07,Groundnuts,Oilseeds/Nuts,1621.09,$/mt,World Bank Commodity Pink Sheet,https://www.worldbank.org/en/research/commodity-markets

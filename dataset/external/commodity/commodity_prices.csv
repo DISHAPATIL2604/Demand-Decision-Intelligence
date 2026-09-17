@@ -1,1 +1,334 @@
 date_,commodity_name,category,price_per_kg,price_per_unit,market_name,source
+2022-04-15,Ghee (vanaspati),oil and fats,165.1,INR 165.10 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Ghee (vanaspati),oil and fats,163.55,INR 163.55 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Ghee (vanaspati),oil and fats,165.03,INR 165.03 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Ghee (vanaspati),oil and fats,147.97,INR 147.97 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils,pulses and nuts,111.76,INR 111.76 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils,pulses and nuts,110.0,INR 110.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils,pulses and nuts,110.13,INR 110.13 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils,pulses and nuts,105.23,INR 105.23 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (masur),pulses and nuts,110.0,INR 110.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (masur),pulses and nuts,109.84,INR 109.84 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (masur),pulses and nuts,109.87,INR 109.87 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (masur),pulses and nuts,108.06,INR 108.06 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (moong),pulses and nuts,115.9,INR 115.90 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (moong),pulses and nuts,113.0,INR 113.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (moong),pulses and nuts,115.9,INR 115.90 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (urad),pulses and nuts,127.17,INR 127.17 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (urad),pulses and nuts,125.42,INR 125.42 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (urad),pulses and nuts,125.77,INR 125.77 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (urad),pulses and nuts,116.26,INR 116.26 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Milk (pasteurized),milk and dairy,41.0,INR 41.00 per L,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Milk (pasteurized),milk and dairy,41.16,INR 41.16 per L,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Milk (pasteurized),milk and dairy,41.07,INR 41.07 per L,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Milk (pasteurized),milk and dairy,41.84,INR 41.84 per L,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (groundnut),oil and fats,205.72,INR 205.72 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (groundnut),oil and fats,216.13,INR 216.13 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (groundnut),oil and fats,220.17,INR 220.17 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (groundnut),oil and fats,217.55,INR 217.55 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (mustard),oil and fats,207.97,INR 207.97 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (mustard),oil and fats,199.45,INR 199.45 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (mustard),oil and fats,197.57,INR 197.57 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (mustard),oil and fats,193.65,INR 193.65 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (palm),oil and fats,167.31,INR 167.31 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (palm),oil and fats,171.1,INR 171.10 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (palm),oil and fats,167.8,INR 167.80 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (palm),oil and fats,144.23,INR 144.23 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (soybean),oil and fats,184.21,INR 184.21 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (soybean),oil and fats,183.1,INR 183.10 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (soybean),oil and fats,180.03,INR 180.03 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (soybean),oil and fats,174.19,INR 174.19 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (sunflower),oil and fats,190.72,INR 190.72 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (sunflower),oil and fats,192.32,INR 192.32 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (sunflower),oil and fats,192.4,INR 192.40 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (sunflower),oil and fats,179.74,INR 179.74 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Onions,vegetables and fruits,22.17,INR 22.17 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Onions,vegetables and fruits,17.71,INR 17.71 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Onions,vegetables and fruits,22.43,INR 22.43 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Onions,vegetables and fruits,24.9,INR 24.90 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Potatoes,cereals and tubers,22.69,INR 22.69 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Potatoes,cereals and tubers,23.48,INR 23.48 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Potatoes,cereals and tubers,24.0,INR 24.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Potatoes,cereals and tubers,19.81,INR 19.81 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Rice,cereals and tubers,44.48,INR 44.48 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Rice,cereals and tubers,44.65,INR 44.65 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Rice,cereals and tubers,43.2,INR 43.20 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Rice,cereals and tubers,45.94,INR 45.94 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Salt (iodised),miscellaneous food,15.0,INR 15.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Salt (iodised),miscellaneous food,15.16,INR 15.16 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Salt (iodised),miscellaneous food,16.4,INR 16.40 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Salt (iodised),miscellaneous food,18.87,INR 18.87 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar,miscellaneous food,46.17,INR 46.17 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar,miscellaneous food,49.94,INR 49.94 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar,miscellaneous food,47.73,INR 47.73 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar,miscellaneous food,42.45,INR 42.45 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar (jaggery/gur),miscellaneous food,70.0,INR 70.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar (jaggery/gur),miscellaneous food,68.06,INR 68.06 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tea (black),miscellaneous food,466.24,INR 466.24 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tea (black),miscellaneous food,470.32,INR 470.32 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tea (black),miscellaneous food,467.0,INR 467.00 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tea (black),miscellaneous food,395.32,INR 395.32 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tomatoes,vegetables and fruits,15.59,INR 15.59 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tomatoes,vegetables and fruits,65.9,INR 65.90 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tomatoes,vegetables and fruits,57.77,INR 57.77 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tomatoes,vegetables and fruits,17.74,INR 17.74 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat,cereals and tubers,35.93,INR 35.93 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat,cereals and tubers,36.55,INR 36.55 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat,cereals and tubers,34.97,INR 34.97 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat,cereals and tubers,36.48,INR 36.48 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat flour,cereals and tubers,38.48,INR 38.48 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat flour,cereals and tubers,39.58,INR 39.58 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat flour,cereals and tubers,41.23,INR 41.23 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat flour,cereals and tubers,42.26,INR 42.26 per KG,Bengaluru (Bengaluru),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Ghee (vanaspati),oil and fats,185.73,INR 185.73 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Ghee (vanaspati),oil and fats,190.58,INR 190.58 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Ghee (vanaspati),oil and fats,188.93,INR 188.93 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Ghee (vanaspati),oil and fats,175.84,INR 175.84 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils,pulses and nuts,102.67,INR 102.67 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils,pulses and nuts,102.97,INR 102.97 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils,pulses and nuts,105.37,INR 105.37 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils,pulses and nuts,103.29,INR 103.29 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (masur),pulses and nuts,93.63,INR 93.63 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (masur),pulses and nuts,96.87,INR 96.87 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (masur),pulses and nuts,95.63,INR 95.63 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (masur),pulses and nuts,92.06,INR 92.06 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (moong),pulses and nuts,103.1,INR 103.10 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (moong),pulses and nuts,105.03,INR 105.03 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (moong),pulses and nuts,99.9,INR 99.90 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (moong),pulses and nuts,99.61,INR 99.61 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (urad),pulses and nuts,109.5,INR 109.50 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (urad),pulses and nuts,114.58,INR 114.58 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (urad),pulses and nuts,118.73,INR 118.73 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (urad),pulses and nuts,115.84,INR 115.84 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Milk (pasteurized),milk and dairy,50.0,INR 50.00 per L,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Milk (pasteurized),milk and dairy,50.0,INR 50.00 per L,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Milk (pasteurized),milk and dairy,50.0,INR 50.00 per L,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Milk (pasteurized),milk and dairy,50.0,INR 50.00 per L,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (groundnut),oil and fats,205.6,INR 205.60 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (groundnut),oil and fats,215.61,INR 215.61 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (groundnut),oil and fats,208.27,INR 208.27 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (groundnut),oil and fats,205.87,INR 205.87 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (mustard),oil and fats,195.63,INR 195.63 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (mustard),oil and fats,197.77,INR 197.77 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (mustard),oil and fats,184.33,INR 184.33 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (mustard),oil and fats,182.26,INR 182.26 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (palm),oil and fats,167.33,INR 167.33 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (palm),oil and fats,175.0,INR 175.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (palm),oil and fats,162.57,INR 162.57 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (palm),oil and fats,145.13,INR 145.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (soybean),oil and fats,184.23,INR 184.23 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (soybean),oil and fats,196.03,INR 196.03 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (soybean),oil and fats,181.67,INR 181.67 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (soybean),oil and fats,162.45,INR 162.45 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (sunflower),oil and fats,198.97,INR 198.97 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (sunflower),oil and fats,215.94,INR 215.94 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (sunflower),oil and fats,218.47,INR 218.47 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (sunflower),oil and fats,208.58,INR 208.58 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Onions,vegetables and fruits,27.93,INR 27.93 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Onions,vegetables and fruits,24.65,INR 24.65 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Onions,vegetables and fruits,26.37,INR 26.37 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Onions,vegetables and fruits,27.87,INR 27.87 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Potatoes,cereals and tubers,17.2,INR 17.20 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Potatoes,cereals and tubers,19.74,INR 19.74 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Potatoes,cereals and tubers,23.8,INR 23.80 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Potatoes,cereals and tubers,26.77,INR 26.77 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Rice,cereals and tubers,31.67,INR 31.67 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Rice,cereals and tubers,32.0,INR 32.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Rice,cereals and tubers,32.1,INR 32.10 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Rice,cereals and tubers,32.32,INR 32.32 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Salt (iodised),miscellaneous food,22.83,INR 22.83 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Salt (iodised),miscellaneous food,23.52,INR 23.52 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Salt (iodised),miscellaneous food,24.0,INR 24.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Salt (iodised),miscellaneous food,24.0,INR 24.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar,miscellaneous food,41.03,INR 41.03 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar,miscellaneous food,40.48,INR 40.48 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar,miscellaneous food,40.13,INR 40.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar,miscellaneous food,41.13,INR 41.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar (jaggery/gur),miscellaneous food,51.17,INR 51.17 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar (jaggery/gur),miscellaneous food,52.94,INR 52.94 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar (jaggery/gur),miscellaneous food,53.43,INR 53.43 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar (jaggery/gur),miscellaneous food,57.13,INR 57.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tea (black),miscellaneous food,224.57,INR 224.57 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tea (black),miscellaneous food,225.39,INR 225.39 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tea (black),miscellaneous food,226.37,INR 226.37 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tea (black),miscellaneous food,231.94,INR 231.94 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tomatoes,vegetables and fruits,29.43,INR 29.43 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tomatoes,vegetables and fruits,32.87,INR 32.87 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tomatoes,vegetables and fruits,46.87,INR 46.87 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tomatoes,vegetables and fruits,41.77,INR 41.77 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat,cereals and tubers,25.0,INR 25.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat,cereals and tubers,25.0,INR 25.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat,cereals and tubers,22.86,INR 22.86 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat,cereals and tubers,24.0,INR 24.00 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat flour,cereals and tubers,26.3,INR 26.30 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat flour,cereals and tubers,27.13,INR 27.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat flour,cereals and tubers,27.6,INR 27.60 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat flour,cereals and tubers,28.13,INR 28.13 per KG,Delhi (Delhi),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Ghee (vanaspati),oil and fats,140.0,INR 140.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Ghee (vanaspati),oil and fats,142.67,INR 142.67 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Ghee (vanaspati),oil and fats,143.0,INR 143.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Ghee (vanaspati),oil and fats,143.0,INR 143.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils,pulses and nuts,101.0,INR 101.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils,pulses and nuts,101.89,INR 101.89 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils,pulses and nuts,102.0,INR 102.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils,pulses and nuts,102.0,INR 102.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (masur),pulses and nuts,89.0,INR 89.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (masur),pulses and nuts,89.89,INR 89.89 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (masur),pulses and nuts,90.0,INR 90.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (masur),pulses and nuts,90.0,INR 90.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (moong),pulses and nuts,93.0,INR 93.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (moong),pulses and nuts,94.79,INR 94.79 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (moong),pulses and nuts,95.0,INR 95.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (moong),pulses and nuts,95.0,INR 95.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (urad),pulses and nuts,89.0,INR 89.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (urad),pulses and nuts,89.89,INR 89.89 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (urad),pulses and nuts,90.0,INR 90.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (urad),pulses and nuts,90.0,INR 90.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Milk (pasteurized),milk and dairy,56.0,INR 56.00 per L,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Milk (pasteurized),milk and dairy,56.0,INR 56.00 per L,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Milk (pasteurized),milk and dairy,56.0,INR 56.00 per L,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Milk (pasteurized),milk and dairy,56.0,INR 56.00 per L,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (groundnut),oil and fats,176.0,INR 176.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (groundnut),oil and fats,184.89,INR 184.89 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (groundnut),oil and fats,186.0,INR 186.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (groundnut),oil and fats,186.0,INR 186.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (mustard),oil and fats,172.0,INR 172.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (mustard),oil and fats,181.78,INR 181.78 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (mustard),oil and fats,183.0,INR 183.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (mustard),oil and fats,183.0,INR 183.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (palm),oil and fats,143.0,INR 143.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (palm),oil and fats,144.78,INR 144.78 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (palm),oil and fats,145.0,INR 145.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (palm),oil and fats,145.0,INR 145.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (soybean),oil and fats,143.0,INR 143.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (soybean),oil and fats,145.67,INR 145.67 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (soybean),oil and fats,146.0,INR 146.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (soybean),oil and fats,146.0,INR 146.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (sunflower),oil and fats,153.0,INR 153.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (sunflower),oil and fats,158.33,INR 158.33 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (sunflower),oil and fats,159.0,INR 159.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (sunflower),oil and fats,159.0,INR 159.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Onions,vegetables and fruits,25.36,INR 25.36 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Onions,vegetables and fruits,20.0,INR 20.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Onions,vegetables and fruits,20.0,INR 20.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Onions,vegetables and fruits,20.0,INR 20.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Potatoes,cereals and tubers,21.07,INR 21.07 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Potatoes,cereals and tubers,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Potatoes,cereals and tubers,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Potatoes,cereals and tubers,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Rice,cereals and tubers,38.0,INR 38.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Rice,cereals and tubers,39.79,INR 39.79 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Rice,cereals and tubers,40.0,INR 40.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Rice,cereals and tubers,40.0,INR 40.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Salt (iodised),miscellaneous food,15.0,INR 15.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Salt (iodised),miscellaneous food,19.47,INR 19.47 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Salt (iodised),miscellaneous food,20.0,INR 20.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Salt (iodised),miscellaneous food,20.0,INR 20.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar,miscellaneous food,42.0,INR 42.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar,miscellaneous food,44.68,INR 44.68 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar,miscellaneous food,45.0,INR 45.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar,miscellaneous food,45.0,INR 45.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar (jaggery/gur),miscellaneous food,40.0,INR 40.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar (jaggery/gur),miscellaneous food,43.58,INR 43.58 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar (jaggery/gur),miscellaneous food,44.0,INR 44.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar (jaggery/gur),miscellaneous food,44.0,INR 44.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tea (black),miscellaneous food,297.0,INR 297.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tea (black),miscellaneous food,335.47,INR 335.47 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tea (black),miscellaneous food,340.0,INR 340.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tea (black),miscellaneous food,340.0,INR 340.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tomatoes,vegetables and fruits,27.5,INR 27.50 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tomatoes,vegetables and fruits,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tomatoes,vegetables and fruits,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tomatoes,vegetables and fruits,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat,cereals and tubers,24.0,INR 24.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat,cereals and tubers,24.89,INR 24.89 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat,cereals and tubers,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat,cereals and tubers,25.0,INR 25.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat flour,cereals and tubers,32.0,INR 32.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat flour,cereals and tubers,34.68,INR 34.68 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat flour,cereals and tubers,35.0,INR 35.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat flour,cereals and tubers,35.0,INR 35.00 per KG,Gurgaon (HR-NCR),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Ghee (vanaspati),oil and fats,180.1,INR 180.10 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Ghee (vanaspati),oil and fats,189.9,INR 189.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Ghee (vanaspati),oil and fats,197.93,INR 197.93 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Ghee (vanaspati),oil and fats,195.81,INR 195.81 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils,pulses and nuts,106.9,INR 106.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils,pulses and nuts,105.55,INR 105.55 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils,pulses and nuts,110.4,INR 110.40 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils,pulses and nuts,115.55,INR 115.55 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (masur),pulses and nuts,99.23,INR 99.23 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (masur),pulses and nuts,101.58,INR 101.58 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (masur),pulses and nuts,101.9,INR 101.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (masur),pulses and nuts,101.74,INR 101.74 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (moong),pulses and nuts,111.13,INR 111.13 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (moong),pulses and nuts,115.84,INR 115.84 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (moong),pulses and nuts,119.7,INR 119.70 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (moong),pulses and nuts,120.39,INR 120.39 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Lentils (urad),pulses and nuts,115.93,INR 115.93 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Lentils (urad),pulses and nuts,117.58,INR 117.58 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Lentils (urad),pulses and nuts,117.9,INR 117.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Lentils (urad),pulses and nuts,119.32,INR 119.32 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Milk (pasteurized),milk and dairy,50.03,INR 50.03 per L,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Milk (pasteurized),milk and dairy,50.13,INR 50.13 per L,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Milk (pasteurized),milk and dairy,50.0,INR 50.00 per L,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Milk (pasteurized),milk and dairy,49.94,INR 49.94 per L,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (groundnut),oil and fats,188.7,INR 188.70 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (groundnut),oil and fats,186.74,INR 186.74 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (groundnut),oil and fats,191.57,INR 191.57 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (groundnut),oil and fats,196.84,INR 196.84 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (mustard),oil and fats,194.27,INR 194.27 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (mustard),oil and fats,199.35,INR 199.35 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (mustard),oil and fats,196.47,INR 196.47 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (mustard),oil and fats,188.29,INR 188.29 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (palm),oil and fats,155.93,INR 155.93 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (palm),oil and fats,158.55,INR 158.55 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (palm),oil and fats,158.1,INR 158.10 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (palm),oil and fats,151.35,INR 151.35 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (soybean),oil and fats,169.1,INR 169.10 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (soybean),oil and fats,182.23,INR 182.23 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (soybean),oil and fats,189.93,INR 189.93 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (soybean),oil and fats,176.71,INR 176.71 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Oil (sunflower),oil and fats,188.47,INR 188.47 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Oil (sunflower),oil and fats,196.35,INR 196.35 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Oil (sunflower),oil and fats,199.5,INR 199.50 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Oil (sunflower),oil and fats,187.55,INR 187.55 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Onions,vegetables and fruits,21.67,INR 21.67 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Onions,vegetables and fruits,19.26,INR 19.26 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Onions,vegetables and fruits,21.9,INR 21.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Onions,vegetables and fruits,23.87,INR 23.87 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Potatoes,cereals and tubers,24.47,INR 24.47 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Potatoes,cereals and tubers,26.68,INR 26.68 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Potatoes,cereals and tubers,29.9,INR 29.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Potatoes,cereals and tubers,35.9,INR 35.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Rice,cereals and tubers,35.23,INR 35.23 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Rice,cereals and tubers,34.42,INR 34.42 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Rice,cereals and tubers,34.3,INR 34.30 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Rice,cereals and tubers,34.06,INR 34.06 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Salt (iodised),miscellaneous food,23.9,INR 23.90 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Salt (iodised),miscellaneous food,24.81,INR 24.81 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Salt (iodised),miscellaneous food,25.0,INR 25.00 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Salt (iodised),miscellaneous food,25.0,INR 25.00 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar,miscellaneous food,42.57,INR 42.57 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar,miscellaneous food,42.06,INR 42.06 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar,miscellaneous food,41.53,INR 41.53 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar,miscellaneous food,40.97,INR 40.97 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Sugar (jaggery/gur),miscellaneous food,67.03,INR 67.03 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Sugar (jaggery/gur),miscellaneous food,64.45,INR 64.45 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Sugar (jaggery/gur),miscellaneous food,64.5,INR 64.50 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Sugar (jaggery/gur),miscellaneous food,64.68,INR 64.68 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tea (black),miscellaneous food,319.03,INR 319.03 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tea (black),miscellaneous food,315.81,INR 315.81 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tea (black),miscellaneous food,315.0,INR 315.00 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tea (black),miscellaneous food,313.87,INR 313.87 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Tomatoes,vegetables and fruits,33.37,INR 33.37 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Tomatoes,vegetables and fruits,58.06,INR 58.06 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Tomatoes,vegetables and fruits,72.77,INR 72.77 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Tomatoes,vegetables and fruits,37.55,INR 37.55 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat,cereals and tubers,35.17,INR 35.17 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat,cereals and tubers,36.35,INR 36.35 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat,cereals and tubers,40.37,INR 40.37 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat,cereals and tubers,40.29,INR 40.29 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-04-15,Wheat flour,cereals and tubers,49.87,INR 49.87 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-05-15,Wheat flour,cereals and tubers,53.0,INR 53.00 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-06-15,Wheat flour,cereals and tubers,60.4,INR 60.40 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India
+2022-07-15,Wheat flour,cereals and tubers,59.29,INR 59.29 per KG,Mumbai (Mumbai),UN WFP / Ministry of Consumer Affairs India

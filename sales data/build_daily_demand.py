@@ -2,6 +2,8 @@ import pandas as pd
 import os
 
 INPUT = "dataset/processed/sales_product_master_imputed.csv"
+if not os.path.exists(INPUT):
+    INPUT = "dataset/cleaned/sales_product_master.csv"
 OUTPUT = "dataset/processed/daily_product_demand.csv"
 
 USECOLS = [
