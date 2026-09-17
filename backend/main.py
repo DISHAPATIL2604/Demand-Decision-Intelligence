@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
-from backend.api import health, auth, demand
+from backend.api import health, auth, demand, products, upload
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -38,6 +38,17 @@ app.include_router(
     tags=["Demand Intelligence"]
 )
 
+app.include_router(
+    products.router,
+    prefix=f"{settings.API_V1_STR}/products",
+    tags=["Products"]
+)
+
+app.include_router(
+    upload.router,
+    prefix=f"{settings.API_V1_STR}/upload",
+    tags=["Data Upload"]
+)
 
 @app.get("/")
 def root():
