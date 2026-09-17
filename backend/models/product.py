@@ -28,3 +28,4 @@ class Product(Base):
     inventory_recommendations = relationship("InventoryRecommendation", back_populates="product", cascade="all, delete-orphan")
     forecast_items = relationship("ForecastItem", back_populates="product", cascade="all, delete-orphan")
     anomalies = relationship("AnomalyAlert", back_populates="product", cascade="all, delete-orphan")
+    commodity_mapping = relationship("ProductCommodityMapping", back_populates="product", uselist=False, cascade="all, delete-orphan")

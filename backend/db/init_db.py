@@ -10,7 +10,7 @@ from backend.models import (
     SalesTransaction, DailyProductDemand, ForecastRun,
     ForecastItem, ForecastEvaluation, InventoryState,
     InventoryRecommendation, AnomalyAlert, ChatSession,
-    ChatMessage, AuditLog
+    ChatMessage, AuditLog, MarketPriceObservation, ProductCommodityMapping
 )
 from backend.core.security import get_password_hash
 

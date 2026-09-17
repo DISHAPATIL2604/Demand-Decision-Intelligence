@@ -1,9 +1,9 @@
 model,MAE,RMSE,WAPE_pct
-Naive (Lag-1),134.9939,261.0935,26.9
-Seasonal Naive (Lag-7),130.1737,245.2926,25.94
-Moving Average (7 Days),105.0257,200.7986,20.93
-Moving Average (14 Days),101.6585,194.9029,20.26
-Moving Average (28 Days),99.8161,190.6422,19.89
-Prophet (Weekly Seasonality),94.0475,177.5753,18.74
-Ridge Regression,97.8066,186.7519,19.49
-HistGradientBoosting (GBT),96.9549,190.0272,19.32
+Naive (Lag-1),5.948,45.6442,32.43
+Seasonal Naive (Lag-7),14.5525,105.8495,79.35
+Moving Average (7 Days),9.1043,70.4306,49.64
+Moving Average (14 Days),11.6753,79.5168,63.66
+Moving Average (28 Days),9.048,53.1004,49.34
+Prophet (Weekly Seasonality),14.1187,91.2133,76.98
+Ridge Regression,5.8639,41.0083,31.97
+HistGradientBoosting (GBT),7.4401,74.4733,40.57

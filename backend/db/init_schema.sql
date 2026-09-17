@@ -161,6 +161,44 @@ CREATE TABLE IF NOT EXISTS forecast_runs (
 CREATE INDEX IF NOT EXISTS idx_forecast_runs_status ON forecast_runs(status);
 
 -- -----------------------------------------------------------------------------
+-- 8A. MARKET PRICES AND EXPLICIT PRODUCT-TO-COMMODITY MAPPINGS
+-- Observations retain the source's price type; do not infer retail from mandi.
+-- Empty geography/variety is stored as '' so the uniqueness constraint works.
+-- -----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS market_price_observations (
+    id BIGSERIAL PRIMARY KEY,
+    source VARCHAR(40) NOT NULL,
+    commodity VARCHAR(200) NOT NULL,
+    variety VARCHAR(200) NOT NULL DEFAULT '',
+    market VARCHAR(200) NOT NULL DEFAULT '',
+    state VARCHAR(100) NOT NULL DEFAULT '',
+    district VARCHAR(100) NOT NULL DEFAULT '',
+    price_date DATE NOT NULL,
+    min_price DOUBLE PRECISION,
+    max_price DOUBLE PRECISION,
+    modal_price DOUBLE PRECISION,
+    retail_price DOUBLE PRECISION,
+    wholesale_price DOUBLE PRECISION,
+    unit VARCHAR(60) NOT NULL DEFAULT '',
+    raw_source_reference TEXT,
+    fetched_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    CONSTRAINT uq_market_price_observation UNIQUE (source, commodity, variety, market, state, district, price_date)
+);
+CREATE INDEX IF NOT EXISTS idx_market_price_commodity_date ON market_price_observations(commodity, price_date);
+CREATE INDEX IF NOT EXISTS idx_market_price_latest ON market_price_observations(source, commodity, price_date DESC);
+
+CREATE TABLE IF NOT EXISTS product_commodity_mappings (
+    id SERIAL PRIMARY KEY,
+    product_id BIGINT NOT NULL UNIQUE REFERENCES products(product_id) ON DELETE CASCADE,
+    commodity VARCHAR(200) NOT NULL,
+    mapping_method VARCHAR(60) NOT NULL DEFAULT 'controlled_rule',
+    mapping_reason TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- -----------------------------------------------------------------------------
 -- 9. FORECASTS (PREDICTED VALUES) TABLE
 -- -----------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS forecasts (

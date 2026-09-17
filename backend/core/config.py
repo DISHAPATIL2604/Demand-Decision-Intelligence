@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
 import os
 from pathlib import Path
 
@@ -26,6 +26,14 @@ class Settings(BaseSettings):
     
     # Database
     DATABASE_URL: str = "postgresql+psycopg2://postgres:yash@localhost:5432/demand_decision_db"
+
+    # Market data. Set MANDI_API_KEY and (if the catalog changes) MANDI_RESOURCE_ID
+    # in backend/.env; neither value is exposed by the API.
+    MANDI_API_KEY: Optional[str] = None
+    MANDI_RESOURCE_ID: str = "9ef84268-d588-465a-a308-a864a43d0070"
+    MANDI_API_BASE_URL: str = "https://api.data.gov.in/resource"
+    MARKET_SPIKE_ZSCORE: float = 3.0
+    MARKET_TREND_VOLATILITY_MULTIPLIER: float = 1.0
 
     class Config:
         case_sensitive = True
