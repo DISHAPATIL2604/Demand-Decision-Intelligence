@@ -1,0 +1,399 @@
+/* ────────────────────────────────────────────────────────────
+   Auth Test Page — AuthTestPage.css
+   Dark-first, premium SaaS aesthetic
+──────────────────────────────────────────────────────────── */
+
+/* Root */
+.atb-root {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+/* ── Hero ──────────────────────────────────────────────── */
+.atb-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f2e4d 100%);
+  border: 1px solid #1e40af44;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.atb-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(59,130,246,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.atb-hero-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.atb-hero-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.25rem;
+}
+.atb-hero-sub {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.atb-hero-sub code {
+  background: rgba(99,102,241,0.2);
+  color: #a5b4fc;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.atb-phase-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* ── Checklist ─────────────────────────────────────────── */
+.atb-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.atb-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-surface, #111827);
+  border: 1px solid #1e40af33;
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+.atb-check-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #1e293b;
+  color: #475569;
+  flex-shrink: 0;
+}
+.atb-check-dot--done {
+  background: rgba(16,185,129,0.2);
+  color: #34d399;
+  border: 1px solid rgba(16,185,129,0.4);
+}
+
+/* ── Token Banner ──────────────────────────────────────── */
+.atb-token-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.3);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.atb-token-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #34d399;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.atb-token-value {
+  font-size: 0.78rem;
+  color: #6ee7b7;
+  background: rgba(0,0,0,0.25);
+  padding: 3px 10px;
+  border-radius: 6px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.atb-token-clear {
+  background: rgba(239,68,68,0.15);
+  border: 1px solid rgba(239,68,68,0.35);
+  color: #f87171;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.atb-token-clear:hover { background: rgba(239,68,68,0.25); }
+
+/* ── 3-column grid ─────────────────────────────────────── */
+.atb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Panel card ────────────────────────────────────────── */
+.atb-panel {
+  background: var(--bg-surface, #111827);
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.atb-panel:hover {
+  border-color: #334155;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.atb-panel-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid #1e293b;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+.atb-panel-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.atb-panel-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.3rem;
+}
+.atb-panel-endpoint {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.atb-method {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.atb-method--post {
+  background: rgba(16,185,129,0.2);
+  color: #34d399;
+  border: 1px solid rgba(16,185,129,0.4);
+}
+.atb-method--get {
+  background: rgba(59,130,246,0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59,130,246,0.4);
+}
+
+/* ── Form ──────────────────────────────────────────────── */
+.atb-form {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border-bottom: 1px solid #1e293b;
+}
+.atb-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.atb-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.atb-auto-tag {
+  font-size: 0.7rem;
+  background: rgba(16,185,129,0.15);
+  color: #34d399;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(16,185,129,0.3);
+}
+.atb-input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.atb-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+.atb-textarea { resize: vertical; min-height: 90px; font-size: 0.78rem; }
+.atb-input::placeholder { color: #475569; }
+
+/* Demo creds chip row */
+.atb-demo-creds {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.atb-demo-label { font-size: 0.75rem; color: #475569; }
+.atb-demo-chip {
+  font-size: 0.75rem;
+  background: rgba(99,102,241,0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99,102,241,0.35);
+  padding: 3px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.atb-demo-chip:hover { background: rgba(99,102,241,0.3); }
+
+/* ── Buttons ───────────────────────────────────────────── */
+.atb-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.18s;
+  width: 100%;
+  letter-spacing: 0.01em;
+}
+.atb-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.atb-btn--register {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(139,92,246,0.35);
+}
+.atb-btn--register:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(139,92,246,0.45);
+}
+
+.atb-btn--login {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(59,130,246,0.35);
+}
+.atb-btn--login:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59,130,246,0.45);
+}
+
+.atb-btn--me {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(16,185,129,0.35);
+}
+.atb-btn--me:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(16,185,129,0.45);
+}
+
+/* ── Response box ──────────────────────────────────────── */
+.atb-response {
+  margin: 0;
+  flex: 1;
+}
+.atb-response-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  background: #0a0f1a;
+  border-top: 1px solid #1e293b;
+}
+.atb-response-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475569;
+}
+.atb-response-body {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  background: #0a0f1a;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  min-height: 100px;
+  max-height: 240px;
+  overflow-y: auto;
+  font-family: "Fira Code", "Cascadia Code", ui-monospace, monospace;
+}
+.atb-response-empty { color: #334155; font-style: italic; }
+
+/* ── Status badge ──────────────────────────────────────── */
+.atb-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.atb-badge--ok  { background: rgba(16,185,129,0.2); color: #34d399; border: 1px solid rgba(16,185,129,0.4); }
+.atb-badge--err { background: rgba(239,68,68,0.2);  color: #f87171; border: 1px solid rgba(239,68,68,0.4); }
+
+/* ── Footer ────────────────────────────────────────────── */
+.atb-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.atb-docs-link {
+  color: #60a5fa;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.atb-docs-link:hover {
+  background: rgba(59,130,246,0.2);
+  border-color: rgba(59,130,246,0.5);
+  transform: translateY(-1px);
+}
