@@ -28,7 +28,7 @@ def get_inventory_recommendations(
     if not sample_file.exists():
         raise HTTPException(status_code=404, detail="Inventory recommendations dataset not found.")
         
-    df = pd.read_csv(sample_file)
+    df = pd.read_csv(sample_file).fillna(0)
     
     if product_id:
         df = df[df["product_id"].astype(str) == str(product_id)]
