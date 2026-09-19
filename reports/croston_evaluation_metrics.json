@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-09-19T13:56:56Z",
+  "total_series": 46305,
+  "category_distribution": {
+    "Intermittent": 31973,
+    "Smooth": 8595,
+    "Lumpy": 5215,
+    "Erratic": 522
+  },
+  "segment_results": {
+    "All SKUs": [
+      {
+        "model": "Naive (Lag-1)",
+        "MAE": 18.34,
+        "RMSE": 125.2801,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Moving Average (7 Days)",
+        "MAE": 18.34,
+        "RMSE": 125.2801,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Historical Mean",
+        "MAE": 9.9335,
+        "RMSE": 53.1982,
+        "WAPE_pct": 54.16,
+        "Zero_Days_Overprediction": 1.4833
+      },
+      {
+        "model": "Ridge Regression",
+        "MAE": 6.141,
+        "RMSE": 45.7142,
+        "WAPE_pct": 33.48,
+        "Zero_Days_Overprediction": 0.7654
+      },
+      {
+        "model": "Croston's Method (Classic)",
+        "MAE": 8.1602,
+        "RMSE": 39.6534,
+        "WAPE_pct": 44.49,
+        "Zero_Days_Overprediction": 1.5208
+      },
+      {
+        "model": "SBA (Syntetos-Boylan Approximation)",
+        "MAE": 8.4504,
+        "RMSE": 41.6612,
+        "WAPE_pct": 46.08,
+        "Zero_Days_Overprediction": 1.4448
+      }
+    ],
+    "Intermittent & Lumpy SKUs (ADI >= 1.32)": [
+      {
+        "model": "Naive (Lag-1)",
+        "MAE": 5.7426,
+        "RMSE": 44.8716,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Moving Average (7 Days)",
+        "MAE": 5.7426,
+        "RMSE": 44.8716,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Historical Mean",
+        "MAE": 4.9484,
+        "RMSE": 29.9898,
+        "WAPE_pct": 86.17,
+        "Zero_Days_Overprediction": 1.2519
+      },
+      {
+        "model": "Ridge Regression",
+        "MAE": 2.71,
+        "RMSE": 17.374,
+        "WAPE_pct": 47.19,
+        "Zero_Days_Overprediction": 0.7551
+      },
+      {
+        "model": "Croston's Method (Classic)",
+        "MAE": 4.4469,
+        "RMSE": 25.1638,
+        "WAPE_pct": 77.44,
+        "Zero_Days_Overprediction": 1.2792
+      },
+      {
+        "model": "SBA (Syntetos-Boylan Approximation)",
+        "MAE": 4.4728,
+        "RMSE": 25.4881,
+        "WAPE_pct": 77.89,
+        "Zero_Days_Overprediction": 1.2152
+      }
+    ],
+    "Smooth SKUs (Fast-Moving)": [
+      {
+        "model": "Naive (Lag-1)",
+        "MAE": 72.3354,
+        "RMSE": 274.9249,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Moving Average (7 Days)",
+        "MAE": 72.3354,
+        "RMSE": 274.9249,
+        "WAPE_pct": 100.0,
+        "Zero_Days_Overprediction": 0.0
+      },
+      {
+        "model": "Historical Mean",
+        "MAE": 30.6172,
+        "RMSE": 104.8761,
+        "WAPE_pct": 42.33,
+        "Zero_Days_Overprediction": 27.9344
+      },
+      {
+        "model": "Ridge Regression",
+        "MAE": 20.5913,
+        "RMSE": 99.2811,
+        "WAPE_pct": 28.47,
+        "Zero_Days_Overprediction": 1.94
+      },
+      {
+        "model": "Croston's Method (Classic)",
+        "MAE": 23.7034,
+        "RMSE": 74.697,
+        "WAPE_pct": 32.77,
+        "Zero_Days_Overprediction": 29.5907
+      },
+      {
+        "model": "SBA (Syntetos-Boylan Approximation)",
+        "MAE": 25.1685,
+        "RMSE": 79.9854,
+        "WAPE_pct": 34.79,
+        "Zero_Days_Overprediction": 28.1112
+      }
+    ]
+  },
+  "key_findings": {
+    "wape_improvement_vs_ma7_pct": 22.11,
+    "wape_improvement_vs_naive_pct": 22.11,
+    "zero_day_bias_reduction_pct": 0.0,
+    "sba_wape_intermittent": 77.89,
+    "ma7_wape_intermittent": 100.0,
+    "naive_wape_intermittent": 100.0
+  }
+}
