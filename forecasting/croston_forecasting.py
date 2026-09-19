@@ -280,6 +280,21 @@ def run_croston_pipeline():
     val_merged["pred_ridge"] = np.clip(ridge.predict(val_lags[["lag1", "lag7"]]), 0, None)
     
     # =========================================================================
+    # HYBRID MODEL ROUTER (Connecting Smooth ML with Intermittent SBA)
+    # =========================================================================
+    print("\n[STEP 4b] Routing series through Hybrid Model Decision Router...")
+    # Routing Rule:
+    # 1. Smooth & Erratic (Fast-Moving High Vol) -> Machine Learning Regression
+    # 2. Intermittent & Lumpy (Slow-Moving Zero-Sales) -> Syntetos-Boylan (SBA)
+    val_merged["pred_hybrid"] = np.where(
+        val_merged["demand_category"].isin(["Smooth", "Erratic"]),
+        val_merged["pred_ridge"],
+        val_merged["pred_sba"]
+    )
+    print("  -> Fast-Moving series routed to: ML Regression (Ridge / GBDT)")
+    print("  -> Intermittent / Lumpy series routed to: SBA (Syntetos-Boylan Approximation)")
+    
+    # =========================================================================
     # EVALUATION BY SEGMENT
     # =========================================================================
     print("\n[5/5] Computing Performance Metrics across Segments...")
@@ -291,6 +306,7 @@ def run_croston_pipeline():
         ("Ridge Regression", "pred_ridge"),
         ("Croston's Method (Classic)", "pred_croston"),
         ("SBA (Syntetos-Boylan Approximation)", "pred_sba"),
+        ("Hybrid (ML Head + SBA Tail)", "pred_hybrid"),
     ]
     
     segments = {
@@ -355,22 +371,47 @@ def run_croston_pipeline():
         json.dump(output_metrics, f, indent=2)
     print(f"\nSaved metrics JSON: {metrics_json_path}")
     
+    all_skus_df = pd.DataFrame(segment_results["All SKUs"])
+    hybrid_row = all_skus_df[all_skus_df["model"] == "Hybrid (ML Head + SBA Tail)"].iloc[0]
+    
     # Update model_comparison.csv
     model_comp_path = reports_dir / "model_comparison.csv"
     if model_comp_path.exists():
         df_curr_comp = pd.read_csv(model_comp_path)
-        # Append SBA on Intermittent SKUs benchmark
         new_rows = [
             {"model": "Croston (Classic, Intermittent)", "MAE": interm_df.loc[interm_df['model'] == "Croston's Method (Classic)", 'MAE'].values[0], "RMSE": interm_df.loc[interm_df['model'] == "Croston's Method (Classic)", 'RMSE'].values[0], "WAPE_pct": interm_df.loc[interm_df['model'] == "Croston's Method (Classic)", 'WAPE_pct'].values[0]},
             {"model": "SBA (Syntetos-Boylan, Intermittent)", "MAE": interm_df.loc[interm_df['model'] == "SBA (Syntetos-Boylan Approximation)", 'MAE'].values[0], "RMSE": interm_df.loc[interm_df['model'] == "SBA (Syntetos-Boylan Approximation)", 'RMSE'].values[0], "WAPE_pct": interm_df.loc[interm_df['model'] == "SBA (Syntetos-Boylan Approximation)", 'WAPE_pct'].values[0]},
+            {"model": "Hybrid (ML Head + SBA Tail)", "MAE": hybrid_row['MAE'], "RMSE": hybrid_row['RMSE'], "WAPE_pct": hybrid_row['WAPE_pct']},
         ]
         # Avoid duplicate models
         existing_models = set(df_curr_comp["model"])
         for r in new_rows:
             if r["model"] not in existing_models:
                 df_curr_comp = pd.concat([df_curr_comp, pd.DataFrame([r])], ignore_index=True)
+            else:
+                # Update with latest numbers
+                idx = df_curr_comp.index[df_curr_comp["model"] == r["model"]].tolist()[0]
+                df_curr_comp.at[idx, "MAE"] = r["MAE"]
+                df_curr_comp.at[idx, "RMSE"] = r["RMSE"]
+                df_curr_comp.at[idx, "WAPE_pct"] = r["WAPE_pct"]
         df_curr_comp.to_csv(model_comp_path, index=False)
-        print(f"Updated {model_comp_path} with Croston & SBA benchmarks.")
+        print(f"Updated {model_comp_path} with Croston, SBA, and Hybrid benchmarks.")
+
+    # Update forecast_results.csv with pred_croston, pred_sba, pred_hybrid
+    results_path = reports_dir / "forecast_results.csv"
+    if results_path.exists():
+        print("Merging Hybrid and SBA predictions into forecast_results.csv...")
+        df_res = pd.read_csv(results_path)
+        # Match on product_id, city_name, date_
+        merge_cols = ["date_", "product_id", "city_name"]
+        val_sub = val_merged[merge_cols + ["pred_croston", "pred_sba", "pred_hybrid"]].copy()
+        val_sub["date_"] = val_sub["date_"].dt.strftime("%Y-%m-%d")
+        df_res["date_"] = pd.to_datetime(df_res["date_"]).dt.strftime("%Y-%m-%d")
+        df_res["product_id"] = df_res["product_id"].astype(str)
+        val_sub["product_id"] = val_sub["product_id"].astype(str)
+        df_res = df_res.merge(val_sub, on=merge_cols, how="left")
+        df_res.to_csv(results_path, index=False)
+        print(f"Saved enriched forecast results to: {results_path}")
 
     # Generate Markdown Report
     report_md = rf"""# Croston's Method & Intermittent Demand Evaluation Report

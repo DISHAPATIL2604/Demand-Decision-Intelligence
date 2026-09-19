@@ -54,6 +54,7 @@ Validation performance on the subset of series with $ADI \ge 1.32$:
 | **Ridge Regression** | 2.7100 | 17.3740 | 47.19% | 0.7551 |
 | **Croston's Method (Classic)** | 4.4469 | 25.1638 | 77.44% | 1.2792 |
 | **SBA (Syntetos-Boylan Approximation)** | 4.4728 | 25.4881 | 77.89% | 1.2152 |
+| **Hybrid (ML Head + SBA Tail)** | 4.4728 | 25.4881 | 77.89% | 1.2152 |
 
 ---
 

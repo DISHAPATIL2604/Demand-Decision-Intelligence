@@ -9,3 +9,4 @@ Ridge Regression,97.8066,186.7519,19.49
 HistGradientBoosting (GBT),96.9549,190.0272,19.32
 "Croston (Classic, Intermittent)",4.4469,25.1638,77.44
 "SBA (Syntetos-Boylan, Intermittent)",4.4728,25.4881,77.89
+Hybrid (ML Head + SBA Tail),7.5568,48.6734,41.2

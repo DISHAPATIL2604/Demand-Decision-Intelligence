@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-19T13:56:56Z",
+  "timestamp": "2026-09-19T14:38:41Z",
   "total_series": 46305,
   "category_distribution": {
     "Intermittent": 31973,
@@ -50,6 +50,13 @@
         "RMSE": 41.6612,
         "WAPE_pct": 46.08,
         "Zero_Days_Overprediction": 1.4448
+      },
+      {
+        "model": "Hybrid (ML Head + SBA Tail)",
+        "MAE": 7.5568,
+        "RMSE": 48.6734,
+        "WAPE_pct": 41.2,
+        "Zero_Days_Overprediction": 1.2214
       }
     ],
     "Intermittent & Lumpy SKUs (ADI >= 1.32)": [
@@ -90,6 +97,13 @@
       },
       {
         "model": "SBA (Syntetos-Boylan Approximation)",
+        "MAE": 4.4728,
+        "RMSE": 25.4881,
+        "WAPE_pct": 77.89,
+        "Zero_Days_Overprediction": 1.2152
+      },
+      {
+        "model": "Hybrid (ML Head + SBA Tail)",
         "MAE": 4.4728,
         "RMSE": 25.4881,
         "WAPE_pct": 77.89,
@@ -138,6 +152,13 @@
         "RMSE": 79.9854,
         "WAPE_pct": 34.79,
         "Zero_Days_Overprediction": 28.1112
+      },
+      {
+        "model": "Hybrid (ML Head + SBA Tail)",
+        "MAE": 20.5913,
+        "RMSE": 99.2811,
+        "WAPE_pct": 28.47,
+        "Zero_Days_Overprediction": 1.94
       }
     ]
   },
