@@ -114,7 +114,17 @@ class DemandAnomalyDetector:
 
         # Choose valid expected demand column
         if self.expected_demand_col not in df_forecast.columns:
-            fallback_cols = ["pred_prophet", "pred_hist_gbt", "pred_ridge", "pred_ma_7"]
+            fallback_cols = [
+                "pred_hybrid",
+                "pred_ensemble",
+                "pred_lgb",
+                "pred_xgb",
+                "pred_hist_gbt",
+                "pred_prophet",
+                "pred_ridge",
+                "pred_sba",
+                "pred_ma_7",
+            ]
             found = False
             for col in fallback_cols:
                 if col in df_forecast.columns:

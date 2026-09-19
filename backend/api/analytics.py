@@ -1,33 +1,47 @@
 """
-<<<<<<< HEAD
-Analytics API Router
-Project: Demand-Decision-Intelligence
-"""
-
-import json
-from pathlib import Path
-from fastapi import APIRouter, HTTPException
-=======
 Analytics & Anomaly Detection API Router
 Project: Demand-Decision-Intelligence
 Location: backend/api/analytics.py
 
 Endpoints:
-  GET /api/v1/analytics/anomalies - Returns active CRITICAL demand anomaly alerts
-  GET /api/v1/analytics/summary   - Returns summary KPI metrics for detected anomalies
+  GET /api/v1/analytics/eda-summary - Returns high-level EDA metrics
+  GET /api/v1/analytics/anomalies   - Returns active CRITICAL demand anomaly alerts
+  GET /api/v1/analytics/summary     - Returns summary KPI metrics for detected anomalies
 """
 
+import json
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 from fastapi import APIRouter, Query, HTTPException, status
 import pandas as pd
->>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
 
 router = APIRouter()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-<<<<<<< HEAD
 REPORTS_DIR = PROJECT_ROOT / "reports"
+ANOMALY_CSV_PATH = REPORTS_DIR / "demand_anomalies.csv"
+
+
+def load_anomalies_dataframe() -> pd.DataFrame:
+    """Reads the generated demand anomalies CSV report."""
+    if not ANOMALY_CSV_PATH.exists():
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=(
+                "Demand anomaly deliverables have not been generated yet. "
+                "Run 'python analytics/anomaly_detection_engine.py' first."
+            ),
+        )
+
+    try:
+        df = pd.read_csv(ANOMALY_CSV_PATH)
+        return df
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to read anomaly deliverables: {str(e)}",
+        )
+
 
 @router.get("/eda-summary")
 def get_eda_summary():
@@ -54,29 +68,7 @@ def get_eda_summary():
     return {
         "status": "success",
         "data": data
-=======
-ANOMALY_CSV_PATH = PROJECT_ROOT / "reports" / "demand_anomalies.csv"
-
-
-def load_anomalies_dataframe() -> pd.DataFrame:
-    """Reads the generated demand anomalies CSV report."""
-    if not ANOMALY_CSV_PATH.exists():
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=(
-                "Demand anomaly deliverables have not been generated yet. "
-                "Run 'python analytics/anomaly_detection_engine.py' first."
-            ),
-        )
-
-    try:
-        df = pd.read_csv(ANOMALY_CSV_PATH)
-        return df
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to read anomaly deliverables: {str(e)}",
-        )
+    }
 
 
 @router.get(
@@ -96,23 +88,6 @@ def get_anomalies(
 ) -> Dict[str, Any]:
     """
     Returns the latest ACTIVE CRITICAL alerts (or filtered by query params).
-    Adheres strictly to the required API contract:
-    {
-      "count": N,
-      "alerts": [
-        {
-          "date_": "YYYY-MM-DD",
-          "product_id": "...",
-          "city_name": "...",
-          "actual_demand": float,
-          "expected_demand": float,
-          "anomaly_score": float,
-          "anomaly_type": "SPIKE_DEMAND" | "DROP_STOCKOUT",
-          "severity": "CRITICAL" | "MEDIUM" | "LOW",
-          "action_recommendation": "..."
-        }
-      ]
-    }
     """
     df = load_anomalies_dataframe()
 
@@ -179,18 +154,17 @@ def get_anomaly_summary() -> Dict[str, Any]:
     return {
         "total_anomalies": len(df),
         "severity_breakdown": {
-            "CRITICAL": severity_counts.get("CRITICAL", 0),
-            "MEDIUM": severity_counts.get("MEDIUM", 0),
-            "LOW": severity_counts.get("LOW", 0),
+            "CRITICAL": int(severity_counts.get("CRITICAL", 0)),
+            "MEDIUM": int(severity_counts.get("MEDIUM", 0)),
+            "LOW": int(severity_counts.get("LOW", 0)),
         },
         "anomaly_type_breakdown": {
-            "SPIKE_DEMAND": type_counts.get("SPIKE_DEMAND", 0),
-            "DROP_STOCKOUT": type_counts.get("DROP_STOCKOUT", 0),
-            "PRICE_ANOMALY": type_counts.get("PRICE_ANOMALY", 0),
+            "SPIKE_DEMAND": int(type_counts.get("SPIKE_DEMAND", 0)),
+            "DROP_STOCKOUT": int(type_counts.get("DROP_STOCKOUT", 0)),
+            "PRICE_ANOMALY": int(type_counts.get("PRICE_ANOMALY", 0)),
         },
         "date_range": {
             "earliest_date": str(df["date_"].min()) if not df.empty else None,
             "latest_date": str(df["date_"].max()) if not df.empty else None,
         }
->>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
     }
