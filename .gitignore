@@ -2,15 +2,19 @@
 # Large dataset files (>100MB)
 # ===========================
 
-# Raw sales CSVs
-dataset/raw/sales/*.csv
+# All dataset folders (large CSVs - use cloud storage or DVC instead)
+Demand-Decision-Intelligence-main/dataset/
+dataset/
 
-# Combined sales file
-dataset/combined/fact_sales_combined.csv
-
-# Cleaned / processed datasets
-dataset/cleaned/*.csv
-dataset/processed/
+# Validation reports & sample CSVs at root
+Demand-Decision-Intelligence-main/dataset_validation_report_v3.csv
+Demand-Decision-Intelligence-main/product_id_validation_v3.csv
+Demand-Decision-Intelligence-main/validation_samples_v3.csv
+Demand-Decision-Intelligence-main/sales_file_columns_v3.json
+dataset_validation_report_v3.csv
+product_id_validation_v3.csv
+validation_samples_v3.csv
+sales_file_columns_v3.json
 
 # ===========================
 # Python
