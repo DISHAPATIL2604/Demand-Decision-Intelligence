@@ -9,10 +9,7 @@ const api = axios.create({
     "Content-Type": "application/json",
   },
 });
-
-export default api;
 export { API_BASE_URL };
-
 export async function uploadSalesFile(file) {
   const formData = new FormData();
   formData.append("file", file);
@@ -87,3 +84,5 @@ export async function getValidationResults(uploadId) {
 
   return data;
 }
+
+export default api;
