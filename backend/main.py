@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
+<<<<<<< HEAD
 from backend.api import health, auth, demand, products, upload, forecast, inventory, analytics
+=======
+from backend.api import health, auth, demand, products, upload, analytics
+>>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -50,6 +54,7 @@ app.include_router(
     tags=["Data Upload"]
 )
 
+<<<<<<< HEAD
 app.include_router(
     forecast.router,
     prefix=f"{settings.API_V1_STR}/forecast",
@@ -66,6 +71,13 @@ app.include_router(
     analytics.router,
     prefix=f"{settings.API_V1_STR}/analytics",
     tags=["Business Analytics"]
+=======
+# Analytics & Anomaly Detection Endpoints
+app.include_router(
+    analytics.router,
+    prefix="/api/v1/analytics",
+    tags=["Analytics & Anomalies"]
+>>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
 )
 
 
