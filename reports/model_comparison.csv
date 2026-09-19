@@ -9,7 +9,7 @@ Moving Average (28 Days),99.8161,190.6422,19.89
 Moving Average (14 Days),101.6585,194.9029,20.26
 Moving Average (7 Days),105.0257,200.7986,20.93
 Seasonal Naive (Lag-7),130.1737,245.2926,25.94
-Naive (Lag-1),134.9939,261.0935,26.90
+Naive (Lag-1),134.9939,261.0935,26.9
 "Croston (Classic, Intermittent)",4.4469,25.1638,77.44
 "SBA (Syntetos-Boylan, Intermittent)",4.4728,25.4881,77.89
-Hybrid (ML Head + SBA Tail),7.5568,48.6734,41.20
+Hybrid (ML Head + SBA Tail),7.5568,48.6734,41.2
