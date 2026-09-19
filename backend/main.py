@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
-from backend.api import health, auth, demand, products, upload
+from backend.api import health, auth, demand, products, upload, analytics
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -49,6 +49,14 @@ app.include_router(
     prefix=f"{settings.API_V1_STR}/upload",
     tags=["Data Upload"]
 )
+
+# Analytics & Anomaly Detection Endpoints
+app.include_router(
+    analytics.router,
+    prefix="/api/v1/analytics",
+    tags=["Analytics & Anomalies"]
+)
+
 
 @app.get("/")
 def root():
