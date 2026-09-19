@@ -1,0 +1,55 @@
+{
+  "engineer_role": "Fast-Moving & High-Velocity SKU Demand Forecasting Engineer",
+  "target_wape_status": "OPTIMIZED",
+  "best_wape_achieved_pct": 19.06,
+  "meta_learner_weights": {
+    "LightGBM": 0.1263,
+    "XGBoost": 0.4413,
+    "Prophet": 0.0073,
+    "Ridge": 0.4251
+  },
+  "lightgbm_optuna_params": {
+    "learning_rate": 0.04522441833640167,
+    "max_depth": 5,
+    "num_leaves": 42,
+    "subsample": 0.6784631994281057,
+    "colsample_bytree": 0.8755775998803774,
+    "n_estimators": 181,
+    "objective": "regression",
+    "metric": "mae",
+    "verbosity": -1,
+    "random_state": 42
+  },
+  "evaluation_summary": [
+    {
+      "model": "\ud83c\udfc6 Stacking Ensemble (Meta-Learner)",
+      "MAE": 95.6214,
+      "RMSE": 181.4998,
+      "WAPE_pct": 19.06
+    },
+    {
+      "model": "LightGBM (Optuna Tuned)",
+      "MAE": 96.2701,
+      "RMSE": 186.1157,
+      "WAPE_pct": 19.18
+    },
+    {
+      "model": "XGBoost (Early Stopped)",
+      "MAE": 96.0555,
+      "RMSE": 183.8247,
+      "WAPE_pct": 19.14
+    },
+    {
+      "model": "Ridge Baseline",
+      "MAE": 97.3459,
+      "RMSE": 185.1686,
+      "WAPE_pct": 19.4
+    },
+    {
+      "model": "Prophet (Weekly Seasonality)",
+      "MAE": 125.0494,
+      "RMSE": 235.9438,
+      "WAPE_pct": 24.92
+    }
+  ]
+}
