@@ -15,15 +15,14 @@ import {
 import { useAuth } from '../../context/AuthContext';
 
 const navItems = [
-  { name: 'Dashboard',     path: '/dashboard',     icon: LayoutDashboard },
-  { name: 'Data Upload',   path: '/upload',         icon: UploadCloud },
-  { name: 'Forecast',      path: '/forecast',       icon: TrendingUp },
-  { name: 'Inventory',     path: '/inventory',      icon: Boxes },
-  { name: 'Trends',        path: '/trends',         icon: LineChart },
-  { name: 'Price Insights',path: '/price-insights', icon: Tag },
-  { name: 'Evaluation',    path: '/evaluation',     icon: ShieldCheck },
-  { name: 'Assistant',     path: '/assistant',      icon: Bot },
-  { name: 'Auth Testing',  path: '/auth-test',      icon: KeyRound },
+  { name: 'Store Overview',     path: '/dashboard',      icon: LayoutDashboard },
+  { name: 'Upload Sales Sheet', path: '/upload',         icon: UploadCloud },
+  { name: 'Sales Predictions',  path: '/forecast',       icon: TrendingUp },
+  { name: 'Stock & Reorder Planner', path: '/inventory', icon: Boxes },
+  { name: 'Surges & Stock Alerts', path: '/trends',      icon: LineChart },
+  { name: 'Market Rates & Deals', path: '/price-insights', icon: Tag },
+  { name: 'Forecast Accuracy',  path: '/evaluation',     icon: ShieldCheck },
+  { name: 'AI Business Advisor', path: '/assistant',     icon: Bot },
 ];
 
 /* Role badge colour map */

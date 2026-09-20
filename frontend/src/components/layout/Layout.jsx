@@ -4,15 +4,14 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 
 const titleMap = {
-  '/dashboard': 'Dashboard Overview',
-  '/upload': 'Data Ingestion & Validation',
-  '/forecast': 'Demand Forecasting Engine',
-  '/inventory': 'Inventory Intelligence & Risk',
-  '/trends': 'Trend Analysis & Anomalies',
-  '/price-insights': 'Price Insights & Elasticity',
-  '/evaluation': 'Model Performance Evaluation',
-  '/assistant': 'AI Decision Assistant',
-  '/auth-test': 'Auth & User Management — Phase 2 Tester',
+  '/dashboard': 'Store & Business Overview',
+  '/upload': 'Upload Daily Sales Sheet',
+  '/forecast': 'Sales Demand Predictions',
+  '/inventory': 'Stock & Reorder Decision Planner',
+  '/trends': 'Surge Spikes & Stockout Alerts',
+  '/price-insights': 'Market Prices & Discount Elasticity',
+  '/evaluation': 'Forecast Model Accuracy Check',
+  '/assistant': 'AI Business Decision Advisor',
 };
 
 export default function Layout() {

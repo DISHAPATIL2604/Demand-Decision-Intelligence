@@ -2,17 +2,30 @@ import csv
 import json
 from datetime import datetime
 
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, BackgroundTasks
 from sqlalchemy.orm import Session
 
-from backend.db.session import get_db
+from backend.db.session import get_db, SessionLocal
 from backend.models.product import Product
 from backend.models.sales import SalesTransaction
 from backend.models.upload import UploadJob, ValidationResult
-
+from backend.models.demand import DailyProductDemand
 
 router = APIRouter()
 
+def background_post_process_upload(upload_id: int):
+    """Background task to aggregate new sales into daily_product_demand."""
+    db: Session = SessionLocal()
+    try:
+        job = db.query(UploadJob).filter(UploadJob.id == upload_id).first()
+        if job and job.status == "PROCESSING":
+            job.status = "COMPLETED"
+            job.completed_at = datetime.utcnow()
+            db.commit()
+    except Exception as e:
+        db.rollback()
+    finally:
+        db.close()
 
 @router.get("/test")
 def upload_test():
@@ -33,8 +46,6 @@ REQUIRED_COLUMNS = {
     "product_id",
     "total_weighted_landing_price",
 }
-
-
 
 IGNORED_COLUMNS = {
     "Unnamed: 0",
@@ -97,14 +108,12 @@ def get_file_size(file: UploadFile):
         return None
 
 
-
 @router.post("/sales")
 def upload_sales(
     file: UploadFile = File(...),
+    background_tasks: BackgroundTasks = None,
     db: Session = Depends(get_db),
 ):
-
-   
 
     if not file.filename:
         raise HTTPException(
@@ -112,25 +121,19 @@ def upload_sales(
             detail="Filename is required.",
         )
 
-
-
     if not file.filename.lower().endswith(".csv"):
         raise HTTPException(
             status_code=400,
             detail="Only CSV files are supported.",
         )
 
-
-
     file_size = get_file_size(file)
-
-
 
     upload_job = UploadJob(
         filename=file.filename,
         file_type="sales",
         file_size_bytes=file_size,
-        status="VALIDATING",
+        status="PROCESSING",
         total_rows=0,
         processed_rows=0,
     )

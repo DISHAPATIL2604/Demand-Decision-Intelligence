@@ -45,6 +45,8 @@ frontend/.env.local
 frontend/.env.*.local
 .env
 .env*.local
+backend/.env
+.pytest_cache/
 
 # ===========================
 # IDE / Editor

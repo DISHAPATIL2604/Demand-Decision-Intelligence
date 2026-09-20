@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
-from backend.api import health, auth, demand, products, upload, forecast, inventory, analytics, market_prices
+from backend.core.middleware import ObservabilityMiddleware
+from backend.api import health, auth, demand, products, upload, forecast, inventory, analytics, market_prices, chat
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -9,6 +10,9 @@ app = FastAPI(
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     docs_url=f"{settings.API_V1_STR}/docs",
 )
+
+# Custom observability & timing middleware
+app.add_middleware(ObservabilityMiddleware)
 
 # CORS configuration
 app.add_middleware(
@@ -72,6 +76,12 @@ app.include_router(
     market_prices.router,
     prefix=f"{settings.API_V1_STR}/market-prices",
     tags=["Government Market Prices & Stocking Intelligence"]
+)
+
+app.include_router(
+    chat.router,
+    prefix=f"{settings.API_V1_STR}/chat",
+    tags=["AI Decision Assistant"]
 )
 
 @app.get("/")
