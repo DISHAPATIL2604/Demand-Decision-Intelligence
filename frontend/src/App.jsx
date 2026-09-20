@@ -8,7 +8,11 @@ import RegisterPage from './pages/auth/RegisterPage';
 import AuthTestPage from './pages/auth/AuthTestPage';
 import OverviewPage from './pages/dashboard/OverviewPage';
 import UploadPage from './pages/upload/UploadPage';
-import GenericPage from './pages/common/GenericPage';
+import ForecastPage from './pages/forecast/ForecastPage';
+import InventoryPage from './pages/inventory/InventoryPage';
+import AnomalyPage from './pages/anomaly/AnomalyPage';
+import PricePage from './pages/price/PricePage';
+import EvaluationPage from './pages/evaluation/EvaluationPage';
 import AssistantPage from './pages/assistant/AssistantPage';
 import './styles/main.css';
 
@@ -26,30 +30,12 @@ export default function App() {
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<OverviewPage />} />
             <Route path="/upload" element={<UploadPage />} />
-            <Route 
-              path="/forecast" 
-              element={<GenericPage title="Demand Forecast" description="Multi-horizon demand predictions using statistical, ML, and Prophet models." />} 
-            />
-            <Route 
-              path="/inventory" 
-              element={<GenericPage title="Inventory Intelligence" description="Safety stock recommendations, reorder point calculations, and stockout risk alerts." />} 
-            />
-            <Route 
-              path="/trends" 
-              element={<GenericPage title="Trends & Anomalies" description="Spike and drop detection, seasonal pattern analysis, and sales anomalies." />} 
-            />
-            <Route 
-              path="/price-insights" 
-              element={<GenericPage title="Price Insights" description="Price elasticity modeling and optimal discount recommendations." />} 
-            />
-            <Route 
-              path="/evaluation" 
-              element={<GenericPage title="Forecast Evaluation" description="Backtesting reports, WMAPE/RMSE metrics, and drift monitoring." />} 
-            />
-            <Route 
-              path="/assistant" 
-              element={<AssistantPage />} 
-            />
+            <Route path="/forecast" element={<ForecastPage />} />
+            <Route path="/inventory" element={<InventoryPage />} />
+            <Route path="/trends" element={<AnomalyPage />} />
+            <Route path="/price-insights" element={<PricePage />} />
+            <Route path="/evaluation" element={<EvaluationPage />} />
+            <Route path="/assistant" element={<AssistantPage />} />
             <Route path="/auth-test" element={<AuthTestPage />} />
           </Route>
 

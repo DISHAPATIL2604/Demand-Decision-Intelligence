@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import {
-  uploadSalesFile,
-  getUploads,
-} from "../../services/api";
+  UploadCloud,
+  FileSpreadsheet,
+  CheckCircle2,
+  AlertCircle,
+  Clock,
+  RefreshCw,
+  FileCheck,
+  Layers,
+  Database,
+} from "lucide-react";
+import { uploadSalesFile, getUploads } from "../../services/api";
 
 export default function UploadPage() {
   const [file, setFile] = useState(null);
@@ -11,14 +18,18 @@ export default function UploadPage() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [uploads, setUploads] = useState([]);
+  const [loadingUploads, setLoadingUploads] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
 
- 
   const loadUploads = async () => {
     try {
+      setLoadingUploads(true);
       const data = await getUploads();
       setUploads(data.uploads || []);
     } catch (err) {
-      console.error(err);
+      console.error("Failed to fetch uploads:", err);
+    } finally {
+      setLoadingUploads(false);
     }
   };
 
@@ -26,10 +37,7 @@ export default function UploadPage() {
     loadUploads();
   }, []);
 
-
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-
+  const handleFileSelect = (selectedFile) => {
     setError("");
     setResult(null);
 
@@ -39,7 +47,7 @@ export default function UploadPage() {
     }
 
     if (!selectedFile.name.toLowerCase().endsWith(".csv")) {
-      setError("Please select a CSV file.");
+      setError("Please select a valid CSV file (e.g. sales_transactions.csv).");
       setFile(null);
       return;
     }
@@ -47,7 +55,27 @@ export default function UploadPage() {
     setFile(selectedFile);
   };
 
-  
+  const handleFileChange = (e) => {
+    handleFileSelect(e.target.files[0]);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setIsDragOver(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragOver(false);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setIsDragOver(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleFileSelect(e.dataTransfer.files[0]);
+    }
+  };
+
   const handleUpload = async () => {
     if (!file) {
       setError("Please select a CSV file first.");
@@ -60,237 +88,325 @@ export default function UploadPage() {
       setResult(null);
 
       const data = await uploadSalesFile(file);
-
       setResult(data);
-
-     
       await loadUploads();
-
-      
       setFile(null);
-
     } catch (err) {
-      setError(err.message);
+      setError(err.message || "File upload failed");
     } finally {
       setUploading(false);
     }
   };
 
   return (
-    <div className="p-6 space-y-8">
+    <div className="page-container">
+      {/* Header */}
+      <div className="page-header">
+        <div className="page-header-left">
+          <h1 className="page-title">Sales Data Ingestion &amp; Validation</h1>
+          <p className="page-subtitle">
+            Upload commercial grocery sales batches, run automated forensic integrity checks, and load into PostgreSQL.
+          </p>
+        </div>
+        <div className="page-header-actions">
+          <button
+            className="btn btn-ghost btn-sm"
+            onClick={loadUploads}
+            disabled={loadingUploads}
+          >
+            <RefreshCw size={14} className={loadingUploads ? "spin" : ""} />
+            <span>Refresh History</span>
+          </button>
+        </div>
+      </div>
 
-      {/* Page Header */}
-      <div>
-        <h1 className="text-3xl font-bold">
-          Data Upload
-        </h1>
-
-        <p className="text-gray-500 mt-2">
-          Upload sales data and validate it before
-          storing it in the database.
+      {/* Upload Zone Card */}
+      <div className="card" style={{ marginBottom: "1.5rem" }}>
+        <h2 className="card-title">Upload Sales Batch (CSV)</h2>
+        <p className="card-subtitle">
+          Expected schema: <code className="mono">date, product_id, city, units_sold, sales_revenue</code>. Max file size: 100MB.
         </p>
-      </div>
 
-      {/* Upload Box */}
-      <div className="border rounded-xl p-6 bg-white shadow-sm">
-
-        <h2 className="text-xl font-semibold mb-4">
-          Upload Sales CSV
-        </h2>
-
-        <input
-          type="file"
-          accept=".csv"
-          onChange={handleFileChange}
-          className="block w-full border rounded-lg p-3"
-        />
-
-        {file && (
-          <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-            <p>
-              <strong>Selected file:</strong>{" "}
-              {file.name}
-            </p>
-
-            <p className="text-sm text-gray-500">
-              Size:{" "}
-              {(file.size / 1024).toFixed(2)} KB
-            </p>
-          </div>
-        )}
-
-        <button
-          onClick={handleUpload}
-          disabled={!file || uploading}
-          className="mt-4 px-5 py-3 rounded-lg bg-black text-white disabled:opacity-50"
+        {/* Drag-and-Drop Area */}
+        <div
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          style={{
+            border: `2px dashed ${
+              isDragOver
+                ? "var(--blue)"
+                : file
+                ? "var(--emerald)"
+                : "rgba(255,255,255,0.15)"
+            }`,
+            borderRadius: "var(--r-md)",
+            background: isDragOver
+              ? "rgba(59, 130, 246, 0.08)"
+              : file
+              ? "rgba(16, 185, 129, 0.04)"
+              : "rgba(255, 255, 255, 0.02)",
+            padding: "2.5rem 1.5rem",
+            textAlign: "center",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            position: "relative",
+          }}
+          onClick={() => document.getElementById("file-upload-input").click()}
         >
-          {uploading
-            ? "Uploading..."
-            : "Upload CSV"}
-        </button>
+          <input
+            id="file-upload-input"
+            type="file"
+            accept=".csv"
+            onChange={handleFileChange}
+            style={{ display: "none" }}
+          />
 
-        {/* Error */}
-        {error && (
-          <div className="mt-4 p-4 rounded-lg bg-red-50 text-red-700">
-            ❌ {error}
-          </div>
-        )}
-
-      </div>
-
-      {/* Upload Result */}
-      {result && (
-        <div className="border rounded-xl p-6 bg-white shadow-sm">
-
-          <h2 className="text-xl font-semibold mb-4">
-            Upload Result
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-500">
-                Status
-              </p>
-              <p className="font-bold">
-                {result.status}
-              </p>
-            </div>
-
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-500">
-                Total Rows
-              </p>
-              <p className="font-bold">
-                {result.total_rows}
-              </p>
-            </div>
-
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-500">
-                Valid Rows
-              </p>
-              <p className="font-bold">
-                {result.valid_rows}
-              </p>
-            </div>
-
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-500">
-                Invalid Rows
-              </p>
-              <p className="font-bold">
-                {result.invalid_rows}
-              </p>
-            </div>
-
+          <div
+            style={{
+              width: 52,
+              height: 52,
+              borderRadius: "14px",
+              background: file ? "rgba(16,185,129,0.15)" : "rgba(59,130,246,0.12)",
+              color: file ? "var(--emerald)" : "var(--blue-light)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "0 auto 1rem",
+            }}
+          >
+            {file ? <FileSpreadsheet size={28} /> : <UploadCloud size={28} />}
           </div>
 
-          {/* Validation */}
-          {result.validation && (
-            <div className="mt-6">
-
-              <h3 className="font-semibold mb-3">
-                Validation Summary
-              </h3>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-
-                {Object.entries(
-                  result.validation
-                ).map(([key, value]) => (
-                  <div
-                    key={key}
-                    className="border rounded-lg p-3"
-                  >
-                    <p className="text-sm text-gray-500">
-                      {key.replaceAll("_", " ")}
-                    </p>
-
-                    <p className="font-semibold">
-                      {value}
-                    </p>
-                  </div>
-                ))}
-
+          {file ? (
+            <div>
+              <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                {file.name}
               </div>
-
+              <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.25rem" }}>
+                Size: {(file.size / 1024).toFixed(1)} KB &bull; Ready for validation
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                Drag and drop your sales CSV here, or <span style={{ color: "var(--blue-light)" }}>browse file</span>
+              </div>
+              <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.35rem" }}>
+                Supports standard comma-delimited sales logs with transaction dates and quantities
+              </div>
             </div>
           )}
+        </div>
 
+        {/* Action Controls */}
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "1.25rem" }}>
+          <button
+            onClick={handleUpload}
+            disabled={!file || uploading}
+            className="btn btn-primary"
+            style={{ minWidth: "160px" }}
+          >
+            {uploading ? (
+              <>
+                <RefreshCw size={15} className="spin" />
+                <span>Validating &amp; Uploading...</span>
+              </>
+            ) : (
+              <>
+                <UploadCloud size={16} />
+                <span>Upload &amp; Process CSV</span>
+              </>
+            )}
+          </button>
+
+          {file && (
+            <button
+              className="btn btn-ghost btn-sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                setFile(null);
+              }}
+            >
+              Clear
+            </button>
+          )}
+        </div>
+
+        {/* Error Banner */}
+        {error && (
+          <div
+            style={{
+              marginTop: "1.25rem",
+              padding: "0.85rem 1rem",
+              borderRadius: "var(--r-sm)",
+              background: "rgba(244, 63, 94, 0.1)",
+              border: "1px solid rgba(244, 63, 94, 0.25)",
+              color: "#fb7185",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.6rem",
+              fontSize: "0.85rem",
+            }}
+          >
+            <AlertCircle size={16} style={{ flexShrink: 0 }} />
+            <span>{error}</span>
+          </div>
+        )}
+      </div>
+
+      {/* Upload & Validation Result Feedback */}
+      {result && (
+        <div
+          className="card"
+          style={{
+            marginBottom: "1.5rem",
+            borderColor: "rgba(16, 185, 129, 0.3)",
+            background: "rgba(16, 185, 129, 0.03)",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
+            <CheckCircle2 size={20} style={{ color: "var(--emerald)" }} />
+            <h3 className="card-title" style={{ margin: 0, color: "var(--text-primary)" }}>
+              Ingestion Succeeded &bull; Batch Validated
+            </h3>
+          </div>
+
+          <div className="kpi-grid" style={{ marginBottom: "1rem" }}>
+            <div className="kpi-card" style={{ '--kpi-color': 'var(--emerald)' }}>
+              <div className="kpi-label">Status</div>
+              <div className="kpi-value" style={{ fontSize: "1.3rem", color: "var(--emerald)" }}>
+                {result.status || "SUCCESS"}
+              </div>
+            </div>
+
+            <div className="kpi-card" style={{ '--kpi-color': 'var(--blue)' }}>
+              <div className="kpi-label">Total Rows</div>
+              <div className="kpi-value" style={{ fontSize: "1.3rem" }}>
+                {result.total_rows?.toLocaleString() ?? 0}
+              </div>
+            </div>
+
+            <div className="kpi-card" style={{ '--kpi-color': 'var(--emerald)' }}>
+              <div className="kpi-label">Valid Rows</div>
+              <div className="kpi-value" style={{ fontSize: "1.3rem", color: "var(--emerald)" }}>
+                {result.valid_rows?.toLocaleString() ?? 0}
+              </div>
+            </div>
+
+            <div className="kpi-card" style={{ '--kpi-color': 'var(--rose)' }}>
+              <div className="kpi-label">Invalid Rows</div>
+              <div className="kpi-value" style={{ fontSize: "1.3rem", color: result.invalid_rows > 0 ? "#fb7185" : "inherit" }}>
+                {result.invalid_rows?.toLocaleString() ?? 0}
+              </div>
+            </div>
+          </div>
+
+          {result.validation && (
+            <div style={{ marginTop: "1rem", borderTop: "1px solid var(--border)", paddingTop: "1rem" }}>
+              <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.65rem" }}>
+                Automated Integrity Audit
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem" }}>
+                {Object.entries(result.validation).map(([k, v]) => (
+                  <div
+                    key={k}
+                    style={{
+                      background: "rgba(255,255,255,0.03)",
+                      padding: "0.6rem 0.8rem",
+                      borderRadius: "var(--r-sm)",
+                      border: "1px solid var(--border)",
+                    }}
+                  >
+                    <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "capitalize" }}>
+                      {k.replace(/_/g, " ")}:
+                    </span>
+                    <div className="mono bold" style={{ fontSize: "0.88rem", marginTop: "2px" }}>
+                      {String(v)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
-      {/* Upload History */}
-      <div className="border rounded-xl p-6 bg-white shadow-sm">
+      {/* Upload History Table */}
+      <div className="card">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
+          <div>
+            <h3 className="card-title">Upload History &amp; Audit Log</h3>
+            <p className="card-subtitle" style={{ marginBottom: 0 }}>
+              Audit trail of uploaded sales batches and processing milestones
+            </p>
+          </div>
+          <span className="badge badge-neutral">
+            <Clock size={12} /> {uploads.length} Batches
+          </span>
+        </div>
 
-        <h2 className="text-xl font-semibold mb-4">
-          Upload History
-        </h2>
-
-        {uploads.length === 0 ? (
-          <p className="text-gray-500">
-            No uploads found.
-          </p>
+        {loadingUploads ? (
+          <div className="loading-state">
+            <RefreshCw size={20} className="spin" />
+            <span>Fetching upload history...</span>
+          </div>
+        ) : uploads.length === 0 ? (
+          <div className="empty-state">
+            <div className="empty-state-icon">
+              <FileSpreadsheet size={28} />
+            </div>
+            <div className="empty-state-title">No Uploads Recorded</div>
+            <div className="empty-state-desc">
+              Uploaded files will be registered in the system audit log and persisted in PostgreSQL.
+            </div>
+          </div>
         ) : (
-          <div className="overflow-x-auto">
-
-            <table className="w-full text-left">
-
+          <div className="data-table-wrap">
+            <table className="data-table">
               <thead>
-                <tr className="border-b">
-                  <th className="p-3">
-                    File
-                  </th>
-
-                  <th className="p-3">
-                    Status
-                  </th>
-
-                  <th className="p-3">
-                    Total Rows
-                  </th>
-
-                  <th className="p-3">
-                    Processed
-                  </th>
+                <tr>
+                  <th>Batch ID</th>
+                  <th>File Name</th>
+                  <th>Ingestion Status</th>
+                  <th>Total Rows</th>
+                  <th>Processed Rows</th>
+                  <th>Audited Timestamp</th>
                 </tr>
               </thead>
-
               <tbody>
-
-                {uploads.map((upload) => (
-                  <tr
-                    key={upload.id}
-                    className="border-b"
-                  >
-                    <td className="p-3">
-                      {upload.filename}
+                {uploads.map((u) => (
+                  <tr key={u.id}>
+                    <td className="mono bold">#{u.id}</td>
+                    <td className="bold" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <FileSpreadsheet size={15} style={{ color: "var(--blue-light)" }} />
+                      <span>{u.filename}</span>
                     </td>
-
-                    <td className="p-3">
-                      {upload.status}
+                    <td>
+                      <span
+                        className={`badge ${
+                          u.status === "COMPLETED" || u.status === "SUCCESS"
+                            ? "badge-safe"
+                            : u.status === "FAILED"
+                            ? "badge-critical"
+                            : "badge-medium"
+                        }`}
+                      >
+                        {u.status || "COMPLETED"}
+                      </span>
                     </td>
-
-                    <td className="p-3">
-                      {upload.total_rows}
-                    </td>
-
-                    <td className="p-3">
-                      {upload.processed_rows}
+                    <td className="mono">{u.total_rows?.toLocaleString() ?? "-"}</td>
+                    <td className="mono">{u.processed_rows?.toLocaleString() ?? "-"}</td>
+                    <td style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                      {u.created_at ? new Date(u.created_at).toLocaleString() : "Recorded"}
                     </td>
                   </tr>
                 ))}
-
               </tbody>
-
             </table>
-
           </div>
         )}
-
       </div>
-
     </div>
   );
 }

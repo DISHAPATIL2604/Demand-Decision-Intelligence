@@ -5,32 +5,48 @@ import {
   UploadCloud,
   TrendingUp,
   Boxes,
-  LineChart,
+  Activity,
   Tag,
   ShieldCheck,
   Bot,
   LogOut,
-  KeyRound,
+  BarChart3,
+  Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-const navItems = [
-  { name: 'Dashboard',     path: '/dashboard',     icon: LayoutDashboard },
-  { name: 'Data Upload',   path: '/upload',         icon: UploadCloud },
-  { name: 'Forecast',      path: '/forecast',       icon: TrendingUp },
-  { name: 'Inventory',     path: '/inventory',      icon: Boxes },
-  { name: 'Trends',        path: '/trends',         icon: LineChart },
-  { name: 'Price Insights',path: '/price-insights', icon: Tag },
-  { name: 'Evaluation',    path: '/evaluation',     icon: ShieldCheck },
-  { name: 'Assistant',     path: '/assistant',      icon: Bot },
-  { name: 'Auth Testing',  path: '/auth-test',      icon: KeyRound },
+/* ── Nav sections (auth-test removed from nav) ────────────────────── */
+const navSections = [
+  {
+    label: 'Overview',
+    items: [
+      { name: 'Dashboard',     path: '/dashboard',     icon: LayoutDashboard },
+    ],
+  },
+  {
+    label: 'Intelligence',
+    items: [
+      { name: 'Demand Forecast', path: '/forecast',     icon: TrendingUp },
+      { name: 'Inventory',       path: '/inventory',    icon: Boxes },
+      { name: 'Trends & Anomalies', path: '/trends',   icon: Activity },
+      { name: 'Price Insights',  path: '/price-insights', icon: Tag },
+      { name: 'Evaluation',      path: '/evaluation',   icon: ShieldCheck },
+    ],
+  },
+  {
+    label: 'Tools',
+    items: [
+      { name: 'Data Upload',   path: '/upload',    icon: UploadCloud },
+      { name: 'AI Assistant',  path: '/assistant', icon: Bot },
+    ],
+  },
 ];
 
 /* Role badge colour map */
-const roleColor = {
-  admin:   { bg: 'rgba(239,68,68,0.15)',   text: '#f87171'  },
-  manager: { bg: 'rgba(245,158,11,0.15)',  text: '#fbbf24'  },
-  viewer:  { bg: 'rgba(59,130,246,0.15)',  text: '#60a5fa'  },
+const roleColors = {
+  admin:   { bg: 'rgba(244,63,94,0.14)',   text: '#fb7185'  },
+  manager: { bg: 'rgba(245,158,11,0.14)',  text: '#fbbf24'  },
+  viewer:  { bg: 'rgba(59,130,246,0.14)',  text: '#60a5fa'  },
 };
 
 export default function Sidebar() {
@@ -42,38 +58,46 @@ export default function Sidebar() {
     navigate('/login', { replace: true });
   }
 
-  /* Derive initials & role colours */
-  const initials = user
-    ? (user.full_name ?? user.username ?? 'U')
-        .split(' ')
-        .slice(0, 2)
-        .map(w => w[0])
-        .join('')
-        .toUpperCase()
-    : '?';
+  const displayName = user?.full_name ?? user?.username ?? 'User';
+  const initials = displayName
+    .split(' ')
+    .slice(0, 2)
+    .map(w => w[0] ?? '')
+    .join('')
+    .toUpperCase() || '?';
 
-  const role    = user?.role ?? 'viewer';
-  const rc      = roleColor[role] ?? roleColor.viewer;
+  const role = user?.role ?? 'viewer';
+  const rc = roleColors[role] ?? roleColors.viewer;
 
   return (
     <aside className="sidebar">
       {/* Brand */}
       <div className="sidebar-brand">
-        <TrendingUp size={22} color="#3b82f6" />
-        <span>DemandIQ</span>
+        <div className="sidebar-brand-logo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M3 17l5-8 4 5 3-4 6 7" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <span className="sidebar-brand-name">DemandIQ</span>
+        <span className="sidebar-brand-tag">AI</span>
       </div>
 
-      {/* Nav */}
-      <nav className="sidebar-nav">
-        {navItems.map(({ name, path, icon: Icon }) => (
-          <NavLink
-            key={path}
-            to={path}
-            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
-          >
-            <Icon size={18} />
-            <span>{name}</span>
-          </NavLink>
+      {/* Navigation */}
+      <nav className="sidebar-scroll">
+        {navSections.map(section => (
+          <div key={section.label}>
+            <div className="sidebar-section-label">{section.label}</div>
+            {section.items.map(({ name, path, icon: Icon }) => (
+              <NavLink
+                key={path}
+                to={path}
+                className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              >
+                <Icon size={17} className="nav-link-icon" />
+                <span>{name}</span>
+              </NavLink>
+            ))}
+          </div>
         ))}
       </nav>
 
@@ -81,30 +105,20 @@ export default function Sidebar() {
       <div className="sidebar-footer">
         {user ? (
           <div className="sb-user">
-            {/* Avatar */}
             <div className="sb-avatar">{initials}</div>
-
-            {/* Info */}
             <div className="sb-user-info">
-              <span className="sb-user-name">
-                {user.full_name ?? user.username}
-              </span>
-              <span
-                className="sb-role-badge"
-                style={{ background: rc.bg, color: rc.text }}
-              >
+              <span className="sb-user-name">{displayName}</span>
+              <span className="sb-role-badge" style={{ background: rc.bg, color: rc.text }}>
                 {role}
               </span>
             </div>
-
-            {/* Logout */}
             <button className="sb-logout" onClick={handleLogout} title="Sign out">
-              <LogOut size={16} />
+              <LogOut size={15} />
             </button>
           </div>
         ) : (
           <NavLink to="/login" className="nav-link" style={{ color: 'var(--text-muted)' }}>
-            <LogOut size={18} />
+            <LogOut size={17} />
             <span>Sign In</span>
           </NavLink>
         )}

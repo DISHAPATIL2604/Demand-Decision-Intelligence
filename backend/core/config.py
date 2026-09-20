@@ -1,6 +1,5 @@
 from pydantic_settings import BaseSettings
 from typing import List
-import os
 from pathlib import Path
 
 # Look for .env file either in backend/.env or root .env
@@ -11,12 +10,12 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Demand Decision Intelligence"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api"
-    
+
     # Security
     SECRET_KEY: str = "super-secret-development-key-change-in-production"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 1 day
-    
+
     # CORS
     BACKEND_CORS_ORIGINS: List[str] = [
         "http://localhost:5173",
@@ -28,9 +27,13 @@ class Settings(BaseSettings):
         "http://localhost:3000",
         "*",
     ]
-    
+
     # Database
     DATABASE_URL: str = "postgresql+psycopg2://postgres:yash@localhost:5432/demand_decision_db"
+
+    # AI / LLM — override via .env
+    GROQ_API_KEY: str = ""
+    GROQ_MODEL: str = "llama-3.3-70b-versatile"
 
     class Config:
         case_sensitive = True
