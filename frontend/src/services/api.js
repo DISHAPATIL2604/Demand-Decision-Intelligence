@@ -85,4 +85,36 @@ export async function getValidationResults(uploadId) {
   return data;
 }
 
+export async function getChatSuggestions() {
+  const response = await fetch(
+    `${API_BASE_URL}/chat/suggestions`,
+    {
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+        "Content-Type": "application/json"
+      }
+    }
+  );
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.detail || "Failed to fetch suggestions");
+  return data;
+}
+
+export async function sendChatMessage(message, history) {
+  const response = await fetch(
+    `${API_BASE_URL}/chat/message`,
+    {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message, history })
+    }
+  );
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.detail || "Failed to send message");
+  return data;
+}
+
 export default api;

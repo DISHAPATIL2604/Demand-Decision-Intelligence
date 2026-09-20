@@ -1,33 +1,25 @@
 """
-<<<<<<< HEAD
-Analytics API Router
-Project: Demand-Decision-Intelligence
-"""
-
-import json
-from pathlib import Path
-from fastapi import APIRouter, HTTPException
-=======
 Analytics & Anomaly Detection API Router
 Project: Demand-Decision-Intelligence
 Location: backend/api/analytics.py
 
 Endpoints:
+  GET /api/v1/analytics/eda-summary - Returns high-level EDA metrics
   GET /api/v1/analytics/anomalies - Returns active CRITICAL demand anomaly alerts
   GET /api/v1/analytics/summary   - Returns summary KPI metrics for detected anomalies
 """
 
+import json
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 from fastapi import APIRouter, Query, HTTPException, status
 import pandas as pd
->>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
 
 router = APIRouter()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-<<<<<<< HEAD
 REPORTS_DIR = PROJECT_ROOT / "reports"
+ANOMALY_CSV_PATH = PROJECT_ROOT / "reports" / "demand_anomalies.csv"
 
 @router.get("/eda-summary")
 def get_eda_summary():
@@ -54,8 +46,7 @@ def get_eda_summary():
     return {
         "status": "success",
         "data": data
-=======
-ANOMALY_CSV_PATH = PROJECT_ROOT / "reports" / "demand_anomalies.csv"
+    }
 
 
 def load_anomalies_dataframe() -> pd.DataFrame:
@@ -192,5 +183,4 @@ def get_anomaly_summary() -> Dict[str, Any]:
             "earliest_date": str(df["date_"].min()) if not df.empty else None,
             "latest_date": str(df["date_"].max()) if not df.empty else None,
         }
->>>>>>> 6e0ad7b (Implement ML anomaly detection engine)
     }

@@ -9,6 +9,7 @@ import AuthTestPage from './pages/auth/AuthTestPage';
 import OverviewPage from './pages/dashboard/OverviewPage';
 import UploadPage from './pages/upload/UploadPage';
 import GenericPage from './pages/common/GenericPage';
+import AssistantPage from './pages/assistant/AssistantPage';
 import './styles/main.css';
 
 export default function App() {
@@ -47,7 +48,7 @@ export default function App() {
             />
             <Route 
               path="/assistant" 
-              element={<GenericPage title="AI Decision Assistant" description="RAG-grounded natural language Q&A across sales, inventory, and forecasts." />} 
+              element={<AssistantPage />} 
             />
             <Route path="/auth-test" element={<AuthTestPage />} />
           </Route>
