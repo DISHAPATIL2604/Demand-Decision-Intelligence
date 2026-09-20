@@ -23,6 +23,9 @@ __pycache__/
 dist/
 build/
 *.egg
+*.db
+*.sqlite
+*.sqlite3
 .venv/
 venv/
 env/

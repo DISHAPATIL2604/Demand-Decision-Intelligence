@@ -8,7 +8,21 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+  timeout: 30000,
 });
+
+// Attach JWT token from localStorage and normalize /api paths
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("ddi_access_token") || localStorage.getItem("access_token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  if (config.url && config.url.startsWith('/api')) {
+    config.url = config.url.replace(/^\/api/, '');
+  }
+  return config;
+});
+
 export { API_BASE_URL };
 export async function uploadSalesFile(file) {
   const formData = new FormData();
