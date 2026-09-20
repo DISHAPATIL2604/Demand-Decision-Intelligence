@@ -1,23 +1,24 @@
-from sqlalchemy import create_engine
+"""
+Database session factory.
+- Uses PostgreSQL via the DATABASE_URL in settings.
+- Does NOT fall back to SQLite – a misconfigured DB URL must fail loudly.
+"""
+from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 from backend.core.config import settings
 
-try:
-    engine = create_engine(
-        settings.DATABASE_URL,
-        pool_pre_ping=True,
-        echo=False
-    )
-except Exception:
-    engine = create_engine(
-        "sqlite:///./demand_decision.db",
-        echo=False
-    )
+engine = create_engine(
+    settings.DATABASE_URL,
+    pool_pre_ping=True,   # verifies connection before checkout
+    pool_size=5,
+    max_overflow=10,
+    echo=False,
+)
 
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
-    bind=engine
+    bind=engine,
 )
 
 Base = declarative_base()

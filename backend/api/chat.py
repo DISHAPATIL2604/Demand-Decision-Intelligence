@@ -1,115 +1,68 @@
 """
 Chat API Router
-Project: Demand-Decision-Intelligence
-Location: backend/api/chat.py
-
 Endpoints:
-  POST /api/chat/message   - Submit user query, retrieve grounded DB facts, return response + citations
-  GET  /api/chat/history   - Retrieve message thread history for a session
-  GET  /api/chat/sessions  - List active chat sessions
-  DELETE /api/chat/session/{session_id} - Clear/delete chat session
+  POST /api/chat/message    – Process a user message and return AI decision response
+  GET  /api/chat/suggestions – Return suggested starter questions
 """
-
-from typing import Optional, List, Dict, Any
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from typing import List, Dict, Any, Optional
 from sqlalchemy.orm import Session
-from sqlalchemy import desc
 
 from backend.db.session import get_db
-from backend.models.chat import ChatSession, ChatMessage
-from backend.services.chat_service import chat_service
+from backend.core.deps import get_current_user
+from backend.models.user import User
+from backend.services.chat_assistant import ChatAssistantService
 
 router = APIRouter()
+chat_service = ChatAssistantService()
 
+
+# ── Request / Response schemas ──────────────────────────────────────────────
 
 class ChatMessageRequest(BaseModel):
     message: str
-    session_id: Optional[int] = None
+    history: List[Dict[str, Any]] = []
+
+
+class EvidenceItem(BaseModel):
+    field: str
+    value: Any
 
 
 class ChatMessageResponse(BaseModel):
-    session_id: int
-    role: str
-    message: str
-    intent: str
-    citations: List[Dict[str, Any]]
-    created_at: Optional[str] = None
+    reply: str
+    citations: List[str]
+    intent: Optional[str] = None
+    evidence: List[Dict[str, Any]] = []
 
 
-@router.post(
-    "/message",
-    response_model=ChatMessageResponse,
-    summary="Submit query to AI Decision Assistant",
-    description="Processes query through database-grounded RAG engine and returns synthesized response with data citations."
-)
-def send_message(payload: ChatMessageRequest, db: Session = Depends(get_db)):
-    if not payload.message or not payload.message.strip():
-        raise HTTPException(status_code=400, detail="Message cannot be empty.")
+class ChatSuggestionsResponse(BaseModel):
+    suggestions: List[str]
 
+
+# ── Endpoints ────────────────────────────────────────────────────────────────
+
+@router.post("/message", response_model=ChatMessageResponse)
+def send_message(
+    request: ChatMessageRequest,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Process a natural-language question using the RAG decision assistant."""
     try:
-        result = chat_service.process_chat_message(
-            db=db,
-            user_query=payload.message.strip(),
-            session_id=payload.session_id,
-            user_id=None
+        result = chat_service.process_message(request.message, request.history, db)
+        return ChatMessageResponse(
+            reply=result["reply"],
+            citations=result.get("citations", []),
+            intent=result.get("intent"),
+            evidence=result.get("evidence", []),
         )
-        return result
     except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error generating assistant response: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=f"Chat processing failed: {str(e)}")
 
 
-@router.get("/history", summary="Get Chat Session History")
-def get_chat_history(
-    session_id: int = Query(..., description="Chat session ID"),
-    limit: int = Query(50, ge=1, le=100),
-    db: Session = Depends(get_db)
-):
-    session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
-    if not session:
-        raise HTTPException(status_code=404, detail="Chat session not found.")
-
-    history = chat_service.get_history(db=db, session_id=session_id, limit=limit)
-    return {
-        "session_id": session_id,
-        "title": session.title,
-        "total_messages": len(history),
-        "messages": history
-    }
-
-
-@router.get("/sessions", summary="List All Chat Sessions")
-def list_chat_sessions(
-    limit: int = Query(20, ge=1, le=50),
-    db: Session = Depends(get_db)
-):
-    sessions = db.query(ChatSession).order_by(desc(ChatSession.updated_at)).limit(limit).all()
-    return {
-        "total": len(sessions),
-        "sessions": [
-            {
-                "id": s.id,
-                "title": s.title,
-                "created_at": str(s.created_at),
-                "updated_at": str(s.updated_at),
-            }
-            for s in sessions
-        ]
-    }
-
-
-@router.delete("/session/{session_id}", summary="Delete Chat Session")
-def delete_chat_session(session_id: int, db: Session = Depends(get_db)):
-    session = db.query(ChatSession).filter(ChatSession.id == session_id).first()
-    if not session:
-        raise HTTPException(status_code=404, detail="Chat session not found.")
-
-    db.delete(session)
-    db.commit()
-    return {
-        "status": "success",
-        "message": f"Chat session {session_id} deleted."
-    }
+@router.get("/suggestions", response_model=ChatSuggestionsResponse)
+def get_suggestions(current_user: User = Depends(get_current_user)):
+    """Return curated starter questions for the assistant."""
+    return ChatSuggestionsResponse(suggestions=chat_service.get_suggestions())

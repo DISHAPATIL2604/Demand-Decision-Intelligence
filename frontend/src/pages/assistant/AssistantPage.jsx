@@ -1,508 +1,328 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
+  Send,
   Bot,
   User,
-  Send,
   Sparkles,
+  AlertCircle,
+  Loader2,
   RefreshCw,
-  Trash2,
-  Boxes,
-  AlertTriangle,
-  TrendingUp,
-  LineChart,
-  ShieldCheck,
-  ChevronRight,
   Database,
-  ArrowUpRight
+  FileSpreadsheet,
+  HelpCircle,
+  TrendingUp,
+  Boxes,
+  Activity,
+  DollarSign,
 } from 'lucide-react';
-import api from '../../services/api';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { getChatSuggestions, sendChatMessage } from '../../services/api';
+import '../../styles/main.css';
+import './AssistantPage.css';
 
-const QUICK_PROMPTS = [
-  "Which products are at risk of stockout next week?",
-  "Show top moving products in Delhi",
-  "Summarize recent demand anomalies",
-  "What is the recommended reorder quantity for SKU 19512?"
-];
+const INTENT_CONFIG = {
+  inventory: { label: 'Inventory Optimization', color: '#f59e0b', icon: Boxes },
+  anomaly:   { label: 'Demand Anomaly',        color: '#f43f5e', icon: Activity },
+  forecast:  { label: 'Sales Forecast',        color: '#3b82f6', icon: TrendingUp },
+  business:  { label: 'Business Performance',  color: '#10b981', icon: DollarSign },
+  demand:    { label: 'Demand Analytics',      color: '#8b5cf6', icon: Sparkles },
+};
 
 export default function AssistantPage() {
   const [messages, setMessages] = useState([]);
-  const [inputQuery, setInputQuery] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [sessionId, setSessionId] = useState(null);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const DEFAULT_SUGGESTIONS = [
+    "Which products generate the most revenue?",
+    "Which products should I restock?",
+    "Why should I restock them?",
+    "What is the expected demand next week?",
+    "Are there any demand anomalies?",
+    "Kaunsa product sabse zyada revenue generate karta hai?",
+    "मला कोणते products restock करायचे आहेत?",
+    "What data did you use?",
+  ];
+
+  const [suggestions, setSuggestions] = useState(DEFAULT_SUGGESTIONS);
+  const [error, setError] = useState(null);
   const messagesEndRef = useRef(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   useEffect(() => {
-    scrollToBottom();
-  }, [messages, loading]);
-
-  useEffect(() => {
-    // Initial welcome message
-    setMessages([
-      {
-        id: 'welcome',
-        role: 'assistant',
-        content: `### 🤖 Welcome to DemandIQ AI Decision Assistant
-
-I am grounded directly in your **PostgreSQL production database**, analyzing live transactions across **32,226 product master SKUs**, holdout demand forecasts, safety stocks, and detected anomalies.
-
-**How can I assist your supply chain decisions today?**
-- Inquire about stockout risks and reorder quantities across Delhi, Mumbai, Bengaluru, and HR-NCR hubs.
-- Investigate anomalous demand spikes or stockout drops.
-- Review multi-model forecast projections.`,
-        citations: []
-      }
-    ]);
+    fetchSuggestions();
   }, []);
 
-  const handleSendMessage = async (textToSend) => {
-    const query = (textToSend || inputQuery).trim();
-    if (!query || loading) return;
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, isLoading]);
 
-    const userMsgId = 'user-' + Date.now();
-    const newMessages = [
-      ...messages,
-      { id: userMsgId, role: 'user', content: query }
-    ];
-    setMessages(newMessages);
-    setInputQuery('');
-    setLoading(true);
-
+  const fetchSuggestions = async () => {
     try {
-      const payload = {
-        message: query,
-        session_id: sessionId
-      };
-      const res = await api.post('/chat/message', payload);
-
-      if (res.data) {
-        if (res.data.session_id) {
-          setSessionId(res.data.session_id);
-        }
-
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: 'bot-' + Date.now(),
-            role: 'assistant',
-            content: res.data.message,
-            citations: res.data.citations || [],
-            intent: res.data.intent
-          }
-        ]);
+      const data = await getChatSuggestions();
+      if (data?.suggestions && data.suggestions.length > 0) {
+        setSuggestions(data.suggestions);
       }
     } catch (err) {
-      console.error('Chat error:', err);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: 'error-' + Date.now(),
-          role: 'assistant',
-          content: '⚠️ Failed to connect to the Decision Assistant backend. Please verify that the API server is operational and try again.',
-          citations: []
-        }
-      ]);
+      console.warn('Using default starter suggestions:', err.message);
+    }
+  };
+
+  const handleSubmit = async (e, customText = null) => {
+    if (e) e.preventDefault();
+    const text = customText || input;
+    if (!text.trim() || isLoading) return;
+
+    const userMsg = { role: 'user', content: text };
+    const historyForApi = messages.map(m => ({ role: m.role, content: m.content }));
+
+    setMessages(prev => [...prev, userMsg]);
+    setInput('');
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await sendChatMessage(text, historyForApi);
+      const botMsg = {
+        role:      'assistant',
+        content:   response.reply,
+        citations: response.citations || [],
+        intent:    response.intent,
+        evidence:  response.evidence || [],
+      };
+      setMessages(prev => [...prev, botMsg]);
+    } catch (err) {
+      setError(err.message || 'Assistant encountered a communication error. Please try again.');
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 
-  const handleClearChat = async () => {
-    if (sessionId) {
-      try {
-        await api.delete(`/chat/session/${sessionId}`);
-      } catch (e) {
-        // ignore
-      }
-    }
-    setSessionId(null);
-    setMessages([
-      {
-        id: 'reset',
-        role: 'assistant',
-        content: 'Session cleared. Ask me any question regarding your inventory, demand trends, or forecasting models.',
-        citations: []
-      }
-    ]);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  // Helper to render markdown-like text
-  const formatMarkdown = (text) => {
-    if (!text) return null;
-    const lines = text.split('\n');
-
-    return lines.map((line, idx) => {
-      // Header 3
-      if (line.startsWith('### ')) {
-        return (
-          <h3 key={idx} style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '0.8rem', marginBottom: '0.4rem' }}>
-            {line.replace('### ', '')}
-          </h3>
-        );
-      }
-      // Bullet
-      if (line.startsWith('- ')) {
-        const content = line.substring(2);
-        return (
-          <li key={idx} style={{ marginLeft: '1.2rem', marginBottom: '0.3rem', color: 'var(--text-secondary)' }}>
-            {renderInlineFormatting(content)}
-          </li>
-        );
-      }
-      if (line.trim() === '') {
-        return <div key={idx} style={{ height: '0.5rem' }} />;
-      }
-      return (
-        <p key={idx} style={{ marginBottom: '0.4rem', color: 'var(--text-secondary)' }}>
-          {renderInlineFormatting(line)}
-        </p>
-      );
-    });
-  };
-
-  // Inline bold/italic renderer
-  const renderInlineFormatting = (text) => {
-    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*)/g);
-    return parts.map((part, i) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i} style={{ color: '#fff', fontWeight: 600 }}>{part.slice(2, -2)}</strong>;
-      }
-      if (part.startsWith('*') && part.endsWith('*')) {
-        return <em key={i} style={{ color: 'var(--accent-cyan)' }}>{part.slice(1, -1)}</em>;
-      }
-      return part;
-    });
+  const handleReset = () => {
+    setMessages([]);
+    setError(null);
+    fetchSuggestions();
   };
 
   return (
-    <div style={{ maxWidth: '1300px', margin: '0 auto', height: 'calc(100vh - 100px)', display: 'flex', flexDirection: 'column' }}>
-      {/* Top Header Bar */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
-        <div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Bot color="var(--accent-primary)" size={28} />
-            AI Decision Assistant
-          </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginTop: '0.2rem' }}>
-            RAG-grounded natural language Q&A across live sales, forecasts, and inventory optimization policies.
-          </p>
+    <div className="page-container" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - var(--header-height))', padding: '1.25rem 2rem 1.5rem' }}>
+      {/* Header */}
+      <div className="assistant-header">
+        <div className="assistant-header-left">
+          <div
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: 10,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 2px 10px rgba(59, 130, 246, 0.3)',
+            }}
+          >
+            <Sparkles size={20} style={{ color: '#fff' }} />
+          </div>
+          <div>
+            <h2 className="assistant-title">AI Decision Intelligence Copilot</h2>
+            <p className="assistant-subtitle">
+              Ask natural questions in English, Hindi, or Marathi grounded in audited database records and ML forecasts.
+            </p>
+          </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.35rem 0.75rem', borderRadius: '999px', backgroundColor: 'rgba(16, 185, 129, 0.12)', border: '1px solid var(--accent-emerald)', color: 'var(--accent-emerald)', fontSize: '0.75rem', fontWeight: 600 }}>
-            <Database size={13} />
-            PostgreSQL Live Grounded
+          <div className="data-status-bar" title="Connected to PostgreSQL & Analytics Reports">
+            <span className="data-status-dot" />
+            <Database size={12} />
+            <span>PostgreSQL Evidence Engine</span>
           </div>
 
-          <button
-            onClick={handleClearChat}
-            className="btn"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              backgroundColor: 'var(--bg-surface-elevated)',
-              border: '1px solid var(--border-strong)',
-              color: 'var(--text-muted)',
-              fontSize: '0.8rem',
-              padding: '0.45rem 0.85rem',
-              borderRadius: '6px',
-              cursor: 'pointer'
-            }}
-            title="Clear Chat Session"
-          >
-            <Trash2 size={14} />
-            Clear Session
-          </button>
+          {messages.length > 0 && (
+            <button className="assistant-reset-btn" onClick={handleReset} title="Clear conversation">
+              <RefreshCw size={14} /> New Query
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Quick Action Prompt Chips */}
-      <div style={{ display: 'flex', gap: '0.6rem', overflowX: 'auto', paddingBottom: '0.75rem', marginBottom: '0.5rem' }}>
-        {QUICK_PROMPTS.map((prompt, idx) => (
-          <button
-            key={idx}
-            onClick={() => handleSendMessage(prompt)}
-            disabled={loading}
-            style={{
-              padding: '0.4rem 0.85rem',
-              backgroundColor: 'var(--bg-surface)',
-              border: '1px solid var(--border-strong)',
-              borderRadius: '20px',
-              color: 'var(--text-secondary)',
-              fontSize: '0.8rem',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.35rem',
-              transition: 'all 0.15s ease'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.borderColor = 'var(--accent-primary)';
-              e.currentTarget.style.color = '#fff';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.borderColor = 'var(--border-strong)';
-              e.currentTarget.style.color = 'var(--text-secondary)';
-            }}
-          >
-            <Sparkles size={12} color="var(--accent-amber)" />
-            {prompt}
-          </button>
-        ))}
-      </div>
+      {/* Main Chat Body Card */}
+      <div className="assistant-body">
+        {/* Messages feed */}
+        <div className="assistant-messages">
+          {messages.length === 0 && (
+            <div className="assistant-welcome">
+              <div className="assistant-welcome-icon">
+                <Bot size={36} />
+              </div>
+              <h3>How can I assist your supply chain decisions?</h3>
+              <p>
+                Query sales performance, stockout risks, safety buffer calculations, or anomaly diagnostics.
+              </p>
 
-      {/* Message Stream Area */}
-      <div
-        className="card"
-        style={{
-          flex: 1,
-          overflowY: 'auto',
-          padding: '1.5rem',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1.25rem',
-          backgroundColor: 'var(--bg-surface)',
-          border: '1px solid var(--border-subtle)'
-        }}
-      >
-        {messages.map((m) => {
-          const isUser = m.role === 'user';
+              {/* Suggestions Grid */}
+              <div className="assistant-suggestions-grid">
+                {suggestions.map((sug, idx) => (
+                  <button
+                    key={idx}
+                    className="assistant-suggestion-card"
+                    onClick={() => handleSubmit(null, sug)}
+                  >
+                    <span className="assistant-suggestion-text">{sug}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
-          return (
-            <div
-              key={m.id}
-              style={{
-                display: 'flex',
-                gap: '0.85rem',
-                alignItems: 'flex-start',
-                alignSelf: isUser ? 'flex-end' : 'flex-start',
-                maxWidth: isUser ? '75%' : '90%',
-              }}
-            >
-              {!isUser && (
-                <div
-                  style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: '50%',
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    border: '1px solid var(--accent-primary)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    marginTop: '2px'
-                  }}
-                >
-                  <Bot size={18} color="var(--accent-primary)" />
-                </div>
-              )}
+          {messages.map((msg, idx) => {
+            const intentMeta = INTENT_CONFIG[msg.intent];
+            const IntentIcon = intentMeta?.icon;
 
-              <div style={{ flex: 1 }}>
-                <div
-                  style={{
-                    padding: '1rem 1.25rem',
-                    borderRadius: isUser ? '16px 16px 4px 16px' : '4px 16px 16px 16px',
-                    backgroundColor: isUser ? 'var(--accent-primary)' : 'var(--bg-surface-elevated)',
-                    color: isUser ? '#fff' : 'var(--text-primary)',
-                    border: isUser ? 'none' : '1px solid var(--border-strong)',
-                    fontSize: '0.9rem',
-                    lineHeight: 1.6,
-                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                  }}
-                >
-                  {isUser ? m.content : formatMarkdown(m.content)}
+            return (
+              <div key={idx} className={`assistant-msg-row ${msg.role}`}>
+                {/* Avatar */}
+                <div className={`assistant-avatar ${msg.role}`}>
+                  {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
                 </div>
 
-                {/* Grounded Citation Cards */}
-                {!isUser && m.citations && m.citations.length > 0 && (
-                  <div style={{ marginTop: '0.85rem' }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                      <Database size={12} color="var(--accent-cyan)" />
-                      Cited Database Records ({m.citations.length})
+                {/* Bubble */}
+                <div className={`assistant-bubble ${msg.role}`}>
+                  {/* Intent tag */}
+                  {msg.role === 'assistant' && msg.intent && (
+                    <div
+                      className="assistant-intent-badge"
+                      style={{
+                        borderColor: intentMeta?.color ? `${intentMeta.color}40` : 'var(--border)',
+                        background: intentMeta?.color ? `${intentMeta.color}15` : 'transparent',
+                      }}
+                    >
+                      {IntentIcon && <IntentIcon size={12} style={{ color: intentMeta.color }} />}
+                      <span style={{ color: intentMeta?.color || 'var(--text-secondary)' }}>
+                        {intentMeta?.label || msg.intent.toUpperCase()}
+                      </span>
                     </div>
+                  )}
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.6rem' }}>
-                      {m.citations.map((c, cIdx) => (
-                        <div
-                          key={cIdx}
-                          style={{
-                            padding: '0.75rem',
-                            backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                            border: '1px solid var(--border-subtle)',
-                            borderRadius: '8px',
-                            fontSize: '0.8rem'
-                          }}
-                        >
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
-                            <span style={{ fontWeight: 600, color: '#fff' }}>
-                              {c.product_name ? `${c.product_name.slice(0, 24)}...` : `SKU #${c.product_id}`}
-                            </span>
-                            {c.city && (
-                              <span style={{ fontSize: '0.7rem', color: 'var(--accent-cyan)', backgroundColor: 'rgba(6, 182, 212, 0.1)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>
-                                {c.city}
+                  {/* Message content */}
+                  <div className="assistant-bubble-content">
+                    {msg.role === 'assistant' ? (
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          table: ({ node, ...props }) => (
+                            <div className="assistant-table-wrap">
+                              <table className="data-table" {...props} />
+                            </div>
+                          ),
+                          code: ({ node, inline, ...props }) =>
+                            inline ? (
+                              <code className="assistant-inline-code" {...props} />
+                            ) : (
+                              <pre className="assistant-code-block">
+                                <code {...props} />
+                              </pre>
+                            ),
+                        }}
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
+                    ) : (
+                      <p className="assistant-user-text">{msg.content}</p>
+                    )}
+                  </div>
+
+                  {/* Evidence records */}
+                  {msg.evidence && msg.evidence.length > 0 && (
+                    <details className="assistant-evidence">
+                      <summary>
+                        <Database size={13} style={{ display: 'inline', marginRight: 4, verticalAlign: 'middle' }} />
+                        View Grounded Evidence ({msg.evidence.length} records retrieved)
+                      </summary>
+                      <div className="assistant-evidence-body">
+                        {msg.evidence.slice(0, 5).map((ev, i) => (
+                          <div key={i} className="assistant-evidence-card">
+                            {Object.entries(ev)
+                              .filter(([k]) => k !== 'source' && ev[k] !== null && ev[k] !== undefined)
+                              .map(([k, v]) => (
+                                <span key={k} className="assistant-ev-field">
+                                  <span className="assistant-ev-key">{k.replace(/_/g, ' ')}:</span>{' '}
+                                  <span className="assistant-ev-val">{String(v)}</span>
+                                </span>
+                              ))}
+                            {ev.source && (
+                              <span className="assistant-ev-source">
+                                <FileSpreadsheet size={11} style={{ display: 'inline', marginRight: 3 }} />
+                                Source: {ev.source}
                               </span>
                             )}
                           </div>
+                        ))}
+                      </div>
+                    </details>
+                  )}
 
-                          {c.type === 'inventory' && (
-                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>
-                              <div>Current Stock: <strong style={{ color: '#fff' }}>{Math.round(c.current_stock).toLocaleString()}</strong></div>
-                              <div>Recommended PO: <strong style={{ color: 'var(--accent-rose)' }}>{Math.round(c.recommended_order_qty).toLocaleString()}</strong></div>
-                              <div style={{ marginTop: '0.2rem' }}>
-                                <span style={{
-                                  padding: '0.1rem 0.4rem',
-                                  borderRadius: '4px',
-                                  fontSize: '0.68rem',
-                                  fontWeight: 700,
-                                  backgroundColor: c.risk_status === 'CRITICAL_STOCKOUT' ? 'rgba(244, 63, 94, 0.2)' : 'rgba(245, 158, 11, 0.2)',
-                                  color: c.risk_status === 'CRITICAL_STOCKOUT' ? 'var(--accent-rose)' : 'var(--accent-amber)'
-                                }}>
-                                  {c.risk_status}
-                                </span>
-                              </div>
-                            </div>
-                          )}
-
-                          {c.type === 'anomaly' && (
-                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>
-                              <div>Actual: <strong style={{ color: '#fff' }}>{Math.round(c.actual).toLocaleString()}</strong> vs Exp: {Math.round(c.expected).toLocaleString()}</div>
-                              <div style={{ color: 'var(--accent-amber)', marginTop: '0.2rem' }}>{c.anomaly_type} ({c.severity})</div>
-                              <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>Date: {c.date}</div>
-                            </div>
-                          )}
-
-                          {c.type === 'forecast' && (
-                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>
-                              <div>Forecast: <strong style={{ color: 'var(--accent-cyan)' }}>{Math.round(c.predicted).toLocaleString()} units</strong></div>
-                              <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>95% CI: {c.bounds}</div>
-                              <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>Model: {c.model}</div>
-                            </div>
-                          )}
-
-                          {c.type === 'sales' && (
-                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>
-                              <div>14-Day Demand: <strong style={{ color: '#fff' }}>{Math.round(c.total_quantity).toLocaleString()} units</strong></div>
-                              <div>Gross Revenue: <strong style={{ color: 'var(--accent-emerald)' }}>₹{Math.round(c.revenue_inr).toLocaleString()}</strong></div>
-                            </div>
-                          )}
-                        </div>
+                  {/* Citations */}
+                  {msg.citations && msg.citations.length > 0 && (
+                    <div className="assistant-citations">
+                      <span className="assistant-citations-label">Sources:</span>
+                      {msg.citations.map((c, i) => (
+                        <span key={i} className="assistant-citation-chip">
+                          {c.includes('.csv') ? <FileSpreadsheet size={11} /> : <Database size={11} />}
+                          <span>{c}</span>
+                        </span>
                       ))}
                     </div>
-                  </div>
-                )}
-              </div>
-
-              {isUser && (
-                <div
-                  style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--bg-surface-elevated)',
-                    border: '1px solid var(--border-strong)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    marginTop: '2px'
-                  }}
-                >
-                  <User size={18} color="#fff" />
+                  )}
                 </div>
-              )}
-            </div>
-          );
-        })}
+              </div>
+            );
+          })}
 
-        {loading && (
-          <div style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
-            <div
-              style={{
-                width: 36,
-                height: 36,
-                borderRadius: '50%',
-                backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                border: '1px solid var(--accent-primary)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
+          {/* Loading bubble */}
+          {isLoading && (
+            <div className="assistant-msg-row assistant">
+              <div className="assistant-avatar assistant"><Bot size={16} /></div>
+              <div className="assistant-bubble assistant assistant-thinking">
+                <Loader2 size={16} className="spin" />
+                <span>Analyzing your data...</span>
+              </div>
+            </div>
+          )}
+
+          {/* Error */}
+          {error && (
+            <div className="assistant-error-bar">
+              <AlertCircle size={16} />
+              <span>{error}</span>
+            </div>
+          )}
+
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Input bar */}
+        <div className="assistant-input-area">
+          <form onSubmit={handleSubmit} className="assistant-input-form">
+            <input
+              type="text"
+              value={input}
+              onChange={e => setInput(e.target.value)}
+              placeholder="Ask about demand, sales, inventory or forecasts — English, Hindi, Marathi or Hinglish..."
+              className="assistant-input"
+              disabled={isLoading}
+            />
+            <button
+              type="submit"
+              disabled={isLoading || !input.trim()}
+              className="assistant-send-btn"
+              title="Send message"
             >
-              <Bot size={18} color="var(--accent-primary)" />
-            </div>
-            <div
-              style={{
-                padding: '0.75rem 1.25rem',
-                borderRadius: '4px 16px 16px 16px',
-                backgroundColor: 'var(--bg-surface-elevated)',
-                border: '1px solid var(--border-strong)',
-                color: 'var(--text-secondary)',
-                fontSize: '0.85rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}
-            >
-              <RefreshCw size={14} className="animate-spin" />
-              Retrieving live facts & computing policy recommendations...
-            </div>
-          </div>
-        )}
-
-        <div ref={messagesEndRef} />
-      </div>
-
-      {/* Message Input Box */}
-      <div style={{ marginTop: '0.75rem', position: 'relative' }}>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <input
-            type="text"
-            placeholder="Ask about stockout risks, SKU recommendations, forecasts, or anomaly alerts..."
-            value={inputQuery}
-            onChange={(e) => setInputQuery(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={loading}
-            style={{
-              flex: 1,
-              padding: '0.85rem 1.25rem',
-              backgroundColor: 'var(--bg-surface)',
-              border: '1px solid var(--border-strong)',
-              borderRadius: '8px',
-              color: '#fff',
-              fontSize: '0.925rem',
-              outline: 'none',
-            }}
-          />
-          <button
-            onClick={() => handleSendMessage()}
-            disabled={!inputQuery.trim() || loading}
-            className="btn btn-primary"
-            style={{
-              padding: '0.85rem 1.5rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              fontWeight: 600,
-              cursor: !inputQuery.trim() || loading ? 'not-allowed' : 'pointer'
-            }}
-          >
-            <Send size={16} />
-            Ask
-          </button>
+              <Send size={18} />
+            </button>
+          </form>
+          <p className="assistant-disclaimer">
+            Decision responses are strictly grounded in PostgreSQL demand data, forecasting models, and inventory reports.
+          </p>
         </div>
       </div>
     </div>

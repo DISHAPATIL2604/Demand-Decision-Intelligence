@@ -9,10 +9,10 @@ import OverviewPage from './pages/dashboard/OverviewPage';
 import UploadPage from './pages/upload/UploadPage';
 import ForecastPage from './pages/forecast/ForecastPage';
 import InventoryPage from './pages/inventory/InventoryPage';
-import TrendsPage from './pages/trends/TrendsPage';
-import PriceInsightsPage from './pages/pricing/PriceInsightsPage';
+import AnomalyPage from './pages/anomaly/AnomalyPage';
+import PricePage from './pages/price/PricePage';
+import EvaluationPage from './pages/evaluation/EvaluationPage';
 import AssistantPage from './pages/assistant/AssistantPage';
-import GenericPage from './pages/common/GenericPage';
 import './styles/main.css';
 
 export default function App() {
@@ -31,10 +31,11 @@ export default function App() {
             <Route path="/upload" element={<UploadPage />} />
             <Route path="/forecast" element={<ForecastPage />} />
             <Route path="/inventory" element={<InventoryPage />} />
-            <Route path="/trends" element={<TrendsPage />} />
-            <Route path="/price-insights" element={<PriceInsightsPage />} />
-            <Route path="/evaluation" element={<ForecastPage />} />
+            <Route path="/trends" element={<AnomalyPage />} />
+            <Route path="/price-insights" element={<PricePage />} />
+            <Route path="/evaluation" element={<EvaluationPage />} />
             <Route path="/assistant" element={<AssistantPage />} />
+            <Route path="/auth-test" element={<AuthTestPage />} />
           </Route>
 
           {/* Fallback */}

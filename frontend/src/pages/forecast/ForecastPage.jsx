@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   ResponsiveContainer,
-  ComposedChart,
-  Line,
+  AreaChart,
   Area,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   Tooltip,
@@ -12,665 +13,389 @@ import {
 } from 'recharts';
 import {
   TrendingUp,
-  Cpu,
-  Sparkles,
-  BarChart3,
-  Calendar,
-  CheckCircle2,
-  AlertCircle,
-  RefreshCw,
-  Award,
+  Filter,
   Layers,
-  Activity,
-  History,
+  Award,
+  AlertCircle,
+  HelpCircle,
+  RefreshCw,
+  Search,
 } from 'lucide-react';
-import api from '../../services/api';
-
-const HORIZONS = [7, 14, 30];
-const AVAILABLE_MODELS = [
-  { id: 'prophet', name: 'Facebook Prophet', tag: 'ML / Seasonality', color: '#3b82f6' },
-  { id: 'moving_avg', name: 'Moving Average (7d)', tag: 'Statistical', color: '#f59e0b' },
-  { id: 'naive', name: 'Naive Baseline', tag: 'Baseline', color: '#06b6d4' },
-];
+import { getForecastResults, getForecastEvaluation } from '../../services/api';
 
 export default function ForecastPage() {
-  // Config state
-  const [topProducts, setTopProducts] = useState(['19512', '391306', '12872', '3881', '445675']);
-  const [selectedProduct, setSelectedProduct] = useState('19512');
-  const [selectedHorizon, setSelectedHorizon] = useState(7);
-  const [selectedModels, setSelectedModels] = useState(['prophet', 'moving_avg', 'naive']);
-  const [activeModelTab, setActiveModelTab] = useState('prophet');
+  const [results, setResults] = useState([]);
+  const [evaluation, setEvaluation] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Data state
-  const [runs, setRuns] = useState([]);
-  const [activeRunDetail, setActiveRunDetail] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [chartLoading, setChartLoading] = useState(false);
-  const [runningForecast, setRunningForecast] = useState(false);
-  const [feedbackMsg, setFeedbackMsg] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
+  // Filters
+  const [cityFilter, setCityFilter] = useState('');
+  const [productFilter, setProductFilter] = useState('');
+  const [selectedModel, setSelectedModel] = useState('pred_ensemble');
 
-  // 1. Initial Load: Fetch top products & existing runs
-  useEffect(() => {
-    loadInitialData();
-  }, []);
-
-  const loadInitialData = async () => {
+  const loadData = async () => {
     setLoading(true);
+    setError(null);
     try {
-      // Fetch demand summary to discover top products
-      const sumRes = await api.get('/api/demand/summary').catch(() => null);
-      if (sumRes?.data?.top_products_by_qty?.length > 0) {
-        const pIds = sumRes.data.top_products_by_qty.map((p) => p.product_id);
-        setTopProducts(pIds);
-        if (!pIds.includes(selectedProduct)) {
-          setSelectedProduct(pIds[0]);
-        }
+      const [resData, evalData] = await Promise.allSettled([
+        getForecastResults({ limit: 300 }),
+        getForecastEvaluation(),
+      ]);
+
+      if (resData.status === 'fulfilled' && resData.value?.data) {
+        setResults(resData.value.data);
+      } else {
+        setResults([]);
       }
 
-      // Fetch existing forecast runs
-      await loadRuns();
+      if (evalData.status === 'fulfilled') {
+        setEvaluation(evalData.value);
+      }
     } catch (err) {
-      console.error('Failed to load initial forecast data', err);
+      setError(err.message || 'Failed to load forecast intelligence');
     } finally {
       setLoading(false);
     }
   };
 
-  const loadRuns = async () => {
-    try {
-      const res = await api.get('/api/forecast/runs?page=1&page_size=50');
-      if (res?.data?.results) {
-        setRuns(res.data.results);
-      }
-    } catch (err) {
-      console.error('Failed to fetch runs', err);
-    }
-  };
-
-  // 2. Load detail for selected product, horizon, and active model
   useEffect(() => {
-    loadSelectedRunDetail();
-  }, [selectedProduct, selectedHorizon, activeModelTab, runs]);
+    loadData();
+  }, []);
 
-  const loadSelectedRunDetail = async () => {
-    // Find matching completed run in memory
-    const match = runs.find(
-      (r) =>
-        r.product_id === String(selectedProduct) &&
-        r.horizon_days === Number(selectedHorizon) &&
-        r.model_name === activeModelTab &&
-        r.status === 'complete'
-    );
-
-    if (match) {
-      setChartLoading(true);
-      try {
-        const { data } = await api.get(`/api/forecast/${match.id}`);
-        setActiveRunDetail(data);
-      } catch (err) {
-        console.error('Failed to fetch run details', err);
-      } finally {
-        setChartLoading(false);
-      }
-    } else {
-      setActiveRunDetail(null);
+  // Filtered dataset
+  const filteredData = useMemo(() => {
+    let data = [...results];
+    if (cityFilter) {
+      data = data.filter(
+        item => item.city_name?.toLowerCase() === cityFilter.toLowerCase()
+      );
     }
-  };
-
-  // 3. Trigger new forecast run
-  const handleTriggerForecast = async () => {
-    setRunningForecast(true);
-    setFeedbackMsg('');
-    setErrorMsg('');
-    try {
-      const payload = {
-        product_ids: [selectedProduct],
-        models: selectedModels,
-        horizon_days: selectedHorizon,
-      };
-      const { data } = await api.post('/api/forecast/run', payload);
-      setFeedbackMsg(`Successfully generated ${data.successful_runs} forecast model run(s)!`);
-      await loadRuns();
-    } catch (err) {
-      const detail = err.response?.data?.detail;
-      setErrorMsg(typeof detail === 'string' ? detail : 'Failed to run forecast.');
-    } finally {
-      setRunningForecast(false);
+    if (productFilter.trim()) {
+      data = data.filter(item =>
+        String(item.product_id).includes(productFilter.trim())
+      );
     }
-  };
+    return data;
+  }, [results, cityFilter, productFilter]);
 
-  // 4. Transform points into chart series
+  // Aggregate time series for chart (group by date_)
   const chartData = useMemo(() => {
-    if (!activeRunDetail?.points?.length) return [];
-    return activeRunDetail.points.map((p) => {
-      const dateLabel = typeof p.forecast_date === 'string' ? p.forecast_date.slice(5) : p.forecast_date;
-      return {
-        date: dateLabel,
-        fullDate: p.forecast_date,
-        Actual: p.actual != null ? Math.round(p.actual) : null,
-        Forecast: Math.round(p.yhat),
-        LowerCI: p.yhat_lower != null ? Math.round(p.yhat_lower) : null,
-        UpperCI: p.yhat_upper != null ? Math.round(p.yhat_upper) : null,
-        isFuture: p.is_future,
-      };
+    if (!filteredData.length) return [];
+
+    const grouped = {};
+    filteredData.forEach(row => {
+      const d = row.date_ || 'Unknown';
+      if (!grouped[d]) {
+        grouped[d] = {
+          date: d,
+          actual: 0,
+          pred_ensemble: 0,
+          pred_lgb: 0,
+          pred_xgb: 0,
+          pred_croston: 0,
+          count: 0,
+        };
+      }
+      grouped[d].actual += Number(row.daily_quantity) || 0;
+      grouped[d].pred_ensemble += Number(row.pred_ensemble) || 0;
+      grouped[d].pred_lgb += Number(row.pred_lgb) || 0;
+      grouped[d].pred_xgb += Number(row.pred_xgb) || 0;
+      grouped[d].pred_croston += Number(row.pred_croston) || 0;
+      grouped[d].count += 1;
     });
-  }, [activeRunDetail]);
 
-  // Find competing runs for the current product & horizon to render comparison leaderboard
-  const comparisonRuns = useMemo(() => {
-    return runs.filter(
-      (r) =>
-        r.product_id === String(selectedProduct) &&
-        r.horizon_days === Number(selectedHorizon) &&
-        r.status === 'complete' &&
-        r.evaluation != null
-    );
-  }, [runs, selectedProduct, selectedHorizon]);
+    return Object.values(grouped)
+      .sort((a, b) => (a.date > b.date ? 1 : -1))
+      .map(item => ({
+        ...item,
+        actual: Math.round(item.actual),
+        pred_ensemble: Math.round(item.pred_ensemble),
+        pred_lgb: Math.round(item.pred_lgb),
+        pred_xgb: Math.round(item.pred_xgb),
+        pred_croston: Math.round(item.pred_croston),
+      }));
+  }, [filteredData]);
 
-  // Find best model by WAPE (or MAE)
-  const bestModel = useMemo(() => {
-    if (!comparisonRuns.length) return null;
-    const sorted = [...comparisonRuns].sort((a, b) => {
-      const wapeA = a.evaluation?.wape ?? Infinity;
-      const wapeB = b.evaluation?.wape ?? Infinity;
-      return wapeA - wapeB;
+  // Available unique cities
+  const cities = useMemo(() => {
+    const set = new Set();
+    results.forEach(r => {
+      if (r.city_name) set.add(r.city_name);
     });
-    return sorted[0];
-  }, [comparisonRuns]);
-
-  // Format helper
-  const fmt = (n) =>
-    n == null ? '—' : Number(n).toLocaleString('en-US', { maximumFractionDigits: 1 });
+    return Array.from(set).sort();
+  }, [results]);
 
   return (
-    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="page-container">
       {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
-        <div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <TrendingUp color="var(--accent-primary)" size={28} />
-            Demand Forecasting & Evaluation Studio
-          </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.925rem', marginTop: '0.25rem' }}>
-            Chronological multi-horizon predictions with Naive, Moving Average, and Facebook Prophet models.
+      <div className="page-header">
+        <div className="page-header-left">
+          <h1 className="page-title">Demand Forecast Intelligence</h1>
+          <p className="page-subtitle">
+            Historical backtest predictions, multi-model comparisons, and daily sales validation.
           </p>
         </div>
-
-        <button
-          className="btn btn-primary"
-          onClick={handleTriggerForecast}
-          disabled={runningForecast}
-          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.4rem' }}
-        >
-          <RefreshCw size={16} className={runningForecast ? 'animate-spin' : ''} />
-          {runningForecast ? 'Training Models...' : 'Run Forecast'}
-        </button>
+        <div className="page-header-actions">
+          <button className="btn btn-ghost btn-sm" onClick={loadData} disabled={loading}>
+            <RefreshCw size={14} className={loading ? 'spin' : ''} />
+            <span>Refresh</span>
+          </button>
+        </div>
       </div>
 
-      {/* Alerts */}
-      {feedbackMsg && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.85rem 1.25rem', backgroundColor: 'rgba(16, 185, 129, 0.12)', border: '1px solid var(--accent-emerald)', borderRadius: '8px', color: 'var(--accent-emerald)', marginBottom: '1.5rem' }}>
-          <CheckCircle2 size={18} />
-          <span>{feedbackMsg}</span>
-        </div>
-      )}
-      {errorMsg && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.85rem 1.25rem', backgroundColor: 'rgba(244, 63, 94, 0.12)', border: '1px solid var(--accent-rose)', borderRadius: '8px', color: 'var(--accent-rose)', marginBottom: '1.5rem' }}>
-          <AlertCircle size={18} />
-          <span>{errorMsg}</span>
+      {error && (
+        <div className="card" style={{ marginBottom: '1.5rem', borderColor: 'rgba(244,63,94,0.3)', background: 'rgba(244,63,94,0.06)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#fb7185' }}>
+            <AlertCircle size={18} />
+            <span>{error}</span>
+          </div>
         </div>
       )}
 
-      {/* Controls Bar */}
-      <div className="card" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Product SKU Selector */}
-        <div>
-          <label style={{ display: 'block', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)', marginBottom: '0.4rem', fontWeight: 600 }}>
-            Target Product SKU
-          </label>
-          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-            {topProducts.slice(0, 5).map((pid) => (
-              <button
-                key={pid}
-                onClick={() => setSelectedProduct(pid)}
-                style={{
-                  padding: '0.45rem 0.9rem',
-                  borderRadius: '6px',
-                  border: selectedProduct === pid ? '1px solid var(--accent-primary)' : '1px solid var(--border-strong)',
-                  backgroundColor: selectedProduct === pid ? 'rgba(59, 130, 246, 0.2)' : 'var(--bg-surface-elevated)',
-                  color: selectedProduct === pid ? '#93c5fd' : 'var(--text-secondary)',
-                  fontWeight: selectedProduct === pid ? 600 : 500,
-                  fontSize: '0.85rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                }}
-              >
-                SKU #{pid}
-              </button>
-            ))}
+      {/* Filter Toolbar */}
+      <div className="card card-sm" style={{ marginBottom: '1.5rem' }}>
+        <div className="filter-bar" style={{ margin: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Filter size={15} style={{ color: 'var(--text-muted)' }} />
+            <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)' }}>Filters:</span>
           </div>
-        </div>
 
-        {/* Horizon Selector */}
-        <div>
-          <label style={{ display: 'block', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)', marginBottom: '0.4rem', fontWeight: 600 }}>
-            Forecast Horizon
-          </label>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            {HORIZONS.map((h) => (
-              <button
-                key={h}
-                onClick={() => setSelectedHorizon(h)}
-                style={{
-                  padding: '0.45rem 1rem',
-                  borderRadius: '6px',
-                  border: selectedHorizon === h ? '1px solid var(--accent-cyan)' : '1px solid var(--border-strong)',
-                  backgroundColor: selectedHorizon === h ? 'rgba(6, 182, 212, 0.2)' : 'var(--bg-surface-elevated)',
-                  color: selectedHorizon === h ? '#67e8f9' : 'var(--text-secondary)',
-                  fontWeight: selectedHorizon === h ? 600 : 500,
-                  fontSize: '0.85rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                }}
-              >
-                {h} Days
-              </button>
+          {/* City Dropdown */}
+          <select
+            className="filter-select"
+            value={cityFilter}
+            onChange={e => setCityFilter(e.target.value)}
+          >
+            <option value="">All Cities ({cities.length || 4})</option>
+            {cities.map(c => (
+              <option key={c} value={c}>
+                {c}
+              </option>
             ))}
-          </div>
-        </div>
+          </select>
 
-        {/* Model Selector for Training */}
-        <div>
-          <label style={{ display: 'block', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)', marginBottom: '0.4rem', fontWeight: 600 }}>
-            Active Models
-          </label>
-          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            {AVAILABLE_MODELS.map((m) => {
-              const active = selectedModels.includes(m.id);
-              return (
-                <label
-                  key={m.id}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                    fontSize: '0.85rem',
-                    color: active ? 'var(--text-primary)' : 'var(--text-muted)',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <input
-                    type="checkbox"
-                    checked={active}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setSelectedModels([...selectedModels, m.id]);
-                      } else if (selectedModels.length > 1) {
-                        setSelectedModels(selectedModels.filter((id) => id !== m.id));
-                      }
-                    }}
-                    style={{ accentColor: 'var(--accent-primary)', cursor: 'pointer' }}
-                  />
-                  <span>{m.name}</span>
-                </label>
-              );
-            })}
+          {/* SKU Search */}
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <Search size={14} style={{ position: 'absolute', left: '0.65rem', color: 'var(--text-muted)', pointerEvents: 'none' }} />
+            <input
+              type="text"
+              className="filter-input"
+              style={{ paddingLeft: '2rem', width: '180px' }}
+              placeholder="Search SKU / Product ID..."
+              value={productFilter}
+              onChange={e => setProductFilter(e.target.value)}
+            />
+          </div>
+
+          {/* Model toggle */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginLeft: 'auto' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Display Model:</span>
+            <select
+              className="filter-select"
+              value={selectedModel}
+              onChange={e => setSelectedModel(e.target.value)}
+            >
+              <option value="pred_ensemble">Stacking Ensemble (Recommended)</option>
+              <option value="pred_xgb">XGBoost</option>
+              <option value="pred_lgb">LightGBM</option>
+              <option value="pred_croston">Croston (Intermittent)</option>
+            </select>
           </div>
         </div>
       </div>
 
-      {/* Model Leaderboard & Evaluation Overview */}
-      <div style={{ marginBottom: '1.5rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-          <h2 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Award size={20} color="var(--accent-amber)" />
-            Model Accuracy Leaderboard (Holdout Evaluation Split)
-          </h2>
-          {bestModel && (
-            <span style={{ fontSize: '0.8rem', padding: '0.25rem 0.75rem', borderRadius: '999px', backgroundColor: 'rgba(16, 185, 129, 0.15)', border: '1px solid var(--accent-emerald)', color: 'var(--accent-emerald)', fontWeight: 600 }}>
-              Top Performer: {bestModel.model_name.toUpperCase()} (WAPE {bestModel.evaluation?.wape}%)
-            </span>
+      {/* Main Trajectory Chart */}
+      <div className="card" style={{ marginBottom: '1.5rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.25rem' }}>
+          <div>
+            <h3 className="card-title">Historical Actual Demand vs Model Prediction</h3>
+            <p className="card-subtitle" style={{ marginBottom: 0 }}>
+              Aggregation of {filteredData.length} records across {chartData.length} recorded forecast dates
+            </p>
+          </div>
+          {evaluation?.best_model && (
+            <div className="badge badge-safe">
+              <Award size={12} />
+              Best Model: {evaluation.best_model}
+            </div>
           )}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1rem' }}>
-          {AVAILABLE_MODELS.map((m) => {
-            const run = comparisonRuns.find((r) => r.model_name === m.id);
-            const isWinner = bestModel?.model_name === m.id;
-            const isSelected = activeModelTab === m.id;
-
-            return (
-              <div
-                key={m.id}
-                onClick={() => setActiveModelTab(m.id)}
-                style={{
-                  backgroundColor: isSelected ? 'var(--bg-surface-elevated)' : 'var(--bg-surface)',
-                  border: isSelected
-                    ? `2px solid ${m.color}`
-                    : isWinner
-                    ? '1px solid var(--accent-emerald)'
-                    : '1px solid var(--border-subtle)',
-                  borderRadius: '12px',
-                  padding: '1.25rem',
-                  cursor: 'pointer',
-                  position: 'relative',
-                  transition: 'all 0.2s ease',
-                }}
-              >
-                {isWinner && (
-                  <span
-                    style={{
-                      position: 'absolute',
-                      top: '0.75rem',
-                      right: '0.75rem',
-                      fontSize: '0.7rem',
-                      fontWeight: 700,
-                      backgroundColor: 'rgba(16, 185, 129, 0.2)',
-                      color: 'var(--accent-emerald)',
-                      padding: '0.15rem 0.5rem',
-                      borderRadius: '4px',
-                    }}
-                  >
-                    BEST ACCURACY
-                  </span>
-                )}
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: m.color }} />
-                  <span style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text-primary)' }}>{m.name}</span>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>({m.tag})</span>
-                </div>
-
-                {run?.evaluation ? (
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginTop: '0.5rem' }}>
-                    <div>
-                      <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)' }}>WAPE</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 700, color: m.color }}>
-                        {run.evaluation.wape != null ? `${run.evaluation.wape}%` : '—'}
-                      </div>
-                    </div>
-                    <div>
-                      <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)' }}>MAE</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                        {fmt(run.evaluation.mae)}
-                      </div>
-                    </div>
-                    <div>
-                      <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)' }}>RMSE</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                        {fmt(run.evaluation.rmse)}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontStyle: 'italic', marginTop: '0.5rem' }}>
-                    No run found for this configuration. Click "Run Forecast" to train.
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Main Forecast Chart Card */}
-      <div className="card" style={{ padding: '1.75rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <div>
-            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Activity size={20} color={AVAILABLE_MODELS.find((m) => m.id === activeModelTab)?.color || '#3b82f6'} />
-              Time Series Prediction Curve & 80% Confidence Interval
-            </h3>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
-              Showing {activeModelTab.toUpperCase()} model | Product SKU #{selectedProduct} | {selectedHorizon}-Day Horizon
-            </p>
+        {loading ? (
+          <div className="loading-state">
+            <RefreshCw size={20} className="spin" />
+            <span>Loading forecast series...</span>
           </div>
-
-          {/* Model toggle pills inside chart header */}
-          <div style={{ display: 'flex', gap: '0.5rem', backgroundColor: 'var(--bg-surface-elevated)', padding: '0.3rem', borderRadius: '8px' }}>
-            {AVAILABLE_MODELS.map((m) => (
-              <button
-                key={m.id}
-                onClick={() => setActiveModelTab(m.id)}
-                style={{
-                  padding: '0.4rem 0.85rem',
-                  borderRadius: '6px',
-                  border: 'none',
-                  backgroundColor: activeModelTab === m.id ? m.color : 'transparent',
-                  color: activeModelTab === m.id ? '#fff' : 'var(--text-secondary)',
-                  fontWeight: activeModelTab === m.id ? 600 : 500,
-                  fontSize: '0.8rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                }}
-              >
-                {m.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Chart Viewport */}
-        {chartLoading ? (
-          <div style={{ height: '360px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
-            <RefreshCw size={24} className="animate-spin" style={{ marginRight: '0.5rem' }} />
-            Loading prediction points...
-          </div>
-        ) : chartData.length > 0 ? (
-          <div style={{ width: '100%', height: 380 }}>
-            <ResponsiveContainer>
-              <ComposedChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-                <defs>
-                  {/* Shaded Confidence Interval Gradient */}
-                  <linearGradient id="ciGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="var(--accent-primary)" stopOpacity={0.25} />
-                    <stop offset="95%" stopColor="var(--accent-primary)" stopOpacity={0.03} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtle)" />
-                <XAxis
-                  dataKey="date"
-                  stroke="var(--text-muted)"
-                  fontSize={12}
-                  tickLine={false}
-                />
-                <YAxis
-                  stroke="var(--text-muted)"
-                  fontSize={12}
-                  tickLine={false}
-                  tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(1)}k` : v)}
-                />
-                <Tooltip
-                  content={({ active, payload, label }) => {
-                    if (active && payload && payload.length) {
-                      const d = payload[0]?.payload;
-                      return (
-                        <div
-                          style={{
-                            backgroundColor: 'var(--bg-surface)',
-                            border: '1px solid var(--border-strong)',
-                            borderRadius: '8px',
-                            padding: '0.85rem',
-                            fontSize: '0.85rem',
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
-                          }}
-                        >
-                          <div style={{ fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
-                            {d?.fullDate} {d?.isFuture ? '(Future Projection)' : '(Holdout Test)'}
-                          </div>
-                          {d?.Actual != null && (
-                            <div style={{ color: '#fff', display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
-                              <span>Actual Demand:</span>
-                              <strong>{d.Actual.toLocaleString()} units</strong>
-                            </div>
-                          )}
-                          <div style={{ color: AVAILABLE_MODELS.find((m) => m.id === activeModelTab)?.color || '#3b82f6', display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
-                            <span>Forecast (yhat):</span>
-                            <strong>{d?.Forecast?.toLocaleString()} units</strong>
-                          </div>
-                          {d?.LowerCI != null && (
-                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.78rem', marginTop: '0.2rem' }}>
-                              80% CI: [{d.LowerCI.toLocaleString()} – {d.UpperCI.toLocaleString()}]
-                            </div>
-                          )}
-                        </div>
-                      );
-                    }
-                    return null;
-                  }}
-                />
-                <Legend verticalAlign="top" height={36} />
-
-                {/* Upper CI boundary / area */}
-                <Area
-                  type="monotone"
-                  dataKey="UpperCI"
-                  name="80% Upper CI"
-                  stroke="none"
-                  fill="url(#ciGradient)"
-                  isAnimationActive={false}
-                />
-                {/* Predicted line */}
-                <Line
-                  type="monotone"
-                  dataKey="Forecast"
-                  name={`Predicted (${activeModelTab.toUpperCase()})`}
-                  stroke={AVAILABLE_MODELS.find((m) => m.id === activeModelTab)?.color || '#3b82f6'}
-                  strokeWidth={2.5}
-                  dot={{ r: 3, fill: AVAILABLE_MODELS.find((m) => m.id === activeModelTab)?.color || '#3b82f6' }}
-                  activeDot={{ r: 6 }}
-                />
-                {/* Actual historical line */}
-                <Line
-                  type="monotone"
-                  dataKey="Actual"
-                  name="Historical Actual"
-                  stroke="#f9fafb"
-                  strokeWidth={2}
-                  strokeDasharray="4 4"
-                  dot={{ r: 3, fill: '#f9fafb' }}
-                />
-              </ComposedChart>
-            </ResponsiveContainer>
+        ) : chartData.length === 0 ? (
+          <div className="empty-state">
+            <div className="empty-state-icon">
+              <TrendingUp size={28} />
+            </div>
+            <div className="empty-state-title">No Forecast Records Available</div>
+            <div className="empty-state-desc">
+              {results.length === 0
+                ? 'Forecast results CSV has not been generated yet. Run the forecasting pipeline first.'
+                : 'No records match the selected city or SKU filter.'}
+            </div>
           </div>
         ) : (
-          <div style={{ padding: '3rem', textAlign: 'center', color: 'var(--text-muted)' }}>
-            No forecast points available for this product and model combination. Click <strong>"Run Forecast"</strong> above to generate forecasts.
+          <div style={{ width: '100%', height: 360 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={chartData} margin={{ top: 10, right: 20, left: 10, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="actualGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                  </linearGradient>
+                  <linearGradient id="forecastGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.35} />
+                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+                <XAxis dataKey="date" stroke="#64748b" fontSize={12} tickLine={false} />
+                <YAxis stroke="#64748b" fontSize={12} tickLine={false} tickFormatter={v => v.toLocaleString()} />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: '#111827',
+                    borderColor: 'rgba(255,255,255,0.12)',
+                    borderRadius: 8,
+                    color: '#f1f5f9',
+                    fontSize: '0.85rem',
+                  }}
+                  formatter={(value, name) => [
+                    value.toLocaleString() + ' units',
+                    name === 'actual'
+                      ? 'Actual Demand'
+                      : name === 'pred_ensemble'
+                      ? 'Stacking Ensemble'
+                      : name === 'pred_xgb'
+                      ? 'XGBoost'
+                      : name === 'pred_lgb'
+                      ? 'LightGBM'
+                      : 'Croston',
+                  ]}
+                />
+                <Legend
+                  wrapperStyle={{ fontSize: '0.82rem', paddingTop: '0.75rem' }}
+                  formatter={value =>
+                    value === 'actual'
+                      ? 'Actual Demand (Units)'
+                      : value === 'pred_ensemble'
+                      ? 'Stacking Ensemble Forecast'
+                      : value === 'pred_xgb'
+                      ? 'XGBoost Prediction'
+                      : value === 'pred_lgb'
+                      ? 'LightGBM Prediction'
+                      : 'Croston'
+                  }
+                />
+                <Area
+                  type="monotone"
+                  dataKey="actual"
+                  stroke="#10b981"
+                  strokeWidth={2}
+                  fill="url(#actualGrad)"
+                  name="actual"
+                />
+                <Area
+                  type="monotone"
+                  dataKey={selectedModel}
+                  stroke="#3b82f6"
+                  strokeWidth={2.2}
+                  fill="url(#forecastGrad)"
+                  name={selectedModel}
+                />
+              </AreaChart>
+            </ResponsiveContainer>
           </div>
         )}
+
+        <div style={{ marginTop: '1.25rem', paddingTop: '1rem', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.78rem' }}>
+          <HelpCircle size={14} />
+          <span>
+            Actual demand reflects daily recorded sales quantity. Predictions are generated using historical temporal features and tree-based ensemble weights.
+          </span>
+        </div>
       </div>
 
-      {/* Runs History Table */}
+      {/* Model Benchmark Performance Table */}
       <div className="card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <History size={18} color="var(--accent-purple)" />
-            Recent Forecast Database Runs
-          </h3>
-          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-            {runs.length} runs recorded in database
+          <div>
+            <h3 className="card-title">Forecasting Benchmark Models &amp; Error Metrics</h3>
+            <p className="card-subtitle" style={{ marginBottom: 0 }}>
+              Stage S3 validation metrics computed on hold-out temporal test splits
+            </p>
+          </div>
+          <span className="badge badge-info">
+            <Layers size={12} />
+            {evaluation?.models?.length || 0} Models Evaluated
           </span>
         </div>
 
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid var(--border-subtle)', textAlign: 'left', color: 'var(--text-secondary)' }}>
-                <th style={{ padding: '0.75rem 1rem' }}>Run ID</th>
-                <th style={{ padding: '0.75rem 1rem' }}>Product SKU</th>
-                <th style={{ padding: '0.75rem 1rem' }}>Model</th>
-                <th style={{ padding: '0.75rem 1rem' }}>Horizon</th>
-                <th style={{ padding: '0.75rem 1rem' }}>Status</th>
-                <th style={{ padding: '0.75rem 1rem' }}>WAPE</th>
-                <th style={{ padding: '0.75rem 1rem' }}>MAE</th>
-                <th style={{ padding: '0.75rem 1rem' }}>RMSE</th>
-                <th style={{ padding: '0.75rem 1rem' }}>Created At</th>
-              </tr>
-            </thead>
-            <tbody>
-              {runs.slice(0, 10).map((r) => {
-                const isSelected = activeRunDetail?.id === r.id;
-                return (
-                  <tr
-                    key={r.id}
-                    onClick={() => {
-                      setSelectedProduct(r.product_id);
-                      setSelectedHorizon(r.horizon_days);
-                      setActiveModelTab(r.model_name);
-                    }}
-                    style={{
-                      borderBottom: '1px solid var(--border-subtle)',
-                      backgroundColor: isSelected ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
-                      cursor: 'pointer',
-                      transition: 'background-color 0.15s ease',
-                    }}
-                  >
-                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                      #{r.id}
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', color: 'var(--text-primary)' }}>
-                      SKU #{r.product_id}
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem' }}>
-                      <span
-                        style={{
-                          padding: '0.2rem 0.5rem',
-                          borderRadius: '4px',
-                          fontSize: '0.75rem',
-                          fontWeight: 600,
-                          backgroundColor:
-                            r.model_name === 'prophet'
-                              ? 'rgba(59, 130, 246, 0.15)'
-                              : r.model_name === 'moving_avg'
-                              ? 'rgba(245, 158, 11, 0.15)'
-                              : 'rgba(6, 182, 212, 0.15)',
-                          color:
-                            r.model_name === 'prophet'
-                              ? '#93c5fd'
-                              : r.model_name === 'moving_avg'
-                              ? '#fcd34d'
-                              : '#67e8f9',
-                        }}
-                      >
-                        {r.model_name.toUpperCase()}
-                      </span>
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', color: 'var(--text-secondary)' }}>
-                      {r.horizon_days} Days
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem' }}>
-                      <span
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.35rem',
-                          color: r.status === 'complete' ? 'var(--accent-emerald)' : 'var(--accent-rose)',
-                          fontSize: '0.8rem',
-                          fontWeight: 500,
-                        }}
-                      >
-                        {r.status === 'complete' ? <CheckCircle2 size={14} /> : <AlertCircle size={14} />}
-                        {r.status}
-                      </span>
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                      {r.evaluation?.wape != null ? `${r.evaluation.wape}%` : '—'}
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', color: 'var(--text-secondary)' }}>
-                      {fmt(r.evaluation?.mae)}
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', color: 'var(--text-secondary)' }}>
-                      {fmt(r.evaluation?.rmse)}
-                    </td>
-                    <td style={{ padding: '0.75rem 1rem', color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-                      {new Date(r.created_at).toLocaleString()}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        {evaluation?.models && evaluation.models.length > 0 ? (
+          <div className="data-table-wrap">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Rank &amp; Model Architecture</th>
+                  <th>MAE (Units)</th>
+                  <th>RMSE (Units)</th>
+                  <th>WAPE (%)</th>
+                  <th>Status / Recommendation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {evaluation.models.map((m, idx) => {
+                  const isTop = idx === 0 || m.model.includes('🏆');
+                  return (
+                    <tr key={m.model || idx} style={isTop ? { background: 'rgba(59,130,246,0.06)' } : {}}>
+                      <td className="bold" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        {isTop ? <Award size={15} style={{ color: '#60a5fa' }} /> : <span style={{ width: 15 }} />}
+                        <span>{m.model}</span>
+                      </td>
+                      <td className="mono">{Number(m.MAE).toFixed(2)}</td>
+                      <td className="mono">{Number(m.RMSE).toFixed(2)}</td>
+                      <td className="mono" style={{ color: Number(m.WAPE_pct) < 20 ? 'var(--emerald)' : 'inherit' }}>
+                        {Number(m.WAPE_pct).toFixed(2)}%
+                      </td>
+                      <td>
+                        {isTop ? (
+                          <span className="badge badge-safe">Selected Production</span>
+                        ) : Number(m.WAPE_pct) <= 20 ? (
+                          <span className="badge badge-low">Competitive Baseline</span>
+                        ) : (
+                          <span className="badge badge-neutral">Standard Baseline</span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="empty-state" style={{ padding: '2rem' }}>
+            <div className="empty-state-title">Model comparison metrics unavailable</div>
+            <div className="empty-state-desc">Reports file model_comparison.csv not found or yet to be executed.</div>
+          </div>
+        )}
+
+        <div style={{ marginTop: '1.25rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: 'var(--r-sm)' }}>
+          <div>
+            <div style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-secondary)' }}>MAE (Mean Absolute Error)</div>
+            <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)' }}>Average magnitude of forecast errors in units sold. Lower is better.</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-secondary)' }}>RMSE (Root Mean Squared Error)</div>
+            <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)' }}>Penalizes larger variance errors more heavily. Useful for safety stock planning.</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--text-secondary)' }}>WAPE (Weighted Absolute % Error)</div>
+            <div style={{ fontSize: '0.73rem', color: 'var(--text-muted)' }}>Aggregate absolute error divided by total actual demand. Essential for high-volume grocery demand.</div>
+          </div>
         </div>
       </div>
     </div>
