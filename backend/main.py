@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
-from backend.api import health, auth, demand, products, upload
+from backend.api import health, auth, demand, products, upload, forecast, inventory, analytics, market_prices
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -48,6 +48,30 @@ app.include_router(
     upload.router,
     prefix=f"{settings.API_V1_STR}/upload",
     tags=["Data Upload"]
+)
+
+app.include_router(
+    forecast.router,
+    prefix=f"{settings.API_V1_STR}/forecast",
+    tags=["Forecasting Suite"]
+)
+
+app.include_router(
+    inventory.router,
+    prefix=f"{settings.API_V1_STR}/inventory",
+    tags=["Inventory Optimization"]
+)
+
+app.include_router(
+    analytics.router,
+    prefix=f"{settings.API_V1_STR}/analytics",
+    tags=["Analytics & Anomalies"]
+)
+
+app.include_router(
+    market_prices.router,
+    prefix=f"{settings.API_V1_STR}/market-prices",
+    tags=["Government Market Prices & Stocking Intelligence"]
 )
 
 @app.get("/")

@@ -248,6 +248,29 @@ res_gbt, pred_gbt = evaluate_predictions(y_val, val_pred_gbt, "HistGradientBoost
 results.append(res_gbt)
 val_results_df["pred_hist_gbt"] = pred_gbt
 
+# ---------------------------------------------------------------------
+# Model 9: Croston's Method & Model 10: SBA (Intermittent Demand)
+# ---------------------------------------------------------------------
+print("\n[STEP 4b] Fitting Croston's Method & SBA for Intermittent SKUs...")
+from forecasting.croston_forecasting import fit_croston_series
+
+croston_dict = {}
+sba_dict = {}
+for (pid, city), grp in train_df.groupby(["product_id", "city_name"]):
+    y_hist = grp["daily_quantity"].values
+    croston_dict[(pid, city)] = fit_croston_series(y_hist, alpha=0.1, variant="classic")
+    sba_dict[(pid, city)] = fit_croston_series(y_hist, alpha=0.1, variant="sba")
+
+val_pred_croston = np.array([croston_dict.get((r.product_id, r.city_name), 0.0) for r in val_df.itertuples()])
+res_croston, pred_croston = evaluate_predictions(y_val, val_pred_croston, "Croston's Method (Classic)")
+results.append(res_croston)
+val_results_df["pred_croston"] = pred_croston
+
+val_pred_sba = np.array([sba_dict.get((r.product_id, r.city_name), 0.0) for r in val_df.itertuples()])
+res_sba, pred_sba = evaluate_predictions(y_val, val_pred_sba, "SBA (Syntetos-Boylan)")
+results.append(res_sba)
+val_results_df["pred_sba"] = pred_sba
+
 # =====================================================================
 # 3. EXPORT DELIVERABLES
 # =====================================================================

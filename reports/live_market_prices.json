@@ -1,0 +1,337 @@
+{
+  "status": "live",
+  "as_on_date": "19/09/2026",
+  "fetched_at": "2026-09-20T13:22:30.772946",
+  "total_commodities": 41,
+  "source_url": "https://fcainfoweb.nic.in/Default.aspx",
+  "commodities": [
+    {
+      "commodity": "Rice",
+      "price_inr_per_kg": 46.11,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Wheat",
+      "price_inr_per_kg": 31.87,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Atta (Wheat)",
+      "price_inr_per_kg": 37.52,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Gram Dal",
+      "price_inr_per_kg": 88.23,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Tur/Arhar Dal",
+      "price_inr_per_kg": 124.43,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Urad Dal",
+      "price_inr_per_kg": 122.63,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Moong Dal",
+      "price_inr_per_kg": 112.03,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Masoor Dal",
+      "price_inr_per_kg": 89.93,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Broken Rice",
+      "price_inr_per_kg": 33.37,
+      "category": "Grains & Pulses",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Groundnut Oil (Packed)",
+      "price_inr_per_kg": 206.84,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Mustard Oil (Packed)",
+      "price_inr_per_kg": 201.42,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Vanaspati (Packed)",
+      "price_inr_per_kg": 167.99,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Soya Oil (Packed)",
+      "price_inr_per_kg": 166.17,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Sunflower Oil (Packed)",
+      "price_inr_per_kg": 193.56,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Palm Oil (Packed)",
+      "price_inr_per_kg": 152.26,
+      "category": "Edible Oils",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Potato",
+      "price_inr_per_kg": 23.12,
+      "category": "Vegetables",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Onion",
+      "price_inr_per_kg": 54.22,
+      "category": "Vegetables",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Tomato",
+      "price_inr_per_kg": 39.04,
+      "category": "Vegetables",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Sugar",
+      "price_inr_per_kg": 58.24,
+      "category": "Daily Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Gur",
+      "price_inr_per_kg": 66.72,
+      "category": "Daily Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Milk @",
+      "price_inr_per_kg": 61.4,
+      "category": "Daily Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Tea Loose",
+      "price_inr_per_kg": 274.08,
+      "category": "Daily Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Salt Pack (Iodised)",
+      "price_inr_per_kg": 22.09,
+      "category": "Daily Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Bajra (whole)",
+      "price_inr_per_kg": 39.11,
+      "category": "Additional Millets",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Jowar (whole)",
+      "price_inr_per_kg": 45.68,
+      "category": "Additional Millets",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Maida (wheat)",
+      "price_inr_per_kg": 42.59,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Ragi (whole)",
+      "price_inr_per_kg": 55.42,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Suji (whole)",
+      "price_inr_per_kg": 47.07,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Besan",
+      "price_inr_per_kg": 96.63,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Desi Ghee",
+      "price_inr_per_kg": 701.41,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Butter (Pasteurised)",
+      "price_inr_per_kg": 60.63,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Eggs",
+      "price_inr_per_kg": 83.84,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Brinjal",
+      "price_inr_per_kg": 43.18,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Black Pepper (whole)",
+      "price_inr_per_kg": 88.57,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Coriander (whole)",
+      "price_inr_per_kg": 43.96,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Cummin Seed (whole)",
+      "price_inr_per_kg": 41.2,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Red Chillies (whole)",
+      "price_inr_per_kg": 30.36,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Turmeric (powder)",
+      "price_inr_per_kg": 16.72,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Banana",
+      "price_inr_per_kg": 49.86,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Ginger",
+      "price_inr_per_kg": 35.99,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    },
+    {
+      "commodity": "Garlic",
+      "price_inr_per_kg": 45.3,
+      "category": "Grains & Essentials",
+      "unit": "₹ / Kg",
+      "as_on_date": "19/09/2026",
+      "source": "Ministry of Consumer Affairs, Food and Public Distribution (PMD)"
+    }
+  ]
+}

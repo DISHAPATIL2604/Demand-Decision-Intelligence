@@ -1,0 +1,1252 @@
+date_,product_id,city_name,actual_demand,expected_demand,anomaly_score,anomaly_type,severity,action_recommendation
+2022-07-10,176190,Bengaluru,1339.0,893.19,0.3674,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,17748,HR-NCR,424.0,1315.15,0.5099,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,27064,Delhi,413.0,256.63,0.0749,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,27389,Delhi,421.0,340.44,0.1023,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,300292,Delhi,328.0,51.12,0.1182,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,368445,HR-NCR,350.0,247.01,0.091,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,389738,Delhi,349.0,216.2,0.0531,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,425780,HR-NCR,85.0,638.01,0.4872,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,483951,Bengaluru,331.0,24.23,0.1499,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,486339,Bengaluru,452.0,2.93,0.2356,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,487712,HR-NCR,509.0,0.0,0.3286,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,55504,HR-NCR,250.0,189.24,0.0669,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,179,Mumbai,307.0,102.55,0.076,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,187,HR-NCR,379.0,282.64,0.0888,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,27389,HR-NCR,209.0,120.86,0.0863,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,28390,Bengaluru,555.0,301.0,0.111,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,309894,Bengaluru,1710.0,1312.13,0.4264,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,329549,HR-NCR,480.0,119.86,0.1775,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,349944,HR-NCR,632.0,412.67,0.137,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-09,470636,Mumbai,127.0,280.71,0.1702,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,127031,Bengaluru,418.0,767.98,0.2977,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,131641,Delhi,7.0,526.02,0.5716,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,15286,HR-NCR,677.0,233.62,0.2611,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-08,317610,Bengaluru,166.0,360.65,0.1469,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,131641,Delhi,107.0,526.02,0.3693,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,131641,HR-NCR,227.0,367.94,0.1098,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,362796,Delhi,364.0,675.78,0.3564,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,425780,HR-NCR,270.0,509.12,0.1837,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,11102,Bengaluru,66.0,190.26,0.2284,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,12872,Delhi,4973.0,6223.65,0.8863,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,279485,Delhi,97.0,178.7,0.1379,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,339179,Delhi,106.0,328.98,0.2489,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,339179,HR-NCR,51.0,230.72,0.2602,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,383992,Bengaluru,18.0,118.97,0.2248,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,38910,Bengaluru,104.0,231.74,0.1573,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,3918,HR-NCR,0.0,238.51,0.3521,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,544,Delhi,60.0,170.99,0.1845,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,339179,Delhi,341.0,510.09,0.1473,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,364304,Delhi,416.0,287.56,0.085,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-05,3885,HR-NCR,303.0,530.32,0.1734,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,391306,Delhi,3533.0,4666.9,0.8683,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,423735,Mumbai,646.0,442.65,0.1496,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-05,425780,HR-NCR,461.0,565.96,0.1224,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,470636,HR-NCR,164.0,1241.26,0.5315,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,483357,HR-NCR,47.0,9.29,0.1298,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-05,485516,Delhi,37.0,13.59,0.156,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-04,300635,Bengaluru,29.0,109.34,0.2107,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,357316,HR-NCR,46.0,31.46,0.1082,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-04,424982,Delhi,57.0,316.46,0.3006,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,1,Delhi,387.0,284.67,0.0523,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,10088,Bengaluru,1920.0,1574.58,0.4455,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,105,Bengaluru,826.0,614.13,0.1569,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,105,Delhi,3368.0,2831.73,0.689,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,106,HR-NCR,251.0,170.03,0.0573,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,10697,Delhi,413.0,289.48,0.0692,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,10908,Delhi,265.0,197.97,0.0479,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,110767,Delhi,846.0,358.84,0.3226,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,114264,Delhi,340.0,199.89,0.0594,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,117641,Delhi,935.0,308.75,0.3797,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,127083,Delhi,339.0,148.76,0.0893,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,127601,Delhi,391.0,288.52,0.0785,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,14,Delhi,591.0,422.42,0.1093,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,14624,Delhi,527.0,311.64,0.0922,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,15288,Delhi,611.0,124.75,0.2812,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,15366,Delhi,619.0,403.16,0.1257,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,159,Delhi,2805.0,2223.87,0.643,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,15902,Delhi,373.0,241.32,0.0594,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,15907,Delhi,3394.0,2142.95,0.789,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,160704,HR-NCR,1192.0,1406.96,0.3437,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,168,Delhi,704.0,541.88,0.1316,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,17,Delhi,557.0,433.02,0.109,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,171258,Delhi,531.0,378.11,0.1118,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,17489,Delhi,701.0,86.22,0.3714,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,17748,Delhi,2617.0,1580.01,0.6982,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,179771,Delhi,567.0,445.54,0.0972,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,18618,Delhi,332.0,262.51,0.0432,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,192,Delhi,1646.0,1258.6,0.4099,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,19507,Delhi,666.0,105.49,0.3375,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,207832,Delhi,763.0,162.32,0.3438,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,217,Delhi,258.0,176.77,0.0626,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,23379,Bengaluru,318.0,247.1,0.0746,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,23742,Delhi,366.0,283.7,0.0437,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,24178,HR-NCR,450.0,328.02,0.103,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,24739,Delhi,361.0,203.75,0.0577,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,25268,Bengaluru,280.0,216.27,0.0353,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,266441,Delhi,255.0,196.04,0.0605,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,27153,Bengaluru,704.0,546.69,0.1586,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,285131,HR-NCR,578.0,15.96,0.327,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,286009,Delhi,662.0,405.08,0.1707,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,299078,Delhi,354.0,240.35,0.058,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,300635,Bengaluru,113.0,191.22,0.1772,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,311059,Delhi,367.0,246.13,0.0548,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,311059,HR-NCR,260.0,183.52,0.0237,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,318058,Delhi,312.0,88.84,0.0803,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,329500,HR-NCR,5.0,331.87,0.7012,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,32991,Delhi,284.0,202.78,0.0692,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,333427,Delhi,683.0,560.18,0.1501,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,333764,Delhi,1121.0,784.64,0.2585,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,333785,HR-NCR,3883.0,2471.83,0.815,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,350169,Delhi,364.0,188.33,0.0716,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,361153,Bengaluru,309.0,239.39,0.0406,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,364304,Bengaluru,265.0,217.23,0.1064,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,372351,Delhi,409.0,257.69,0.0579,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,37261,Delhi,282.0,194.11,0.0835,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,376857,Bengaluru,220.0,135.35,0.0849,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,380157,Delhi,701.0,475.41,0.1363,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,389684,HR-NCR,321.0,169.07,0.0638,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,389691,Bengaluru,257.0,189.3,0.0499,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,389692,Delhi,235.0,186.41,0.0578,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,391607,Delhi,117.0,32.03,0.0986,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,3924,Delhi,569.0,378.11,0.172,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,415627,Bengaluru,266.0,187.37,0.0261,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,415931,Delhi,193.0,115.67,0.1196,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,428612,HR-NCR,1.0,0.48,0.1399,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,429458,Bengaluru,369.0,111.27,0.0996,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,429717,Delhi,372.0,210.49,0.0559,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,437475,Delhi,238.0,170.03,0.0318,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,446707,Bengaluru,1249.0,994.65,0.2546,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,448096,Delhi,1501.0,1180.57,0.3049,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,458321,Delhi,439.0,286.59,0.0949,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,467648,Delhi,350.0,12.31,0.1233,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,467652,Delhi,1251.0,741.29,0.3813,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,467653,Delhi,415.0,48.13,0.166,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,481504,Delhi,842.0,11.89,0.4635,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-03,63628,HR-NCR,267.0,172.92,0.0408,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,11170,Delhi,356.0,302.97,0.031,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,154617,Delhi,332.0,257.69,0.0245,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,159,Delhi,2308.0,1907.89,0.5275,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,160,Delhi,1294.0,1048.59,0.241,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,179771,Delhi,462.0,344.39,0.0815,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,179771,HR-NCR,211.0,114.16,0.0706,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,18546,Mumbai,313.0,216.27,0.0487,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,18555,Delhi,280.0,218.2,0.016,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,285131,Delhi,510.0,18.68,0.2768,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,285131,HR-NCR,431.0,15.96,0.2061,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,365534,Delhi,712.0,23.87,0.391,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,383480,Delhi,1773.0,1464.76,0.4202,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,3913,HR-NCR,1480.0,1167.08,0.2987,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,403799,Mumbai,269.0,176.77,0.0533,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,421687,Delhi,264.0,2.52,0.0771,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,421687,HR-NCR,268.0,2.21,0.0836,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,422948,Delhi,806.0,444.58,0.2343,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,445396,HR-NCR,778.0,317.73,0.2963,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,467648,Delhi,275.0,12.31,0.0804,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,468137,Bengaluru,197.0,3.02,0.0588,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,470636,Bengaluru,71.0,442.65,0.4398,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,48058,Delhi,378.0,200.86,0.0827,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,480925,Delhi,874.0,148.98,0.4329,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,482620,Delhi,476.0,106.91,0.1716,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,483705,Delhi,25.0,48.81,0.1445,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,483705,HR-NCR,8.0,24.86,0.187,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,484067,Delhi,467.0,63.64,0.2069,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,82224,Delhi,246.0,193.15,0.0714,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-02,86,Delhi,443.0,348.25,0.0754,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,1,Delhi,312.0,0.48,0.1581,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,103115,Delhi,1368.0,0.48,0.6634,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,105,Bengaluru,646.0,0.48,0.4194,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,105,Delhi,2792.0,0.48,0.828,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,10530,Delhi,284.0,0.48,0.1748,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,106,Delhi,442.0,0.48,0.2545,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,108301,Delhi,349.0,0.48,0.1957,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,109135,Delhi,211.0,0.48,0.1027,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,110767,Delhi,679.0,0.48,0.4544,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,11150,HR-NCR,525.0,0.48,0.3165,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,11170,Delhi,314.0,0.48,0.1715,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,11214,Delhi,493.0,0.48,0.2989,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,11237,Delhi,394.0,0.48,0.2453,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,116824,Bengaluru,12.0,0.48,0.1389,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,117641,HR-NCR,326.0,0.48,0.1059,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,122263,Delhi,516.0,0.48,0.3203,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,13980,Delhi,72.0,0.48,0.1073,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,14,Delhi,389.0,0.48,0.2043,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,15288,Delhi,537.0,0.48,0.3604,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,15366,Delhi,500.0,0.48,0.3206,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,154617,Delhi,267.0,0.48,0.132,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,159,Delhi,1980.0,0.48,0.7699,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,15902,Delhi,277.0,0.48,0.1415,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,15907,Delhi,2370.0,0.48,0.8084,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,160,Delhi,1088.0,0.48,0.5833,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,174727,Delhi,459.0,0.48,0.2376,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,17489,Delhi,346.0,0.48,0.1341,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,18555,Delhi,226.0,0.48,0.1565,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,18585,Delhi,966.0,0.48,0.5385,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,18851,Delhi,703.0,0.48,0.4575,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,19251,Delhi,350.0,0.48,0.1957,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,19507,Delhi,370.0,0.48,0.1664,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,207832,Delhi,587.0,0.48,0.3586,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,23343,Delhi,594.0,0.48,0.3218,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,233518,Delhi,106.0,0.48,0.087,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,23379,HR-NCR,158.0,0.48,0.1099,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,23653,Delhi,1187.0,0.48,0.6334,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,23653,HR-NCR,533.0,0.48,0.344,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,238044,Bengaluru,228.0,0.48,0.1108,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,240092,Delhi,1343.0,0.48,0.6273,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,240092,HR-NCR,573.0,0.48,0.3566,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,24739,Delhi,287.0,0.48,0.1848,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,25268,Delhi,236.0,0.48,0.1302,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,253317,Delhi,1279.0,0.48,0.6009,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,281869,Delhi,360.0,0.48,0.226,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,285131,Delhi,373.0,18.68,0.152,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,285131,HR-NCR,358.0,15.96,0.1486,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,286009,Delhi,507.0,0.48,0.3516,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,293867,Delhi,84.0,0.48,0.0873,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,299078,Delhi,288.0,0.48,0.1718,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,311059,Delhi,269.0,0.48,0.1621,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,311059,HR-NCR,184.0,0.48,0.132,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,311059,Mumbai,175.0,0.48,0.1519,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,318,Delhi,489.0,0.48,0.2993,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,320667,Bengaluru,10.0,0.48,0.163,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,32553,Bengaluru,462.0,0.48,0.2558,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,333324,Delhi,1337.0,0.48,0.655,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,333324,HR-NCR,427.0,0.48,0.2718,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,335816,Bengaluru,339.0,0.48,0.1679,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,34353,HR-NCR,383.0,0.48,0.2151,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,353470,Delhi,296.0,128.56,0.1174,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,353470,HR-NCR,279.0,94.79,0.1084,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,364177,Delhi,316.0,0.48,0.124,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,365339,Bengaluru,1.0,0.48,0.1407,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,365455,Delhi,333.0,0.48,0.2873,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,365534,Delhi,578.0,23.87,0.3455,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,365534,HR-NCR,404.0,16.75,0.2028,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,367837,Bengaluru,15.0,0.48,0.1367,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,372351,Delhi,302.0,0.48,0.1188,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,380157,Delhi,514.0,0.48,0.3319,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,383480,Delhi,1520.0,0.48,0.7137,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,383480,HR-NCR,764.0,0.48,0.5053,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,385219,HR-NCR,194.0,0.48,0.1387,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,388638,Delhi,732.0,0.48,0.4152,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,388638,HR-NCR,369.0,0.48,0.1669,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,388639,Delhi,1242.0,0.48,0.6298,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,388639,HR-NCR,428.0,0.48,0.2388,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,3889,Delhi,2743.0,0.48,0.8285,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389668,Delhi,678.0,0.48,0.4449,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389683,Bengaluru,365.0,0.48,0.1882,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389684,Delhi,298.0,0.48,0.1124,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389689,Delhi,468.0,0.48,0.2808,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389703,Delhi,660.0,0.48,0.44,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389703,HR-NCR,371.0,0.48,0.2385,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,389725,Delhi,484.0,0.48,0.2738,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,3907,HR-NCR,204.0,0.48,0.0575,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,3918,Delhi,751.0,0.48,0.4727,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,392931,Delhi,345.0,0.48,0.1745,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,394617,Bengaluru,11.0,153.2,0.2693,DROP_STOCKOUT,CRITICAL,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,403776,Delhi,343.0,0.48,0.1479,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,403799,Bengaluru,324.0,0.48,0.1291,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,403799,HR-NCR,406.0,0.48,0.197,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,421687,HR-NCR,169.0,2.21,0.1177,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,423857,Bengaluru,361.0,0.48,0.154,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,425780,Bengaluru,402.0,165.36,0.1152,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,428612,Delhi,3.0,0.48,0.1265,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,429717,Delhi,259.0,0.48,0.0908,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,43,Bengaluru,751.0,0.48,0.4543,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,439697,Delhi,333.0,0.48,0.1054,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,439935,Delhi,447.0,0.48,0.233,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,440031,Delhi,541.0,0.48,0.3314,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,445188,HR-NCR,21.0,0.48,0.1298,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,445675,Bengaluru,2688.0,0.48,0.8285,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,459720,Mumbai,94.0,0.48,0.1003,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,467637,Delhi,276.0,0.48,0.1164,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,467648,Delhi,191.0,12.31,0.065,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,468137,Bengaluru,122.0,3.02,0.1572,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,470636,Bengaluru,459.0,0.48,0.2531,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,479581,Delhi,833.0,0.48,0.4557,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,480901,Delhi,306.0,23.8,0.115,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,480925,Delhi,783.0,148.98,0.4191,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,480925,HR-NCR,325.0,29.3,0.1435,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,481504,Delhi,551.0,11.89,0.3281,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,484064,HR-NCR,126.0,77.89,0.0533,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,485478,Delhi,31.0,15.3,0.1733,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,4916,Delhi,1209.0,0.48,0.6394,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,50,Delhi,1212.0,0.48,0.593,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,50,HR-NCR,428.0,0.48,0.2176,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,52,Delhi,2926.0,0.48,0.8396,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,57435,Delhi,479.0,0.48,0.2769,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,57903,Delhi,234.0,0.48,0.1314,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,600,Delhi,282.0,0.48,0.1001,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,61761,Delhi,286.0,0.48,0.1765,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-01,95031,Delhi,347.0,0.48,0.1371,SPIKE_DEMAND,CRITICAL,Review inventory availability and prepare replenishment.
+2022-07-10,10088,Bengaluru,1962.0,1626.0,0.4363,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,101230,Bengaluru,440.0,224.84,0.1069,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,105,Delhi,2526.0,2384.67,0.6618,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,127601,Delhi,447.0,305.74,0.0731,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,127601,HR-NCR,215.0,157.44,0.0718,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,12872,Delhi,6957.0,5981.14,0.9295,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,12872,HR-NCR,4674.0,4553.6,0.6786,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,15907,Delhi,2594.0,2115.89,0.7125,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,17772,Bengaluru,1020.0,832.53,0.2317,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,18396,HR-NCR,563.0,480.06,0.0949,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,18401,HR-NCR,240.0,198.86,0.076,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,18562,Delhi,755.0,631.29,0.1275,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,189821,Bengaluru,470.0,390.52,0.0966,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,19512,Delhi,8330.0,7309.3,0.9372,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,19512,HR-NCR,7415.0,7010.26,0.7757,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,217614,Bengaluru,420.0,675.52,0.2311,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,221973,HR-NCR,235.0,140.07,0.0836,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,259923,Bengaluru,2321.0,859.31,0.7431,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,309894,Bengaluru,1911.0,1647.42,0.4275,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,319610,Delhi,950.0,1159.87,0.2778,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,319610,HR-NCR,800.0,603.3,0.1696,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,329500,HR-NCR,522.0,932.99,0.6858,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,329549,Delhi,872.0,351.87,0.3342,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,333785,Delhi,4887.0,3969.06,0.8551,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,333785,HR-NCR,3686.0,2471.83,0.7748,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3471,Bengaluru,200.0,153.6,0.0802,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,34778,HR-NCR,1481.0,1184.1,0.2826,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,37083,Bengaluru,4118.0,3850.6,0.6392,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,385219,HR-NCR,293.0,228.72,0.0177,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3881,Delhi,3719.0,3182.84,0.7807,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3881,HR-NCR,3488.0,2700.32,0.8169,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3889,HR-NCR,1243.0,387.34,0.6869,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,389683,Delhi,564.0,408.8,0.0863,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3898,Delhi,3975.0,3491.34,0.6749,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,3898,HR-NCR,3262.0,2695.72,0.6623,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,391306,Delhi,6967.0,6278.65,0.9045,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,391306,HR-NCR,5154.0,4074.99,0.8295,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,415984,Delhi,583.0,255.47,0.1546,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,445281,Bengaluru,230.0,161.29,0.0681,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,445675,Delhi,2352.0,2159.63,0.6774,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,448096,Delhi,1492.0,1187.81,0.2926,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,467655,Bengaluru,400.0,344.3,0.0455,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,469737,Delhi,63.0,131.37,0.1451,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-10,486342,Delhi,321.0,2.55,0.1009,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,486376,Delhi,1189.0,0.0,0.7187,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,52,Delhi,3076.0,2703.52,0.7474,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,5451,Delhi,269.0,139.13,0.0495,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,65679,Delhi,320.0,264.36,0.0252,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,105,Delhi,2476.0,1806.79,0.7069,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,10557,HR-NCR,635.0,402.06,0.1348,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,116189,Bengaluru,834.0,607.15,0.1553,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,116824,Delhi,604.0,542.68,0.1241,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,12872,Delhi,6210.0,6094.14,0.8569,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,12872,HR-NCR,4728.0,4389.19,0.7028,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,131641,HR-NCR,175.0,367.94,0.1937,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,15907,Delhi,2197.0,1756.92,0.7006,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,19512,Delhi,7590.0,7082.91,0.8949,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,19512,HR-NCR,7279.0,6549.03,0.8178,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,23343,HR-NCR,184.0,575.39,0.3784,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,259923,Bengaluru,2266.0,859.31,0.7204,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,26923,Bengaluru,1184.0,970.32,0.2274,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,329500,HR-NCR,968.0,1328.82,0.7019,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,333324,HR-NCR,65.0,150.63,0.1616,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,333785,Delhi,4342.0,3969.06,0.77,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,333785,HR-NCR,3396.0,2471.83,0.7226,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,366654,HR-NCR,286.0,16.12,0.0824,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,369084,HR-NCR,234.0,121.81,0.0336,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,37083,Bengaluru,3998.0,3474.91,0.6745,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,374079,Delhi,1539.0,680.2,0.5343,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,374079,HR-NCR,667.0,257.47,0.2594,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,3881,Delhi,3305.0,3759.96,0.8247,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,3881,HR-NCR,2804.0,3577.29,0.8254,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,3889,Delhi,49.0,258.94,0.6784,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,3889,HR-NCR,402.0,1167.82,0.643,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,389683,HR-NCR,259.0,181.53,0.0157,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,389717,Delhi,305.0,167.08,0.0428,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,391306,Delhi,6519.0,5362.71,0.9317,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,391306,HR-NCR,4231.0,4426.77,0.7054,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,395336,HR-NCR,635.0,309.51,0.169,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,400105,Delhi,3040.0,2592.84,0.653,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,421721,Bengaluru,1.0,0.48,0.1498,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,445675,Bengaluru,2815.0,2444.6,0.6631,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,445675,Delhi,2242.0,1750.26,0.7434,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,45533,HR-NCR,461.0,666.86,0.2003,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,467655,HR-NCR,353.0,217.15,0.0553,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,480925,HR-NCR,504.0,29.3,0.2541,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,482620,Delhi,629.0,106.91,0.2982,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,486376,Delhi,1363.0,0.0,0.7426,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,52,Delhi,2807.0,2484.99,0.724,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-09,86446,Delhi,2439.0,1871.69,0.5741,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,105,Delhi,1876.0,1378.15,0.6856,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,12872,Delhi,6328.0,5986.45,0.8621,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,15907,Delhi,1824.0,923.59,0.7818,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,19257,HR-NCR,275.0,142.99,0.0441,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,19512,Delhi,7355.0,7050.48,0.8664,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,19512,HR-NCR,6800.0,6522.08,0.7404,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,259923,Bengaluru,1822.0,859.31,0.6395,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,28390,Bengaluru,312.0,14.84,0.1023,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,318,Delhi,641.0,66.8,0.3426,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,329500,HR-NCR,1379.0,1714.78,0.7277,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,329549,Bengaluru,146.0,191.16,0.0662,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,329549,HR-NCR,124.0,176.69,0.0736,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,3881,Delhi,3904.0,3807.04,0.792,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,3889,Delhi,269.0,662.41,0.6848,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,3898,Delhi,3388.0,3708.07,0.6992,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,3898,HR-NCR,2412.0,2859.72,0.6477,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,391306,Bengaluru,3739.0,3285.39,0.6668,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,391306,Delhi,5568.0,6188.24,0.8938,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,391306,HR-NCR,4596.0,4210.07,0.6989,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,438113,Bengaluru,231.0,534.93,0.255,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,468128,Delhi,286.0,52.31,0.08,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,477482,Delhi,827.0,387.55,0.2843,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,478815,Delhi,317.0,195.0,0.0469,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,486376,Delhi,1833.0,0.0,0.7705,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,4916,Delhi,566.0,835.32,0.2836,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,52,Delhi,2580.0,2055.34,0.7444,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-08,9098,HR-NCR,324.0,338.11,0.0296,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,12872,Delhi,6216.0,4791.17,0.9494,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,12872,HR-NCR,4688.0,3931.87,0.7612,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,159,Delhi,1603.0,1348.19,0.6315,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,19469,Delhi,157.0,232.65,0.1948,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,19469,HR-NCR,64.0,100.67,0.0993,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,19512,Delhi,7321.0,7556.91,0.863,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,19512,HR-NCR,6772.0,6631.14,0.73,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,259923,Bengaluru,1975.0,859.31,0.6713,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,279485,Delhi,93.0,93.93,0.0568,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,329500,HR-NCR,1780.0,1592.88,0.6611,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,333785,Delhi,4257.0,3969.06,0.7601,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,333785,HR-NCR,3268.0,2471.83,0.6889,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,339179,Delhi,101.0,102.6,0.109,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,339179,HR-NCR,41.0,49.61,0.1225,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,365455,Bengaluru,214.0,237.46,0.0388,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,37083,Bengaluru,3643.0,3814.34,0.6367,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,379584,Delhi,295.0,198.93,0.034,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,387474,Delhi,108.0,182.55,0.1242,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,3881,Delhi,3953.0,4059.03,0.8088,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,3889,HR-NCR,1350.0,326.09,0.7016,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,38910,Bengaluru,106.0,231.74,0.1488,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,3898,Delhi,3850.0,4324.91,0.7309,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,391306,Bengaluru,3411.0,3750.76,0.6954,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,391306,Delhi,6425.0,5139.9,0.9416,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,391306,HR-NCR,4371.0,3579.29,0.7563,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,396897,Delhi,243.0,373.29,0.0845,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,445675,Bengaluru,2672.0,2331.76,0.6412,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,445675,Delhi,1941.0,1339.52,0.7478,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,445675,HR-NCR,1996.0,1454.16,0.6527,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-07,483854,Delhi,1509.0,522.16,0.7103,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,105,Delhi,1386.0,1811.56,0.7047,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,12872,HR-NCR,4081.0,4300.83,0.6848,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,159,Delhi,1399.0,1675.73,0.6683,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,15907,Delhi,1244.0,1618.89,0.7056,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,17772,Delhi,182.0,273.11,0.0772,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,19469,Delhi,241.0,645.92,0.3412,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,19469,HR-NCR,104.0,280.81,0.2148,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,19512,HR-NCR,6883.0,6674.49,0.7352,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,259923,Bengaluru,1918.0,859.31,0.653,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,31,HR-NCR,305.0,593.9,0.2322,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,329500,HR-NCR,1653.0,1970.51,0.7362,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,333785,Delhi,4557.0,3969.06,0.8149,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,333785,HR-NCR,3232.0,2471.83,0.6881,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,362796,Delhi,701.0,1108.32,0.3657,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,362796,HR-NCR,257.0,430.13,0.1284,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,37083,Bengaluru,3959.0,3552.31,0.7043,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,3881,Delhi,4213.0,3961.73,0.8161,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,3881,HR-NCR,4005.0,3832.64,0.8027,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,3889,HR-NCR,338.0,1363.61,0.6165,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,3898,Delhi,4489.0,3609.15,0.7918,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,391306,Bengaluru,3893.0,3559.06,0.6535,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,391306,Delhi,5335.0,3403.96,0.9694,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,391306,HR-NCR,3715.0,3508.0,0.636,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,3918,Delhi,178.0,379.07,0.1869,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,405806,Bengaluru,137.0,306.82,0.1809,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,445675,Bengaluru,2420.0,2650.63,0.6545,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,445675,Delhi,1390.0,1502.33,0.7102,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,447623,Delhi,125.0,277.92,0.1757,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,470636,HR-NCR,1559.0,158.47,0.7275,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,479964,HR-NCR,43.0,186.41,0.2385,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,483854,Delhi,1584.0,522.16,0.7336,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-06,4926,Delhi,154.0,171.96,0.0335,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,73577,Delhi,242.0,312.6,0.0515,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,73577,HR-NCR,137.0,194.11,0.083,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,99,HR-NCR,62.0,158.47,0.188,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,105,Delhi,1880.0,2382.82,0.7377,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,111387,Delhi,294.0,207.6,0.0663,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,12872,Delhi,6460.0,6704.36,0.8484,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,159,Delhi,1739.0,2417.5,0.751,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,15907,Delhi,1680.0,1996.52,0.7295,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,169812,Bengaluru,41.0,93.93,0.146,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,19512,Delhi,8144.0,7940.32,0.8483,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,259923,Bengaluru,1883.0,859.31,0.655,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,279485,Delhi,185.0,232.65,0.0602,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,320667,Bengaluru,357.0,268.29,0.0423,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,325764,Delhi,34.0,138.98,0.197,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,329500,HR-NCR,2045.0,1630.45,0.6931,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,333785,Delhi,4362.0,3969.06,0.8017,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,333785,HR-NCR,3172.0,2471.83,0.6632,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,339152,Mumbai,268.0,223.98,0.0532,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,37083,Bengaluru,3687.0,3843.24,0.6956,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,3881,Delhi,4112.0,3849.98,0.81,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,3881,HR-NCR,3978.0,3503.18,0.8241,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,3889,Delhi,695.0,2547.55,0.7043,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,3898,HR-NCR,2647.0,3009.95,0.6805,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,3918,HR-NCR,20.0,238.51,0.3141,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,424982,Delhi,5.0,55.39,0.168,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,445396,Delhi,169.0,288.52,0.1357,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,445675,Delhi,1559.0,1653.57,0.711,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,445675,HR-NCR,1527.0,1709.44,0.6892,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,483854,Delhi,1517.0,522.16,0.755,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,484067,Delhi,551.0,63.64,0.2672,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-05,95032,Mumbai,444.0,386.78,0.0526,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,105,Delhi,2473.0,3245.01,0.7691,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,115774,Bengaluru,229.0,175.81,0.0691,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,12872,Delhi,6959.0,5205.4,0.9694,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,12872,HR-NCR,4582.0,4828.74,0.719,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,159,Delhi,2509.0,2702.65,0.6583,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,15907,Delhi,2072.0,3270.05,0.802,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,192,HR-NCR,488.0,1797.11,0.6733,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,19512,Delhi,8242.0,9090.55,0.9154,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,19512,HR-NCR,7191.0,7370.03,0.8013,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,217614,Mumbai,317.0,274.07,0.0352,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,259923,Bengaluru,1316.0,859.31,0.3796,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,314,Delhi,1228.0,1855.87,0.6655,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,320667,Bengaluru,278.0,238.43,0.0152,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,329500,HR-NCR,1692.0,5.3,0.8672,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,333785,Delhi,3418.0,3969.06,0.7983,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,333785,HR-NCR,3207.0,2471.83,0.6724,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,34778,Delhi,1212.0,1932.94,0.6899,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,360216,Delhi,141.0,175.39,0.0744,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,366321,Delhi,219.0,818.36,0.4507,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,37083,Bengaluru,3989.0,4077.33,0.7003,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3881,Delhi,3996.0,4602.35,0.8789,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3881,HR-NCR,3636.0,4235.32,0.8599,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3888,HR-NCR,1854.0,725.88,0.6682,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,3889,Bengaluru,2551.0,3136.15,0.6764,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3889,Delhi,2644.0,1079.42,0.809,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,3898,HR-NCR,3124.0,3564.84,0.7129,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,391305,Bengaluru,2739.0,3107.25,0.6334,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,391306,Bengaluru,3630.0,4276.74,0.7444,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,391306,Delhi,4844.0,5716.94,0.8704,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,391306,HR-NCR,3661.0,4290.23,0.7444,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3928,Bengaluru,284.0,249.99,0.02,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,39410,Bengaluru,612.0,452.29,0.0961,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,400105,Delhi,2473.0,3239.23,0.7211,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,428612,HR-NCR,2.0,1.44,0.1532,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,428741,Delhi,123.0,200.06,0.103,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,445188,HR-NCR,23.0,207.6,0.2716,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,445675,Delhi,1716.0,2032.16,0.7805,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,445675,HR-NCR,1774.0,1976.29,0.6984,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,467651,Delhi,378.0,826.06,0.3393,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,467652,Mumbai,11.0,213.38,0.3035,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,477788,Delhi,458.0,152.05,0.1288,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,483854,Delhi,1318.0,522.16,0.7848,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,483854,HR-NCR,915.0,377.06,0.6651,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-04,4907,Delhi,113.0,137.05,0.1198,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,52,Delhi,2365.0,3267.16,0.8326,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,10088,Delhi,2621.0,2134.28,0.5689,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,103115,HR-NCR,386.0,292.37,0.0434,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,104,Delhi,521.0,362.7,0.0745,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,104616,Delhi,483.0,348.25,0.0837,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,104616,HR-NCR,210.0,129.57,0.0615,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,105,HR-NCR,1088.0,896.39,0.1928,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,105,Mumbai,523.0,476.37,0.063,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,106,Delhi,526.0,474.44,0.0658,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,108301,Delhi,400.0,324.16,0.0538,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,108301,HR-NCR,172.0,147.87,0.0949,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,10974,Delhi,415.0,300.08,0.0558,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,11006,Mumbai,471.0,346.32,0.0805,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,114916,Delhi,452.0,389.67,0.0543,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,117641,HR-NCR,388.0,124.75,0.1051,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,127031,Bengaluru,980.0,843.4,0.2273,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,127601,HR-NCR,196.0,153.65,0.0642,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,12872,Delhi,5403.0,7306.45,0.8895,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,12872,HR-NCR,5012.0,3828.79,0.8218,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,136950,Bengaluru,244.0,201.82,0.0275,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,13981,Delhi,319.0,242.28,0.0281,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,154617,Delhi,372.0,320.31,0.0514,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,15907,HR-NCR,1370.0,986.94,0.3417,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,160,Delhi,1533.0,1247.04,0.3553,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,160,HR-NCR,478.0,418.57,0.0551,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,166848,Delhi,513.0,406.05,0.093,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,168,HR-NCR,325.0,291.41,0.0277,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,169812,Delhi,762.0,674.82,0.1428,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,17148,Delhi,298.0,252.88,0.0658,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,174727,Delhi,580.0,462.88,0.1022,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,176190,Bengaluru,987.0,729.73,0.2332,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,17643,Bengaluru,1086.0,775.01,0.261,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,17748,Bengaluru,1581.0,1425.26,0.3205,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,179771,HR-NCR,243.0,203.75,0.0217,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18401,HR-NCR,211.0,160.4,0.0988,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18546,Delhi,1898.0,1676.69,0.4336,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18546,Mumbai,344.0,302.01,0.0208,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18841,HR-NCR,360.0,251.91,0.0405,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18851,Delhi,903.0,690.23,0.1684,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18851,HR-NCR,408.0,357.88,0.0425,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18854,Delhi,484.0,400.27,0.0636,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18857,Delhi,748.0,603.53,0.1169,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,18857,HR-NCR,319.0,270.22,0.0286,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,19257,Delhi,646.0,458.07,0.1176,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,19469,Delhi,916.0,759.59,0.1661,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,19469,HR-NCR,372.0,302.97,0.0495,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,19512,Delhi,9436.0,9123.3,0.8664,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,19512,HR-NCR,7650.0,6699.54,0.8641,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,217614,HR-NCR,1571.0,1235.48,0.3494,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,21869,Delhi,497.0,437.84,0.0607,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,225254,Delhi,325.0,49.22,0.0837,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,23383,Mumbai,407.0,336.69,0.0485,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,23653,Delhi,1433.0,1095.8,0.3934,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,240092,Delhi,1381.0,827.99,0.4397,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,24097,Delhi,201.0,170.03,0.0534,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,24785,Delhi,214.0,148.84,0.0733,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,25268,Delhi,280.0,237.46,0.0155,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,25279,Delhi,422.0,322.24,0.05,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,25486,Delhi,337.0,244.21,0.0377,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,259923,Bengaluru,2212.0,859.31,0.7188,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,281869,Delhi,337.0,91.04,0.0765,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,285131,Delhi,561.0,18.68,0.3047,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,289037,Delhi,237.0,158.47,0.0329,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,299087,Delhi,230.0,209.53,0.0219,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,304377,Delhi,272.0,199.89,0.0174,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,309921,Bengaluru,3458.0,3297.99,0.6326,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,31,Delhi,1157.0,880.01,0.2211,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,31,HR-NCR,897.0,755.74,0.1704,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,311059,Mumbai,216.0,169.07,0.0526,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,315221,Delhi,229.0,11.8,0.0514,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,317610,Bengaluru,515.0,392.56,0.0923,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,318,Delhi,475.0,108.38,0.1807,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,320667,Bengaluru,247.0,15.89,0.055,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,32153,Bengaluru,207.0,164.25,0.0687,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,333764,HR-NCR,528.0,441.69,0.096,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,333785,Delhi,4160.0,3969.06,0.7424,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,335816,Bengaluru,38.0,116.08,0.1669,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,3471,HR-NCR,323.0,249.99,0.0468,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,34778,Delhi,2006.0,969.6,0.7492,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,34819,Delhi,300.0,230.72,0.0215,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,353470,Delhi,383.0,128.56,0.0975,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,353470,HR-NCR,336.0,94.79,0.0722,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,361153,Delhi,486.0,406.05,0.0677,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,362796,Delhi,1521.0,1326.04,0.2962,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,364177,Delhi,381.0,330.91,0.03,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,366711,Delhi,474.0,178.07,0.1275,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,37083,Bengaluru,4232.0,4052.29,0.7289,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,37273,Delhi,870.0,717.21,0.1575,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,37273,HR-NCR,304.0,257.69,0.02,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,375328,Delhi,242.0,213.38,0.0486,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,379583,Delhi,370.0,273.11,0.0389,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,383480,Delhi,1837.0,1708.48,0.4461,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,385219,HR-NCR,220.0,172.92,0.0567,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3881,Delhi,4777.0,4328.76,0.8635,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3881,HR-NCR,4396.0,3201.66,0.9089,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,388638,Delhi,888.0,681.56,0.1923,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,388639,Delhi,1509.0,1306.77,0.3517,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3888,Delhi,991.0,1700.77,0.5222,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,3888,HR-NCR,753.0,1469.57,0.4869,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,3889,Delhi,1120.0,2098.63,0.6898,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,389668,Delhi,779.0,616.05,0.1353,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389668,HR-NCR,220.0,180.63,0.0529,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389683,Bengaluru,401.0,354.99,0.0427,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389683,HR-NCR,227.0,182.55,0.0648,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389684,Delhi,362.0,274.07,0.0337,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389686,Delhi,353.0,190.53,0.0569,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389699,Delhi,358.0,278.89,0.0624,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389700,Delhi,371.0,307.79,0.0294,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389717,Delhi,244.0,171.96,0.0219,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389725,Delhi,602.0,469.63,0.1098,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389727,Delhi,307.0,228.79,0.0285,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389735,Delhi,1420.0,1120.84,0.3053,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389740,Delhi,299.0,227.83,0.0196,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3898,Delhi,4032.0,3871.18,0.6784,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3898,HR-NCR,3700.0,2876.05,0.7449,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389815,Delhi,312.0,242.28,0.0218,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389843,Delhi,344.0,279.85,0.0222,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,389944,HR-NCR,289.0,251.91,0.0181,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,391306,Bengaluru,4439.0,3705.48,0.7367,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,391306,Delhi,5934.0,5109.07,0.8927,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,391306,HR-NCR,4453.0,3797.96,0.7524,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,391805,Delhi,279.0,253.84,0.009,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,3928,Bengaluru,259.0,205.67,0.0282,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,39493,Delhi,690.0,601.6,0.1087,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,39493,HR-NCR,381.0,312.6,0.0356,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,400105,Delhi,3362.0,2948.3,0.6681,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,403219,Delhi,387.0,309.71,0.0454,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,403776,Delhi,382.0,332.83,0.0327,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,403799,Delhi,1358.0,1090.98,0.2852,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,405599,Delhi,349.0,167.93,0.0775,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,405806,Bengaluru,427.0,368.48,0.0431,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,423735,Delhi,2793.0,2012.9,0.6493,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,423735,HR-NCR,2102.0,1706.55,0.484,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,427133,Delhi,236.0,177.74,0.0562,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,429694,Delhi,354.0,283.7,0.0302,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,436913,Delhi,376.0,295.26,0.0353,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,438128,Delhi,579.0,477.33,0.0985,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,438145,Delhi,576.0,432.06,0.1062,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,439697,Delhi,451.0,388.71,0.0566,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,439935,Delhi,519.0,390.63,0.0792,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,439970,Delhi,674.0,519.72,0.1204,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,439978,Delhi,407.0,320.31,0.0572,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,440031,Delhi,643.0,518.76,0.0995,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,440033,Delhi,304.0,223.01,0.0254,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,445281,Bengaluru,212.0,153.65,0.0724,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,445396,Delhi,264.0,412.79,0.1267,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,445675,Delhi,2109.0,1886.7,0.7196,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,446729,Delhi,335.0,208.56,0.0724,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,446730,Delhi,282.0,183.52,0.0244,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,455785,HR-NCR,240.0,198.93,0.0738,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,458325,Delhi,509.0,342.47,0.0794,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,467673,Bengaluru,285.0,236.5,0.0376,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,468137,Delhi,253.0,10.72,0.062,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,477482,Delhi,747.0,409.9,0.1772,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,477483,Delhi,304.0,203.75,0.0492,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,477788,Delhi,393.0,152.05,0.0835,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,478704,Bengaluru,190.0,72.69,0.0878,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,480044,Delhi,413.0,332.83,0.0449,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,48058,Delhi,404.0,364.62,0.0407,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,480901,Delhi,401.0,23.8,0.1798,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,481504,HR-NCR,468.0,10.32,0.2307,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,482088,Delhi,69.0,146.31,0.1455,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,483854,Delhi,753.0,522.16,0.6601,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,486376,Delhi,1188.0,0.0,0.6367,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,4916,Delhi,1304.0,1133.37,0.2401,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,4926,Delhi,404.0,356.92,0.0471,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,4943,Bengaluru,1069.0,964.78,0.2306,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,50,Delhi,1517.0,950.33,0.4889,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,50,HR-NCR,515.0,320.31,0.087,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,52,Delhi,3391.0,2824.03,0.7299,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,5451,Delhi,233.0,143.06,0.0564,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,55504,Delhi,453.0,414.72,0.044,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,56692,Bengaluru,294.0,239.39,0.0178,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,56692,Delhi,1336.0,1105.43,0.2656,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,56692,HR-NCR,583.0,479.26,0.094,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,57903,Delhi,294.0,222.05,0.0204,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,600,Delhi,386.0,329.94,0.0458,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,60749,Delhi,405.0,321.27,0.0525,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,60749,HR-NCR,200.0,164.25,0.0694,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,608,Delhi,387.0,328.02,0.0421,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,63628,Delhi,489.0,388.71,0.0686,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,68,Delhi,234.0,182.55,0.0343,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,68483,Bengaluru,280.0,230.72,0.0153,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,81953,HR-NCR,321.0,255.77,0.045,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,82224,Delhi,272.0,237.46,0.0462,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,89120,Delhi,335.0,264.44,0.0235,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,91891,Delhi,982.0,748.03,0.2119,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,93038,Delhi,328.0,247.1,0.0364,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,95031,Delhi,946.0,693.12,0.1821,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,95031,HR-NCR,671.0,441.69,0.1728,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,95781,Bengaluru,331.0,135.35,0.0613,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,99,Bengaluru,260.0,220.12,0.027,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-03,99,Delhi,540.0,402.19,0.0718,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,103115,HR-NCR,303.0,232.65,0.0209,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,105,Delhi,2939.0,2690.12,0.5771,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,105,Mumbai,494.0,378.11,0.0733,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,106,Delhi,492.0,426.28,0.0668,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,10697,Delhi,300.0,260.58,0.0381,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,109135,Delhi,232.0,203.75,0.0193,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,11007,Delhi,227.0,169.07,0.0553,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,11214,Delhi,479.0,475.41,0.0614,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,116189,Bengaluru,770.0,634.36,0.1608,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,116824,Bengaluru,23.0,12.04,0.1358,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,122263,Delhi,506.0,497.56,0.0727,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,127601,Delhi,299.0,238.43,0.0738,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,12872,Delhi,7584.0,6661.97,0.9056,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,12872,HR-NCR,3974.0,4480.01,0.7415,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,13876,Mumbai,523.0,400.27,0.0821,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,13980,Delhi,82.0,69.84,0.0698,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,14,Delhi,438.0,375.22,0.0487,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,14162,HR-NCR,207.0,181.59,0.0463,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,14624,Bengaluru,334.0,272.14,0.0217,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,160,HR-NCR,434.0,322.24,0.0596,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,160,Mumbai,241.0,192.19,0.0331,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,168,Delhi,562.0,455.18,0.0932,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,168,HR-NCR,302.0,253.84,0.0378,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,169812,Delhi,700.0,606.42,0.1443,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,169812,HR-NCR,336.0,223.98,0.0611,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,17148,Delhi,262.0,217.23,0.0698,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,17678,Delhi,99.0,164.25,0.1341,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,17748,Bengaluru,1479.0,1280.76,0.2778,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,18546,Delhi,1740.0,1461.87,0.3953,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,18548,Delhi,268.0,231.68,0.0277,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,18618,Delhi,272.0,227.83,0.0572,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,18851,HR-NCR,371.0,297.19,0.0417,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,192,HR-NCR,1763.0,976.34,0.6443,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,19281,Delhi,272.0,205.67,0.0283,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,19512,Delhi,9470.0,8117.58,0.9582,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,19512,HR-NCR,6954.0,6640.78,0.7857,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,217,Delhi,183.0,133.42,0.0805,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,22982,Bengaluru,589.0,490.82,0.1143,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,23653,Delhi,1137.0,1143.96,0.2643,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,25268,Delhi,246.0,227.83,0.0186,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,253317,Mumbai,297.0,246.13,0.0445,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,259923,Bengaluru,2052.0,859.31,0.68,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,266441,Delhi,203.0,179.66,0.0741,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,293867,Delhi,26.0,81.4,0.1656,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,299087,Delhi,217.0,172.92,0.0291,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,309921,Bengaluru,3423.0,3121.7,0.6445,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,311059,Delhi,255.0,259.62,0.0069,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,311059,HR-NCR,190.0,177.74,0.0343,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,311059,Mumbai,175.0,169.07,0.0655,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,315221,Delhi,177.0,11.8,0.0487,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,32553,Bengaluru,572.0,445.54,0.0912,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,329500,HR-NCR,344.0,1396.36,0.7393,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,333324,Delhi,1472.0,1288.47,0.2906,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,333324,HR-NCR,425.0,411.83,0.049,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,333427,Delhi,581.0,467.7,0.1096,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,333764,Delhi,814.0,664.22,0.1705,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,333785,Delhi,3332.0,3969.06,0.7506,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,333785,HR-NCR,3287.0,2471.83,0.6968,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,34778,Delhi,1006.0,1547.6,0.6863,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,352443,Bengaluru,596.0,758.63,0.2342,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,352443,Delhi,1048.0,1550.49,0.6677,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,353470,Delhi,300.0,128.56,0.0515,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,353470,HR-NCR,286.0,94.79,0.0516,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,361153,Bengaluru,248.0,168.1,0.0544,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,364177,Delhi,343.0,304.9,0.026,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,365339,Bengaluru,1.0,1.44,0.2911,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,365678,Delhi,239.0,190.26,0.034,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,367837,Bengaluru,6.0,14.93,0.1413,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,37083,Bengaluru,4206.0,3875.99,0.7406,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,374079,Delhi,1460.0,680.2,0.5289,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,375328,Delhi,221.0,190.26,0.0671,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,3881,Delhi,4493.0,4720.84,0.8509,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,3881,HR-NCR,3323.0,1953.17,0.9002,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,388639,Delhi,1356.0,1196.95,0.2568,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,388639,HR-NCR,438.0,412.79,0.0426,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,3889,Delhi,2178.0,2642.92,0.6609,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,389665,Delhi,293.0,242.28,0.0345,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,389683,Bengaluru,368.0,352.1,0.0368,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,389692,Delhi,193.0,165.21,0.0629,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,389725,HR-NCR,258.0,204.71,0.0058,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,389738,Delhi,248.0,195.08,0.0267,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,3898,Delhi,4018.0,3929.94,0.6653,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,389944,HR-NCR,261.0,238.43,0.0268,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,391306,Bengaluru,3846.0,3227.67,0.6842,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,391306,HR-NCR,3942.0,3637.09,0.6553,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,391805,Delhi,263.0,206.64,0.0216,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,39410,Bengaluru,102.0,146.91,0.0724,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,394617,Bengaluru,15.0,153.2,0.2354,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,39493,Bengaluru,451.0,395.45,0.0514,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,395336,Delhi,1078.0,609.86,0.3538,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,396489,Delhi,194.0,0.96,0.0527,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,404983,Delhi,734.0,117.71,0.3676,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,405599,Delhi,303.0,167.93,0.0806,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,415984,Delhi,470.0,255.47,0.1125,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,427129,Delhi,251.0,197.0,0.0561,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,438128,Delhi,495.0,415.68,0.0836,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,439697,Delhi,403.0,321.27,0.0492,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,439935,Bengaluru,295.0,204.71,0.0302,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,445675,Delhi,1958.0,1328.93,0.7664,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,445675,HR-NCR,2164.0,2436.77,0.765,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,45377,HR-NCR,323.0,227.83,0.0507,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,455785,Delhi,486.0,425.31,0.0937,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,467673,Bengaluru,245.0,221.09,0.0487,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,480901,Delhi,300.0,23.8,0.0958,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,481495,Delhi,433.0,85.32,0.1613,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,483854,Delhi,1261.0,522.16,0.7709,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,483854,HR-NCR,781.0,377.06,0.6557,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,486376,Delhi,1243.0,0.0,0.6969,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,4943,HR-NCR,371.0,280.81,0.0516,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,52,Mumbai,230.0,202.78,0.0057,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,55504,Delhi,430.0,330.91,0.0588,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,56,Delhi,211.0,156.54,0.0512,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,600,Delhi,342.0,272.14,0.022,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,609,Delhi,268.0,217.23,0.0291,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,68,Delhi,189.0,170.03,0.0484,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,68483,Bengaluru,239.0,223.98,0.0232,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-02,99,Bengaluru,228.0,197.0,0.0323,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,10088,Bengaluru,1529.0,0.48,0.7039,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,10088,Delhi,2301.0,0.48,0.7926,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,10088,HR-NCR,1486.0,0.48,0.6679,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,103115,HR-NCR,241.0,0.48,0.0579,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,105,HR-NCR,887.0,0.48,0.487,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,108301,HR-NCR,161.0,0.48,0.1569,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,11150,Delhi,1077.0,0.48,0.5661,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,114264,Delhi,240.0,0.48,0.0891,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,116189,Bengaluru,658.0,0.48,0.4339,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,117641,Delhi,649.0,0.48,0.3583,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,123007,Mumbai,309.0,0.48,0.0958,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,12872,Delhi,6915.0,0.48,0.9829,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,12872,HR-NCR,4650.0,0.48,0.9101,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,14624,Bengaluru,282.0,0.48,0.1074,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,14624,Delhi,387.0,0.48,0.1857,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,15907,Bengaluru,556.0,0.48,0.3172,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,15907,HR-NCR,1098.0,0.48,0.5612,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,160704,Delhi,2832.0,0.48,0.8269,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,160704,HR-NCR,1406.0,0.48,0.6815,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,168,Delhi,472.0,0.48,0.2771,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,17643,HR-NCR,271.0,347.23,0.0525,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,17748,Bengaluru,1329.0,0.48,0.635,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,179771,Delhi,357.0,0.48,0.1703,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,18546,Delhi,1517.0,0.48,0.6871,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,191,Bengaluru,407.0,0.48,0.1988,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,192,Delhi,1369.0,0.48,0.6548,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,192,HR-NCR,1013.0,0.48,0.6603,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,19512,Delhi,8426.0,0.48,1.0,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,19512,HR-NCR,6893.0,0.48,0.9594,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,19512,Mumbai,2686.0,0.48,0.8302,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,19924,Delhi,1744.0,0.48,0.7342,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,19925,Delhi,2875.0,0.48,0.8534,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,216251,Delhi,144.0,166.31,0.0705,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,217614,Delhi,1443.0,0.48,0.6928,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,23343,HR-NCR,590.0,0.48,0.3286,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,23379,Delhi,562.0,0.48,0.383,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,23383,Bengaluru,1748.0,0.48,0.7347,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,237680,Bengaluru,1473.0,0.48,0.6707,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,242283,Delhi,209.0,0.48,0.08,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,242283,HR-NCR,129.0,0.48,0.1392,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,25279,Delhi,352.0,0.48,0.1379,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,253317,Mumbai,255.0,0.48,0.1335,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,25486,Delhi,251.0,0.48,0.0854,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,259923,Bengaluru,1732.0,859.31,0.6672,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,266441,Delhi,186.0,0.48,0.1398,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,309894,Bengaluru,1295.0,0.48,0.659,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,309921,Bengaluru,3240.0,0.48,0.8734,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,313420,Delhi,8.0,0.48,0.1371,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,314,Delhi,1556.0,0.48,0.7865,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,319610,Delhi,1274.0,0.48,0.666,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,329500,Delhi,1339.0,0.48,0.6325,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,329500,HR-NCR,1449.0,0.48,0.8052,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,333785,Delhi,3698.0,3969.06,0.692,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,339309,Delhi,1906.0,0.48,0.7594,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,34778,Delhi,1606.0,0.48,0.8117,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,34778,HR-NCR,1055.0,0.48,0.6452,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,350169,Delhi,233.0,0.48,0.1044,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,352443,Delhi,1609.0,0.48,0.8046,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,352443,Mumbai,129.0,0.48,0.102,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,365339,Delhi,1257.0,0.48,0.6475,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,365455,HR-NCR,271.0,0.48,0.1644,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,369013,HR-NCR,126.0,218.42,0.1262,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,369752,Delhi,712.0,0.48,0.6383,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,37078,Bengaluru,302.0,0.48,0.0999,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,37083,Bengaluru,4023.0,0.48,0.9284,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,37273,Delhi,754.0,0.48,0.4387,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,381789,Delhi,209.0,0.48,0.1,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,382102,Delhi,84.0,144.62,0.1857,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,3881,Bengaluru,1124.0,0.48,0.6774,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3881,Delhi,4900.0,0.48,0.9818,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3881,HR-NCR,2027.0,0.48,0.9045,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3888,Delhi,1804.0,0.48,0.7453,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3888,HR-NCR,1495.0,0.48,0.6949,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3889,Bengaluru,2683.0,0.48,0.8274,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3889,HR-NCR,1791.0,0.48,0.7602,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389665,Delhi,251.0,0.48,0.1067,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389691,Bengaluru,214.0,0.48,0.1078,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389699,Delhi,300.0,0.48,0.1526,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389714,Delhi,236.0,0.48,0.0901,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389719,Delhi,370.0,0.48,0.1742,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389725,HR-NCR,212.0,0.48,0.0588,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3898,Delhi,4079.0,0.48,0.9022,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3898,HR-NCR,2953.0,0.48,0.8736,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389815,Delhi,244.0,0.48,0.1098,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,389944,HR-NCR,247.0,0.48,0.1005,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,3913,Delhi,1612.0,0.48,0.715,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391305,Bengaluru,2619.0,0.48,0.8209,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391306,Bengaluru,3350.0,0.48,0.8607,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391306,Delhi,5462.0,0.48,0.9649,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391306,HR-NCR,3775.0,0.48,0.8757,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391306,Mumbai,1249.0,0.48,0.6346,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,391805,Delhi,214.0,0.48,0.0813,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,39410,Bengaluru,152.0,0.48,0.0615,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,394525,HR-NCR,158.0,0.48,0.0645,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,39493,Delhi,580.0,0.48,0.3505,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,39493,HR-NCR,322.0,0.48,0.1162,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,399908,Delhi,474.0,472.95,0.0679,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,400105,Delhi,2780.0,0.48,0.8345,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,400105,HR-NCR,1015.0,0.48,0.5456,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,401895,Delhi,42.0,192.03,0.2516,DROP_STOCKOUT,MEDIUM,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,403799,Delhi,1109.0,0.48,0.5692,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,405599,Delhi,290.0,167.93,0.0967,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,415627,Bengaluru,194.0,0.48,0.0975,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,423735,Bengaluru,1792.0,0.48,0.7498,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,423735,Delhi,2114.0,0.48,0.7959,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,423735,HR-NCR,1563.0,0.48,0.706,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,429458,Bengaluru,11.0,0.48,0.1357,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,43,Delhi,415.0,0.48,0.2083,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,437475,Delhi,170.0,0.48,0.1159,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,439959,Delhi,358.0,0.48,0.1504,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,440033,Delhi,259.0,0.48,0.0966,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,445675,Delhi,1379.0,0.48,0.861,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,445675,HR-NCR,2529.0,0.48,0.9099,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,446728,Delhi,212.0,0.48,0.0588,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,446730,Delhi,205.0,0.48,0.0497,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,448096,Delhi,1165.0,0.48,0.6322,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,453022,Delhi,131.0,0.48,0.1385,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,467649,Delhi,257.0,0.48,0.0817,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,467653,Delhi,326.0,48.13,0.0903,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,467655,HR-NCR,178.0,0.48,0.0808,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,467673,Bengaluru,229.0,0.48,0.1339,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,468137,Delhi,185.0,10.72,0.0585,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,470636,Delhi,1923.0,0.48,0.7632,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,470636,HR-NCR,1776.0,0.48,0.738,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,481495,Delhi,166.0,85.32,0.0292,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,483854,Delhi,638.0,522.16,0.6461,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,484064,Delhi,217.0,133.96,0.0455,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,486016,Delhi,1302.0,0.0,0.7167,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,486376,Delhi,1342.0,0.0,0.7274,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,487714,Delhi,1127.0,0.0,0.6818,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,52,Mumbai,210.0,0.48,0.0635,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,60749,Delhi,362.0,0.48,0.1783,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,68,Delhi,176.0,0.48,0.1155,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,68483,Bengaluru,232.0,0.48,0.1145,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,86,Delhi,361.0,0.48,0.1826,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,86446,Delhi,1723.0,0.48,0.7991,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,86446,HR-NCR,1002.0,0.48,0.6454,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-01,89120,Delhi,266.0,0.48,0.1009,SPIKE_DEMAND,MEDIUM,Review inventory availability and prepare replenishment.
+2022-07-10,11006,HR-NCR,335.0,234.47,0.0494,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,145447,Bengaluru,417.0,370.3,0.0505,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,15364,Bengaluru,314.0,244.13,0.036,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,17,HR-NCR,236.0,169.96,0.0645,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,28390,Bengaluru,540.0,535.12,0.1405,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,341974,Delhi,375.0,170.89,0.0713,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,3471,HR-NCR,352.0,286.49,0.0296,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,34778,Delhi,2354.0,1885.11,0.5843,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,362191,Delhi,438.0,300.94,0.0624,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,376859,Bengaluru,240.0,166.11,0.0285,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,385219,Delhi,237.0,204.65,0.0343,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,404983,Delhi,837.0,117.71,0.4176,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,436336,Bengaluru,521.0,465.65,0.072,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,455780,Delhi,374.0,302.86,0.0349,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-10,455785,HR-NCR,264.0,223.9,0.052,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,10088,HR-NCR,1957.0,1440.23,0.5147,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,116824,HR-NCR,268.0,223.91,0.0417,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,179,Bengaluru,227.0,126.63,0.0457,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,300292,Delhi,257.0,51.12,0.0915,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,381789,Delhi,49.0,73.63,0.1132,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,396489,Delhi,249.0,0.96,0.0647,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,455780,HR-NCR,234.0,141.07,0.0423,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,467659,HR-NCR,289.0,143.97,0.0443,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,478894,HR-NCR,202.0,164.2,0.0672,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,482733,Delhi,356.0,236.55,0.0523,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,483845,Delhi,347.0,50.68,0.098,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,483854,HR-NCR,160.0,377.06,0.3871,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-09,4943,Bengaluru,1121.0,816.12,0.2442,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-09,9483,HR-NCR,810.0,484.88,0.1917,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,104616,HR-NCR,206.0,129.52,0.0369,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,12872,HR-NCR,4557.0,4515.17,0.6651,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,216251,Delhi,111.0,166.31,0.09,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,23343,Bengaluru,265.0,328.85,0.0452,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,26923,Bengaluru,1007.0,929.87,0.2167,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,283,HR-NCR,996.0,562.81,0.3175,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,333785,Delhi,3945.0,3969.06,0.7199,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,339152,Mumbai,119.0,193.09,0.1062,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,365455,Bengaluru,199.0,206.55,0.0169,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,3881,HR-NCR,3714.0,3651.87,0.7666,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,391607,Delhi,106.0,32.03,0.0857,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,3923,Delhi,316.0,405.87,0.077,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,445675,Delhi,1817.0,1869.9,0.6876,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,470636,Delhi,1382.0,1692.47,0.4336,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,477482,HR-NCR,701.0,366.39,0.1753,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,481495,Delhi,84.0,85.32,0.0876,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,486376,HR-NCR,1207.0,0.0,0.616,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,487712,HR-NCR,396.0,0.0,0.2133,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,4916,Bengaluru,586.0,725.64,0.1952,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-08,61743,HR-NCR,248.0,118.91,0.038,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-08,9483,HR-NCR,751.0,484.88,0.18,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-07,10088,HR-NCR,902.0,1067.86,0.2702,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,11102,Bengaluru,73.0,64.06,0.0845,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-07,176,Bengaluru,216.0,317.42,0.0945,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,23343,Delhi,233.0,377.15,0.2956,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,25279,Bengaluru,69.0,83.33,0.1028,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,349944,Delhi,906.0,814.5,0.1531,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-07,362796,HR-NCR,251.0,248.06,0.0421,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-07,362796,Mumbai,86.0,147.87,0.0995,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,3881,HR-NCR,3791.0,3858.65,0.7826,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,39493,Bengaluru,152.0,195.08,0.0685,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-07,475802,Delhi,970.0,99.1,0.5099,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-07,52,Delhi,2134.0,2115.01,0.676,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,169812,Bengaluru,21.0,39.98,0.1311,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,19512,Delhi,7844.0,7845.92,0.84,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,23343,Delhi,391.0,597.75,0.2901,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,25279,Bengaluru,86.0,125.72,0.1127,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,31,Delhi,372.0,689.27,0.3328,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-06,349944,Delhi,845.0,556.33,0.1675,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,353470,Delhi,419.0,128.56,0.1147,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,353470,HR-NCR,413.0,94.79,0.1192,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,467649,Delhi,330.0,168.1,0.0435,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,486339,HR-NCR,29.0,4.74,0.1166,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-06,52,Delhi,2195.0,2134.28,0.6759,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,12872,HR-NCR,4464.0,4414.5,0.6557,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,166848,Delhi,269.0,459.03,0.1341,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,19512,HR-NCR,6928.0,6927.85,0.7519,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,196281,Delhi,323.0,280.81,0.0397,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,253317,Mumbai,349.0,275.03,0.0277,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,38910,Bengaluru,243.0,231.74,0.019,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,459720,Bengaluru,271.0,447.47,0.2394,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,467648,Bengaluru,367.0,295.26,0.0307,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,469737,Delhi,127.0,131.37,0.0733,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,477787,Delhi,533.0,236.42,0.1188,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-05,4926,Delhi,178.0,268.29,0.0771,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-05,52,Delhi,2215.0,2278.78,0.7095,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,136950,Bengaluru,257.0,235.54,0.0081,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,15286,Delhi,286.0,564.03,0.3052,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,18546,HR-NCR,337.0,684.45,0.3106,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,253317,Delhi,1341.0,738.4,0.4157,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,311059,HR-NCR,253.0,250.95,0.0081,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,335816,Bengaluru,14.0,37.09,0.1343,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,339153,Mumbai,200.0,10.07,0.0749,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,369013,Bengaluru,656.0,547.66,0.1154,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,383615,Delhi,157.0,240.35,0.1179,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,3898,Delhi,3855.0,3884.66,0.6561,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,394617,Delhi,378.0,449.02,0.0849,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,43,Bengaluru,750.0,547.66,0.1652,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,436336,Bengaluru,463.0,389.67,0.0993,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,453022,Delhi,101.0,149.8,0.0922,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,467642,Delhi,135.0,210.49,0.1526,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,467653,HR-NCR,267.0,89.58,0.0469,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,478704,Bengaluru,191.0,72.69,0.0612,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,484064,Bengaluru,176.0,80.03,0.0312,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,55360,Delhi,300.0,420.5,0.118,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,578,Delhi,333.0,430.13,0.0768,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-04,91891,Delhi,989.0,946.48,0.1864,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-04,95032,Mumbai,401.0,349.21,0.0517,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,103115,Delhi,1569.0,1135.29,0.4772,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,104887,Delhi,494.0,427.24,0.0678,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,10530,Delhi,272.0,221.09,0.0168,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,109135,Delhi,247.0,223.98,0.0,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,11150,Delhi,1098.0,631.47,0.351,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,114233,Bengaluru,300.0,222.05,0.045,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,122133,Bengaluru,366.0,205.58,0.0591,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,14162,Delhi,390.0,321.27,0.0376,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,14162,HR-NCR,219.0,199.89,0.0295,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,15907,Bengaluru,705.0,594.86,0.1212,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,17748,HR-NCR,1995.0,1315.15,0.5567,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,18585,Delhi,998.0,857.85,0.2991,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,19251,Delhi,319.0,171.96,0.0466,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,19257,HR-NCR,250.0,185.44,0.0093,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,207766,HR-NCR,429.0,298.15,0.0657,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,237680,Bengaluru,1816.0,1438.75,0.4556,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,238044,Bengaluru,242.0,205.67,0.0138,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,253317,Mumbai,301.0,286.59,0.0202,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,329549,Bengaluru,284.0,254.8,0.0534,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,339152,Bengaluru,566.0,421.46,0.1069,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,339153,Mumbai,190.0,10.07,0.0789,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,3471,Delhi,674.0,456.14,0.1333,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,352443,Bengaluru,532.0,574.63,0.2302,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,365534,Delhi,715.0,23.87,0.4119,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,365534,HR-NCR,428.0,16.75,0.2032,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,365678,Delhi,252.0,230.72,0.007,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,380156,Delhi,335.0,234.57,0.0341,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,381789,Delhi,237.0,204.71,0.0282,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,383411,HR-NCR,493.0,388.71,0.0698,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,388638,HR-NCR,409.0,323.2,0.0528,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,389665,Delhi,295.0,282.74,0.0219,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,389683,Delhi,448.0,388.71,0.0456,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,389701,Delhi,325.0,270.22,0.0253,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,389735,HR-NCR,483.0,446.51,0.0622,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,389944,Delhi,419.0,369.44,0.0434,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,3913,HR-NCR,1533.0,1426.22,0.3085,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,392931,Delhi,371.0,325.13,0.0295,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,39410,Bengaluru,469.0,98.74,0.1842,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,39492,Delhi,231.0,209.53,0.0313,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,403799,Bengaluru,349.0,308.75,0.0293,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,403804,Delhi,449.0,385.82,0.0452,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,405595,Delhi,345.0,88.88,0.0934,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,415627,Delhi,512.0,441.69,0.0583,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,425780,Bengaluru,433.0,165.36,0.1154,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,439931,Delhi,264.0,159.43,0.0271,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,440057,Delhi,238.0,185.44,0.0243,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,440200,Delhi,317.0,256.73,0.0167,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,445675,HR-NCR,2051.0,2085.15,0.6787,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,446728,Delhi,259.0,226.87,0.0089,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,448096,HR-NCR,1006.0,768.26,0.2081,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,455780,Delhi,355.0,301.04,0.0324,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,459720,Bengaluru,472.0,598.71,0.1535,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-03,463281,Mumbai,207.0,176.77,0.0463,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,467648,Bengaluru,328.0,240.35,0.0356,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,467649,Bengaluru,227.0,157.51,0.0111,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,467651,Bengaluru,323.0,256.73,0.0216,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,477482,HR-NCR,619.0,402.19,0.1072,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,478814,Delhi,350.0,262.51,0.0351,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,484064,Delhi,202.0,133.96,0.0591,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,4943,Delhi,580.0,507.2,0.0861,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,52,Mumbai,256.0,222.05,0.0089,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,67352,Delhi,319.0,279.85,0.0222,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,81953,Delhi,551.0,481.19,0.0685,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-03,86,Delhi,443.0,427.24,0.0428,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,105,Bengaluru,637.0,622.8,0.1205,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,127083,Delhi,277.0,148.76,0.0815,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,15907,Bengaluru,617.0,536.1,0.0932,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,166849,Bengaluru,941.0,853.04,0.1783,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,17,Delhi,449.0,377.15,0.0784,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,174727,Delhi,480.0,442.65,0.0602,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,17678,HR-NCR,84.0,157.51,0.1309,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,17748,HR-NCR,1887.0,1315.15,0.5083,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,17748,Mumbai,432.0,351.14,0.0627,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,18585,Delhi,890.0,931.07,0.2193,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,18851,Delhi,716.0,677.71,0.1173,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,18857,HR-NCR,280.0,210.49,0.0349,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,21869,Delhi,454.0,392.56,0.0457,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,225254,Delhi,267.0,49.22,0.0527,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,233518,Delhi,109.0,102.6,0.0759,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,23379,Delhi,579.0,541.88,0.1223,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,23742,Delhi,294.0,250.95,0.0154,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,238044,Bengaluru,213.0,220.12,0.0241,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,25268,Bengaluru,224.0,176.77,0.0504,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,318058,Delhi,199.0,88.84,0.0346,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,320667,Bengaluru,16.0,10.11,0.1337,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,339153,Mumbai,178.0,10.07,0.0883,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,339309,HR-NCR,604.0,541.88,0.0988,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,355012,Bengaluru,327.0,261.55,0.0229,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,365455,Delhi,328.0,321.27,0.2856,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,365534,HR-NCR,364.0,16.75,0.1555,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,366492,Delhi,1.0,0.48,0.1651,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,369013,Bengaluru,580.0,483.11,0.0929,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,372351,Delhi,267.0,291.41,0.0188,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,379583,Delhi,283.0,198.93,0.0241,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,3889,HR-NCR,735.0,1725.82,0.5912,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,389662,Delhi,263.0,236.5,0.0082,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,389668,HR-NCR,187.0,160.4,0.0501,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,389714,Delhi,255.0,227.83,0.0045,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,389735,HR-NCR,463.0,384.85,0.066,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,389815,Delhi,251.0,235.54,0.0275,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,389944,Delhi,383.0,319.35,0.0319,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,391306,Delhi,5303.0,5262.24,0.788,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,391333,Delhi,470.0,584.26,0.2334,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,392931,Delhi,337.0,332.83,0.0296,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,39492,Delhi,217.0,189.3,0.0489,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,39493,Delhi,624.0,559.22,0.0908,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,39493,HR-NCR,324.0,310.68,0.0258,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,3952,Bengaluru,114.0,142.09,0.1183,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-02,403219,Delhi,321.0,288.52,0.0254,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,403776,Delhi,345.0,330.91,0.0227,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,415627,Bengaluru,194.0,187.37,0.0307,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,421747,Bengaluru,311.0,259.62,0.0202,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,425780,Bengaluru,376.0,165.36,0.0707,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,437475,Delhi,176.0,164.25,0.0509,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,439959,Delhi,388.0,345.36,0.0421,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,443549,Delhi,285.0,241.32,0.0159,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,446707,Bengaluru,1032.0,800.05,0.2415,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,446728,Delhi,235.0,204.71,0.0082,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,467637,Delhi,270.0,266.36,0.0075,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,467652,Bengaluru,450.0,343.43,0.0674,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,468137,Delhi,199.0,10.72,0.0443,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,480925,HR-NCR,288.0,29.3,0.0795,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,4943,Bengaluru,1001.0,892.53,0.2301,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,56692,Delhi,1147.0,1029.33,0.2023,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,57903,Delhi,230.0,225.9,0.02,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,605,Delhi,524.0,424.35,0.0696,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,608,Delhi,340.0,286.59,0.0538,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-02,80165,Bengaluru,212.0,175.81,0.0286,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,106,HR-NCR,176.0,0.48,0.12,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,10697,Delhi,270.0,0.48,0.1223,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,11020,Delhi,359.0,0.48,0.1696,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,14162,HR-NCR,188.0,0.48,0.1131,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,17678,Delhi,170.0,0.48,0.0935,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,18546,Bengaluru,432.0,0.48,0.2387,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,18548,Delhi,240.0,0.48,0.0932,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,299087,Delhi,179.0,0.48,0.0835,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,307780,Delhi,473.0,0.48,0.2707,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,315221,Delhi,131.0,11.8,0.0716,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,34819,Delhi,240.0,0.48,0.0891,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,352443,Bengaluru,787.0,0.48,0.4451,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,366654,Bengaluru,233.0,27.72,0.0427,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,369013,Delhi,186.0,241.48,0.0526,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,37273,HR-NCR,264.0,0.48,0.0952,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,382102,HR-NCR,57.0,83.61,0.1149,DROP_STOCKOUT,LOW,"Check inventory, stock availability, and delivery/supply status."
+2022-07-01,389662,Delhi,245.0,0.48,0.0864,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,39493,Bengaluru,410.0,0.48,0.202,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,400105,Bengaluru,621.0,0.48,0.3522,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,403219,Delhi,299.0,0.48,0.1008,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,403804,Delhi,395.0,0.48,0.1961,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,405595,Delhi,284.0,88.88,0.0563,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,421687,Delhi,156.0,2.52,0.0644,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,422948,Delhi,461.0,0.48,0.2471,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,423735,Mumbai,313.0,0.48,0.1025,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,459720,Delhi,133.0,0.48,0.0977,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,467651,Delhi,903.0,0.48,0.5192,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,480044,Delhi,334.0,0.48,0.1061,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,52,HR-NCR,1151.0,0.48,0.5927,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,55360,Delhi,322.0,0.48,0.1291,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,56692,HR-NCR,530.0,0.48,0.324,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,605,HR-NCR,291.0,0.48,0.1059,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,60749,HR-NCR,166.0,0.48,0.1455,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,91891,HR-NCR,182.0,0.48,0.1016,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,93038,Delhi,256.0,0.48,0.1057,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
+2022-07-01,99,Delhi,415.0,0.48,0.2043,SPIKE_DEMAND,LOW,Review inventory availability and prepare replenishment.
